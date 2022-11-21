@@ -1,0 +1,15 @@
+.connestWithUs {
+  width: 420px;
+  border: 9px solid black;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.connestBtn {
+
+  padding: 10px;
+  border: 5px solid black;
+}

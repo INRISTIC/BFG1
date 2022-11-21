@@ -1,0 +1,18 @@
+nav {
+  display: flex;
+  gap: 37px;
+}
+
+nav a {
+  text-decoration: none;
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 18px;
+  color: var(--text-color);
+}
+
+.active {
+
+}

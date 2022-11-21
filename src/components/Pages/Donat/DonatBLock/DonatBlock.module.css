@@ -1,0 +1,76 @@
+.donatBlock {
+  max-width: 420px;
+  min-width: 330px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 289px;
+}
+
+.title {
+  margin-bottom: 77px;
+  font-weight: 700;
+  font-size: 23px;
+  line-height: 27px;
+  text-align: center;
+  color: #0066ff;
+  background: #ffffff;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.07);
+  border-radius: 20px;
+  padding: 19px 51px;
+}
+
+.subTitle {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+  color: #000000;
+  opacity: 0.5;
+  margin-bottom: 23px;
+}
+
+.listBtn {
+  display: flex;
+  flex-direction: column;
+  gap: 23px;
+  width: 100%;
+}
+
+.bankCard {
+  display: flex;
+  background: #ffffff;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.07);
+  border-radius: 20px;
+  padding: 16px 25px;
+  gap: 17px;
+  align-items: center;
+}
+
+.bankCardTitle {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 19px;
+  color: #000000;
+}
+
+.bankCardSubTitle {
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 15px;
+  color: #000000;
+  opacity: 0.3;
+}
+
+.bankCardImg {
+  width: 58px;
+  height: 58px;
+  background: #FFF4EC;
+}
+
+.bankCardText {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
+}

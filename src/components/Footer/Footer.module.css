@@ -1,0 +1,40 @@
+.footer {
+  background: var(--background-modal);
+  height: 146px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: auto;
+  padding: 30px 0 20px;
+}
+
+.footerBlock {
+  display: flex;
+  max-width: 1350px;
+  width: 100%;
+  justify-content: space-around;
+}
+
+.logo {
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: 800;
+  font-size: 25px;
+  line-height: 30px;
+  background: linear-gradient(180deg, #0038FF 0%, #0029BA 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+  margin-right: 47px;
+}
+
+.footerBlockLeft {
+  display: flex;
+}
+
+.footerBlockRight {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}

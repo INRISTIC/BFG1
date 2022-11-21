@@ -1,0 +1,107 @@
+.newsTitle {
+  border: 5px black solid;
+  font-size: 30px;
+  margin-bottom: 79px;
+}
+
+.newsBlock {
+  display: flex;
+  gap: 25px;
+}
+
+.newsBlockTg {
+  width: 316px;
+  border: 5px black solid;
+  padding: 21px;
+  margin-bottom: 35px;
+}
+
+.tgTitle {
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 19px;
+  color: #0085ff;
+  margin-bottom: 8px;
+}
+
+.tgText {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 19px;
+  color: #000000;
+  margin-bottom: 13px;
+}
+
+.tgBtn {
+  padding: 14px 38px;
+  background: #0085ff;
+  border-radius: 14px;
+}
+
+.stats div {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 160%;
+  color: #000000;
+  padding: 15px 22px;
+  background: #ffffff;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.07);
+  border-radius: 13px;
+  margin-bottom: 13px;
+}
+
+.newsBlockRight {
+}
+
+.filter {
+  display: flex;
+  justify-content: space-between;
+  padding: 24px 36px;
+}
+
+.filterOptions {
+  display: flex;
+  gap: 169px;
+}
+
+.newsList {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.newsPost {
+  display: flex;
+  gap: 53px;
+  padding: 13px 16px;
+}
+
+.postImgContainer {
+  max-width: 192px;
+  width: 100%;
+  height: 193px;
+  background-color: aqua;
+}
+
+.postContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.postHeader {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 23px;
+}
+
+.postDescription {
+  margin-bottom: 12px;
+}
+
+.postFullBtn {
+  margin-left: auto;
+  padding: 15px;
+}

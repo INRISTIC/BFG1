@@ -1,0 +1,109 @@
+.title {
+  font-weight: 700;
+  font-size: 23px;
+  line-height: 27px;
+  text-align: center;
+  color: #0066ff;
+  padding: 19px 28px;
+  background: #ffffff;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.07);
+  border-radius: 20px;
+  margin-bottom: 85px;
+}
+
+.statsBlock {
+  padding: 21px 44px;
+}
+
+.statsBlockHeader {
+  display: flex;
+  gap: 36px;
+  padding-bottom: 21px;
+  align-items: center;
+}
+
+.avatarContainer {
+  display: flex;
+  align-items: center;
+  gap: 21px;
+}
+
+.avatarContainerImg {
+  width: 62px;
+  height: 62px;
+  background-color: red;
+}
+
+.dataRegisterBlock {
+  display: flex;
+  gap: 13px;
+}
+
+
+.stats {
+  display: flex;
+  justify-content: center;
+  gap: 45px;
+  
+}
+
+.statsItem {
+  margin-bottom: 10px;
+}
+
+.statsItemBtn {
+  padding: 16px 66px;
+}
+
+.statsButtons {
+  display: flex;
+  gap: 24px;
+}
+
+.statsButton {
+  width: 120px;
+  height: 120px;
+  background: linear-gradient(180deg, #0085FF 0%, #0047FF 100%);
+  border-radius: 23px;
+  margin-bottom: 272px;
+}
+
+.TopsPlayyersHeader {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.TopsPlayersFilter {
+  display: flex;
+  gap: 10px;
+}
+
+.TopsPlayyersFilterBtn {
+  padding-top: 19px;
+  padding-bottom: 19px;
+  width: 358px;
+  margin-bottom: 25px;
+}
+
+.TopsPlayersBlockTitle {
+  display: flex;
+  justify-content: space-between;
+  padding: 18px 48px;
+}
+
+.TopsPlayersBlockTitleLeft {
+  display: flex;
+  gap: 203px;
+}
+
+.TopsPlayersBlockItem {
+  padding: 23px 51px;
+}
+
+.TopsPlayersBlockItem {
+  display: flex;
+}
+
+.TopsPlayers {
+  margin-bottom: 50px;
+}
