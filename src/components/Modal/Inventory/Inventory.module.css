@@ -1,0 +1,19 @@
+.modal {
+  padding: 40px 120px;
+}
+
+.title {
+  margin-bottom: 42px;
+}
+
+.list {
+  display: grid;
+  grid-template-columns: repeat(5, 72px);
+  gap: 17px;
+}
+
+.listItem {
+  width: 72px;
+  height: 72px;
+  background-color: red;
+}

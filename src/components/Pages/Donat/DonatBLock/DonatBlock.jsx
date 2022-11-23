@@ -1,33 +1,19 @@
-import s from "./DonatBlock.module.css"
+import s from "./DonatBlock.module.css";
+import WayDonat from "./WayDonat/WayDonat";
+import { useSelector, useDispatch } from "react-redux";
+import DonatQiwi from "./DonatQiwi/DonatQiwi";
 
 const DonatBlock = () => {
+
+  const donat = useSelector((state) => state.donat);
+
   return (
     <div className={s.donatBlock}>
       <div className={s.title}>Донат</div>
-      <div className={s.subTitle}>Выберите систему оплаты</div>
-      <div className={s.listBtn}>
-        <button className={s.bankCard}>
-          <img src="" alt="" className={s.bankCardImg}/>
-          <div className={s.bankCardText}>
-            <div className={s.bankCardTitle}>Банковская карта</div>
-            <div className={s.bankCardSubTitle}>VISA/MASTERCARD/МИР/UNIONPAY</div>
-          </div>
-        </button>
-        <button className={s.bankCard}>
-          <img src="" alt="" className={s.bankCardImg}/>
-          <div className={s.bankCardText}>
-            <div className={s.bankCardTitle}>Qiwi Wallet</div>
-            <div className={s.bankCardSubTitle}>Электронный кошелек</div>
-          </div>
-        </button>
-        <button className={s.bankCard}>
-          <img src="" alt="" className={s.bankCardImg}/>
-          <div className={s.bankCardText}>
-            <div className={s.bankCardTitle}>ЮMoney</div>
-            <div className={s.bankCardSubTitle}>Электронный кошелек</div>
-          </div>
-        </button>
-      </div>
+      {donat.donatWay && <WayDonat />}
+      {donat.donatCard.status && <DonatQiwi />}
+      {donat.donatQiwi.status && <DonatQiwi />}
+      {donat.donatMoney.status && <DonatQiwi />}
     </div>
   )
 }

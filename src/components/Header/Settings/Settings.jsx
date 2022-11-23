@@ -5,15 +5,11 @@ import SettingModal from "./SettingModal/SettingModal";
 
 const SettingsBlock = () => {
 
-  
-
   const [active, setActive] = useState(false);
 
   let modalSettings = () => {
     setActive(!active)
   }
-
-  
 
   return (
     <React.StrictMode>

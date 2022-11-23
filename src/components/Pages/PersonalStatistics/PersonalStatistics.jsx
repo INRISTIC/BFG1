@@ -1,6 +1,10 @@
 import s from "./PersonalStatistics.module.css";
+import { useSelector, useDispatch } from "react-redux";
+import { openModal } from "../../../store/slices/sliceModal";
 
 const PersonalStatistics = () => {
+  const dispatch = useDispatch();
+  
   return (
     <div>
       <div className={s.title}>Личная статистика</div>
@@ -50,27 +54,27 @@ const PersonalStatistics = () => {
         </div>
       </div>
       <div className={s.statsButtons}>
-        <div className={s.statsButton}>
+        <button className={s.statsButton} onClick={() => dispatch(openModal({modalInventory: true}))}>
           <img src="" alt="" className={s.statsButtonImg} />
-        </div>
-        <div className={s.statsButton}>
+        </button>
+        <button className={s.statsButton} onClick={() => dispatch(openModal({modalWindmill: true}))}>
           <img src="" alt="" className={s.statsButtonImg} />
-        </div>
-        <div className={s.statsButton}>
+        </button>
+        <button className={s.statsButton} onClick={() => dispatch(openModal({modalWindmill: true}))}>
           <img src="" alt="" className={s.statsButtonImg} />
-        </div>
-        <div className={s.statsButton}>
+        </button>
+        <button className={s.statsButton} onClick={() => dispatch(openModal({modalWindmill: true}))}>
           <img src="" alt="" className={s.statsButtonImg} />
-        </div>
-        <div className={s.statsButton}>
+        </button>
+        <button className={s.statsButton} onClick={() => dispatch(openModal({modalWindmill: true}))}>
           <img src="" alt="" className={s.statsButtonImg} />
-        </div>
-        <div className={s.statsButton}>
+        </button>
+        <button className={s.statsButton} onClick={() => dispatch(openModal({modalWindmill: true}))}>
           <img src="" alt="" className={s.statsButtonImg} />
-        </div>
-        <div className={s.statsButton}>
+        </button>
+        <button className={s.statsButton} onClick={() => dispatch(openModal({modalWindmill: true}))}>
           <img src="" alt="" className={s.statsButtonImg} />
-        </div>
+        </button>
       </div>
       <div className={s.TopsPlayers}>
         <div className={s.TopsPlayyersHeader}>ТОП 100 игроков</div>
