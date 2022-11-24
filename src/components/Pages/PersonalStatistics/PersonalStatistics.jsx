@@ -6,7 +6,7 @@ const PersonalStatistics = () => {
   const dispatch = useDispatch();
   
   return (
-    <div>
+    <>
       <div className={s.title}>Личная статистика</div>
       <div className={s.statsBlock}>
         <div className={s.statsBlockHeader}>
@@ -104,7 +104,7 @@ const PersonalStatistics = () => {
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 

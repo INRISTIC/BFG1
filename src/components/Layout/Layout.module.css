@@ -1,7 +1,5 @@
 .main {
   max-width: 1350px;
-  display: flex;
-  justify-content: center;
   align-self: center;
-  flex-direction: column;
+  width: 100%;
 }

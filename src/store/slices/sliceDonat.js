@@ -5,17 +5,17 @@ const initialState = {
   donatCard: {
     status: false,
     name: 'Банковская карта',
-    urlImg: './1'
+    urlImg: '../../../../../assets/images/donat-card.png'
   },
   donatQiwi: {
     status: false,
     name: 'Qiwi Wallet',
-    urlImg: './21'
+    urlImg: '../../../../../assets/images/donat-qiwi.png'
   },
   donatMoney: {
     status: false,
     name: 'ЮMoney',
-    urlImg: './3'
+    urlImg: '../../../../../assets/images/donat-money.png'
   },
 }
 

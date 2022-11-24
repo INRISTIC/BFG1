@@ -9,7 +9,7 @@ const DonatBlock = () => {
 
   return (
     <div className={s.donatBlock}>
-      <div className={s.title}>Донат</div>
+      <h1 className={s.title}>Донат</h1>
       {donat.donatWay && <WayDonat />}
       {donat.donatCard.status && <DonatQiwi />}
       {donat.donatQiwi.status && <DonatQiwi />}

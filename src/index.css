@@ -13,7 +13,8 @@ code {
 }
 
 :root[data-theme="light"] {
-  --background-color: #FFFFFF;
+  --background-modal: #FFFFFF;
+  --background-color: #F0FAFF;
   --text-color: #192028;
 }
 

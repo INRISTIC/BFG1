@@ -1,15 +1,71 @@
 .connestWithUs {
-  width: 420px;
-  border: 9px solid black;
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 20px;
+  max-width: 420px;
+  margin: 0 auto;
+  background: #ffffff;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.07);
+  border-radius: 20px;
+  padding: 36px 66px 44px;
+  margin-bottom: 40px;
+  background-image: url('../../../../assets/images/circle-blue.svg');
+  background-repeat: no-repeat;
+}
+
+.title {
+  font-family: "Rubik";
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+  color: #000000;
+  position: relative;
+  margin-bottom: 33px;
+}
+
+.title::after {
+  content: "";
+  position: absolute;
+  left: 44%;
+  bottom: -7px;
+  width: 33px;
+  height: 2px;
+  background: #000000;
+  border-radius: 100px;
 }
 
 .connestBtn {
+  background: #d3eaff;
+  border: 2px solid #0085ff;
+  border-radius: 15px;
+  padding: 16px 15px 16px;
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 15px;
+  color: #0085ff;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
 
-  padding: 10px;
-  border: 5px solid black;
+.buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.imgRobot {
+  width: 24px;
+  height: 24px;
+}
+
+.imgTg {
+  width: 29px;
+  height: 29px;
+}
+
+.imgArrow {
+  margin-left: auto;
+  width: 25px;
+  height: 25px;
 }

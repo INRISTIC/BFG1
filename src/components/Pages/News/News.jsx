@@ -2,7 +2,7 @@ import s from "./News.module.css";
 
 const News = () => {
   return (
-    <div>
+    <>
       <div className={s.newsTitle}>News</div>
       <div className={s.newsBlock}>
         <div className={s.newsBlockLeft}>
@@ -67,7 +67,7 @@ const News = () => {
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 

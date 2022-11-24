@@ -1,11 +1,3 @@
-.donatBlock {
-  max-width: 420px;
-  min-width: 330px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-bottom: 289px;
-}
 
 .title {
   margin-bottom: 77px;
@@ -31,10 +23,13 @@
 }
 
 .listBtn {
+  max-width: 420px;
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
   display: flex;
   flex-direction: column;
-  gap: 23px;
-  width: 100%;
+  gap: 10px;
 }
 
 .bankCard {
@@ -45,6 +40,11 @@
   padding: 16px 25px;
   gap: 17px;
   align-items: center;
+  border: 3px solid #ffffff00;
+}
+
+.bankCard:hover {
+  border: 3px solid #0085FF;
 }
 
 .bankCardTitle {
@@ -62,15 +62,14 @@
   opacity: 0.3;
 }
 
-.bankCardImg {
-  width: 58px;
-  height: 58px;
-  background: #FFF4EC;
-}
-
 .bankCardText {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   gap: 4px;
+}
+
+.img {
+  width: 58px;
+  height: 58px;
 }

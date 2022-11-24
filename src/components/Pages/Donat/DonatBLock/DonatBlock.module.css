@@ -1,18 +1,14 @@
 .donatBlock {
-  max-width: 420px;
-  min-width: 330px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   margin-bottom: 289px;
 }
 
 .title {
+  width: max-content;
+  margin: 0 auto;
   margin-bottom: 77px;
   font-weight: 700;
   font-size: 23px;
   line-height: 27px;
-  text-align: center;
   color: #0066ff;
   background: #ffffff;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.07);
