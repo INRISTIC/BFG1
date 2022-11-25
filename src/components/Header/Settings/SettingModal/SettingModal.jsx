@@ -10,7 +10,6 @@ import  {ReactComponent as Moon} from "../../../../assets/images/moon.svg"
 
 const SettingModal = ({ className }) => {
   const theme = useSelector((state) => state.theme);
-  console.log(theme)
   const dispatch = useDispatch();
 
   const handleChangeNight = () => {

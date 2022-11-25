@@ -1,7 +1,6 @@
 import s from "./Post.module.css";
 
 import { Rate } from 'antd';
-import { StarOutlined } from '@ant-design/icons';
 
 import { ReactComponent as Star } from "../../../../assets/images/star-gray.svg"
 

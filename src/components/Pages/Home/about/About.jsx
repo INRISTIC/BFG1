@@ -1,7 +1,8 @@
 import React from "react";
-import s from "./About.module.css";
 
 import panda from "../../../../assets/images/panda-about.png";
+
+import s from "./About.module.css";
 
 const About = () => {
   return (

@@ -1,10 +1,11 @@
-import s from "./WayDonat.module.css";
 import { useSelector, useDispatch } from "react-redux";
 import { donatWay } from "../../../../../store/slices/sliceDonat";
 
 import card from "../../../../../assets/images/donat-card.svg";
 import qiwi from "../../../../../assets/images/donat-qiwi.svg";
 import money from "../../../../../assets/images/donat-money.svg";
+
+import s from "./WayDonat.module.css";
 
 const WayDonat = () => {
   const donat = useSelector((state) => state.donat);
@@ -24,6 +25,8 @@ const WayDonat = () => {
 
     dispatch(donatWay(newObj));
   };
+
+  console.log('load')
 
   return (
     <div className={s.donatBlock}>

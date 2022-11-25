@@ -12,12 +12,12 @@ const SettingsBlock = () => {
   }
 
   return (
-    <React.StrictMode>
+    <>
       <button className={s.button} onClick={modalSettings}>
         <Setting className={s.icon} />
       </button>
       {active && <SettingModal/>}
-    </React.StrictMode>
+    </>
   )
 }
 

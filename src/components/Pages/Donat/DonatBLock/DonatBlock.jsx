@@ -1,6 +1,6 @@
 import s from "./DonatBlock.module.css";
 import WayDonat from "./WayDonat/WayDonat";
-import { useSelector, useDispatch } from "react-redux";
+import { useSelector } from "react-redux";
 import DonatQiwi from "./DonatQiwi/DonatQiwi";
 
 const DonatBlock = () => {
