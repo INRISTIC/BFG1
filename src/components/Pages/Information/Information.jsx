@@ -1,16 +1,13 @@
-// import s from "./Information.module.css";
-// import FAQBlock from "./DonatBLock/DonatBlock";
-// import RegulationsBlock from "./ConnectWithUs/ConnectWithUs";
+import s from "./Information.module.css";
+import FAQBlock from "./FAQBlock/FAQBlock";
+import RegulationsBlock from "./RegulationsBlock/RegulationsBlock";
 
 const Information = () => {
   return (
     <>
-      {/* <FAQBlock />
-      <RegulationsBlock /> */}
+      <FAQBlock />
+      <RegulationsBlock />
     </>
-    // <div>
-    //   <div className={s.title}>F.A.Q</div>
-    // </div>
   )
 }
 

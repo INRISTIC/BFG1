@@ -1,0 +1,38 @@
+.informationBlockContainer {
+
+}
+
+.title {
+  width: max-content;
+  margin: 0 auto;
+  margin-bottom: 78px;
+  font-weight: 700;
+  font-size: 23px;
+  line-height: 27px;
+  color: #0066ff;
+  background: #ffffff;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.07);
+  border-radius: 20px;
+  padding: 19px 51px;
+}
+
+.informationRow {
+  max-width: 916px;
+  width: 100%;
+
+  display: flex;
+  justify-content: space-between;
+  gap: 42px;
+
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.informationCol {
+  max-width: 437px;
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
