@@ -1,0 +1,68 @@
+.newsPost {
+  display: flex;
+  gap: 53px;
+  padding: 13px 16px;
+  background: #dbebff;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.07);
+  border-radius: 25px;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 18px;
+  color: #000000;
+}
+
+.postImgContainer {
+  max-width: 192px;
+  width: 100%;
+  height: 193px;
+  border-radius: 25px;
+}
+
+.postContainer {
+  display: flex;
+  flex-direction: column;
+  padding-top: 19px;
+}
+
+.postHeader {
+  display: flex;
+  align-items: center;
+  margin-bottom: 23px;
+}
+
+.postTitle {
+  margin-right: 36px;
+}
+
+.postData {
+  margin-left: auto;
+}
+
+.postDescription {
+  margin-bottom: 12px;
+}
+
+.postFullBtn {
+  margin-left: auto;
+  padding: 15px;
+  background: #0071FF;
+  border-radius: 14px;
+  font-size: 14px;
+  line-height: 17px;
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+}
+
+.arrow * {
+  fill: white;
+}
+
+.stars li {
+  margin-inline-end: 0px!important;
+}
+
+.stars li div div svg path{
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3)!important;
+  border-radius: 1.58108px!important;
+}
