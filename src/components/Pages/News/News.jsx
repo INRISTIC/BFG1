@@ -48,6 +48,7 @@ const News = () => {
           <div className={s.newsList}>
             <Post />
             <Post />
+            <Post />
           </div>
         </div>
       </div>

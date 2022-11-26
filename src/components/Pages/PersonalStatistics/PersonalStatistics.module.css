@@ -9,17 +9,32 @@
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.07);
   border-radius: 20px;
   margin-bottom: 85px;
+  width: max-content;
+  margin: 0 auto;
+  margin-bottom: 85px;
 }
 
 .statsBlock {
-  padding: 21px 44px;
+  max-width: 876px;
+  margin: 0 auto;
+  background: #ffffff;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.07);
+  border-radius: 25px;
+  padding-bottom: 115px;
+  margin-bottom: 50px;
 }
 
 .statsBlockHeader {
   display: flex;
+  justify-content: space-between;
   gap: 36px;
   padding-bottom: 21px;
   align-items: center;
+  background: #ffffff;
+  box-shadow: 0px 7px 13px rgba(0, 0, 0, 0.1);
+  border-radius: 25px 25px 0px 0px;
+  padding: 21px 22px 26px 44px;
+  margin-bottom: 75px;
 }
 
 .avatarContainer {
@@ -31,7 +46,24 @@
 .avatarContainerImg {
   width: 62px;
   height: 62px;
-  background-color: red;
+  background-color: black;
+  border-radius: 50%;
+}
+
+.headerTitle {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 28px;
+  color: #000000;
+}
+
+.dataRegister {
+  max-width: 149px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  color: #000000;
+  opacity: 0.5;
 }
 
 .dataRegisterBlock {
@@ -39,42 +71,113 @@
   gap: 13px;
 }
 
+.email {
+  background: #f2f2f2;
+  border-radius: 15px;
+  border: none;
+  padding: 19px 27px 18px;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 15px;
+  color: #000000;
+  opacity: 0.2;
+}
+
+.dataRegisterBtn {
+  background: #0085ff;
+  border-radius: 15px;
+  padding: 18px 29px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  text-align: center;
+  color: #ffffff;
+}
 
 .stats {
   display: flex;
   justify-content: center;
   gap: 45px;
-  
 }
 
 .statsItem {
   margin-bottom: 10px;
+  padding: 15px 24px;
+  background: #ffffff;
+  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.07);
+  border-radius: 12.3707px;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 18px;
+  color: #000000;
+  display: flex;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.statsItem span {
+  color: #0071ff;
 }
 
 .statsItemBtn {
   padding: 16px 66px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  text-align: center;
+  color: #ffffff;
+  background: #0071ff;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.07);
+  border-radius: 12.3707px;
 }
 
 .statsButtons {
   display: flex;
   gap: 24px;
+  justify-content: center;
+  margin-bottom: 272px;
 }
 
 .statsButton {
   width: 120px;
   height: 120px;
-  background: linear-gradient(180deg, #0085FF 0%, #0047FF 100%);
+  background: linear-gradient(180deg, #0085ff 0%, #0047ff 100%);
   border-radius: 23px;
-  margin-bottom: 272px;
 }
 
-.TopsPlayyersHeader {
+.TopsPlayers {
+  margin-bottom: 50px;
+  max-width: 1180px;
+  margin: 0 auto;
+  background: #ffffff;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.07);
+  border-radius: 25px;
+  padding-bottom: 55px;
+  margin-bottom: 50px;
+}
+
+.TopsPlayersHeader {
+  background: #3991ff;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.07);
+  border-radius: 25px 25px 0px 0px;
   text-align: center;
   margin-bottom: 25px;
+  padding-top: 18px;
+  padding-bottom: 19px;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+  color: #ffffff;
+  display: flex;
+  gap: 9px;
+  align-items: center;
+  justify-content: center;
 }
 
 .TopsPlayersFilter {
   display: flex;
+  justify-content: center;
   gap: 10px;
 }
 
@@ -83,12 +186,35 @@
   padding-bottom: 19px;
   width: 358px;
   margin-bottom: 25px;
+  background: #d0e5ff;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+  color: #0071ff;
+}
+
+.TopsPlayyersFilterBtn:first-child {
+  border-radius: 17px 0px 0px 17px;
+}
+
+.TopsPlayyersFilterBtn:last-child {
+  border-radius: 0px 17px 17px 0px;
 }
 
 .TopsPlayersBlockTitle {
   display: flex;
   justify-content: space-between;
   padding: 18px 48px;
+  background: #f0f7ff;
+  border-radius: 17px 17px 0px 0px;
+  width: 1095px;
+  margin: 0 auto;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  color: #0071FF;
+  margin-bottom: 25px;
 }
 
 .TopsPlayersBlockTitleLeft {
@@ -102,8 +228,14 @@
 
 .TopsPlayersBlockItem {
   display: flex;
-}
-
-.TopsPlayers {
-  margin-bottom: 50px;
+  width: 1095px;
+  margin: 0 auto;
+  background: #FFFFFF;
+  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.07);
+  border-radius: 17px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  color: #000000;
+  justify-content: space-between;
 }
