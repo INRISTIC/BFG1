@@ -1,30 +1,33 @@
 import s from "./PersonalStatistics.module.css";
 import { useSelector, useDispatch } from "react-redux";
 import { openModal } from "../../../store/slices/sliceModal";
-import profileIcon from "../../../assets/images/profile-stat.svg";
-import dollarIcon from "../../../assets/images/dollar-stat.svg";
-import bCoinsIcon from "../../../assets/images/bCoins-stat.svg";
-import bitcoinIcon from "../../../assets/images/bitcoin-stat.svg";
-import homeIcon from "../../../assets/images/home-stat.svg";
-import energuIcon from "../../../assets/images/energy-stat.svg";
-import statusIcon from "../../../assets/images/status-stat.svg";
-import homeRightIcon from "../../../assets/images/home-stat.svg";
-import homeTwoIcon from "../../../assets/images/energy-stat.svg";
-import carIcon from "../../../assets/images/status-stat.svg";
-import airplanIcon from "../../../assets/images/airplane-stat.svg";
-import medalIcon from "../../../assets/images/medal-stat.svg";
-import moreIcon from "../../../assets/images/more-square-stat.svg";
-import vertolIcon from "../../../assets/images/vertol-stat.svg";
 
-import windowIcon from "../../../assets/images/window-stat.svg";
-import serverIcon from "../../../assets/images/server-stat.svg";
-import kirkaIcon from "../../../assets/images/kirka-stat.svg";
-import houseIcon from "../../../assets/images/house-stat.svg";
-import houseTwoIcon from "../../../assets/images/house2-stat.svg";
-import svizIcon from "../../../assets/images/sviz-stat.svg";
-import vetrycIcon from "../../../assets/images/vetryc-stat.svg";
+import PlayerItem from "./PlayerItem/PlayerItem";
 
-import topsIcon from "../../../assets/images/tops-stat.svg";
+import { ReactComponent as ProfileIcon } from "../../../assets/images/profile-stat.svg";
+import { ReactComponent as DollarIcon } from "../../../assets/images/dollar-stat.svg";
+import { ReactComponent as BCoinsIcon } from "../../../assets/images/bCoins-stat.svg";
+import { ReactComponent as BitcoinIcon } from "../../../assets/images/bitcoin-stat.svg";
+import { ReactComponent as HomeIcon } from "../../../assets/images/home-stat.svg";
+import { ReactComponent as EnerguIcon } from "../../../assets/images/energy-stat.svg";
+import { ReactComponent as StatusIcon } from "../../../assets/images/status-stat.svg";
+import { ReactComponent as HomeRightIcon } from "../../../assets/images/home-stat.svg";
+import { ReactComponent as HomeTwoIcon } from "../../../assets/images/energy-stat.svg";
+import { ReactComponent as CarIcon } from "../../../assets/images/status-stat.svg";
+import { ReactComponent as AirplanIcon } from "../../../assets/images/airplane-stat.svg";
+import { ReactComponent as MedalIcon } from "../../../assets/images/medal-stat.svg";
+import { ReactComponent as MoreIcon } from "../../../assets/images/more-square-stat.svg";
+import { ReactComponent as VertolIcon } from "../../../assets/images/vertol-stat.svg";
+
+import { ReactComponent as WindowIcon } from "../../../assets/images/window-stat.svg";
+import { ReactComponent as ServerIcon } from "../../../assets/images/server-stat.svg";
+import { ReactComponent as KirkaIcon } from "../../../assets/images/kirka-stat.svg";
+import { ReactComponent as HouseIcon } from "../../../assets/images/house-stat.svg";
+import { ReactComponent as HouseTwoIcon } from "../../../assets/images/house2-stat.svg";
+import { ReactComponent as SvizIcon } from "../../../assets/images/sviz-stat.svg";
+import { ReactComponent as VetrycIcon } from "../../../assets/images/vetryc-stat.svg";
+
+import { ReactComponent as TopsIcon } from "../../../assets/images/tops-stat.svg";
 
 const PersonalStatistics = () => {
   const dispatch = useDispatch();
@@ -57,61 +60,61 @@ const PersonalStatistics = () => {
         <div className={s.stats}>
           <div className={s.statsLeft}>
             <div className={s.statsItem}>
-              <img src={profileIcon} alt="" />
+              <ProfileIcon className={s.icon}/>
               Статус: <span>Создатель</span>
             </div>
             <div className={s.statsItem}>
-              <img src={dollarIcon} alt="" />
+              <DollarIcon className={s.icon}/>
               Денег: <span>100 000$</span>
             </div>
             <div className={s.statsItem}>
-              <img src={homeIcon} alt="" />В банке: <span>100 000 000$</span>
+              <HomeIcon className={s.icon}/>В банке: <span>100 000 000$</span>
             </div>
             <div className={s.statsItem}>
-              <img src={bCoinsIcon} alt="" />
+              <BCoinsIcon className={s.icon}/>
               B-Coins: <span>142 743 ед.</span>
             </div>
             <div className={s.statsItem}>
-              <img src={bitcoinIcon} alt="" />
+              <BitcoinIcon className={s.icon}/>
               Биткоины: <span>0.000534 btc</span>
             </div>
             <div className={s.statsItem}>
-              <img src={energuIcon} alt="" />
+              <EnerguIcon className={s.icon}/>
               Энергия: <span>215 623 ед.</span>
             </div>
             <div className={s.statsItem}>
-              <img src={statusIcon} alt="" />
+              <StatusIcon className={s.icon}/>
               Рейтинг: <span>623 072 ед.</span>
             </div>
             <button className={s.statsItemBtn}>Статистика по играм</button>
           </div>
           <div className={s.statsRight}>
             <div className={s.statsItem}>
-              <img src={homeRightIcon} alt="" />
+              <HomeRightIcon className={s.icon}/>
               Имущество: <span>название</span>
             </div>
             <div className={s.statsItem}>
-              <img src={homeTwoIcon} alt="" />
+              <HomeTwoIcon className={s.icon}/>
               Дом: <span>название</span>
             </div>
             <div className={s.statsItem}>
-              <img src={carIcon} alt="" />
+              <CarIcon className={s.icon}/>
               Машина: <span>название</span>
             </div>
             <div className={s.statsItem}>
-              <img src={airplanIcon} alt="" />
+              <AirplanIcon className={s.icon}/>
               Самолёт: <span>название</span>
             </div>
             <div className={s.statsItem}>
-              <img src={vertolIcon} alt="" />
+              <VertolIcon className={s.iconVert}/>
               Вертолёт: <span>название</span>
             </div>
             <div className={s.statsItem}>
-              <img src={medalIcon} alt="" />
+              <MedalIcon className={s.icon}/>
               Опыт: <span>56 347 ед.</span>
             </div>
             <div className={s.statsItem}>
-              <img src={moreIcon} alt="" />
+              <MoreIcon className={s.icon}/>
               Всего сыграно игр: <span>50 раз</span>
             </div>
             <button className={s.statsItemBtn}>Последние действия</button>
@@ -123,48 +126,48 @@ const PersonalStatistics = () => {
           className={s.statsButton}
           onClick={() => dispatch(openModal({ modalInventory: true }))}
         >
-          <img src={vetrycIcon} alt="" className={s.statsButtonImg} />
+          <VetrycIcon className={s.statsButtonImg} />
         </button>
         <button
           className={s.statsButton}
           onClick={() => dispatch(openModal({ modalWindmill: true }))}
         >
-          <img src={windowIcon} alt="" className={s.statsButtonImg} />
+          <WindowIcon className={s.statsButtonImg} />
         </button>
         <button
           className={s.statsButton}
           onClick={() => dispatch(openModal({ modalWindmill: true }))}
         >
-          <img src={serverIcon} alt="" className={s.statsButtonImg} />
+          <ServerIcon className={s.statsButtonImg} />
         </button>
         <button
           className={s.statsButton}
           onClick={() => dispatch(openModal({ modalWindmill: true }))}
         >
-          <img src={kirkaIcon} alt="" className={s.statsButtonImg} />
+          <KirkaIcon className={s.statsButtonImg} />
         </button>
         <button
           className={s.statsButton}
           onClick={() => dispatch(openModal({ modalWindmill: true }))}
         >
-          <img src={houseIcon} alt="" className={s.statsButtonImg} />
+          <HouseIcon className={s.statsButtonImg} />
         </button>
         <button
           className={s.statsButton}
           onClick={() => dispatch(openModal({ modalWindmill: true }))}
         >
-          <img src={houseTwoIcon} alt="" className={s.statsButtonImg} />
+          <HouseTwoIcon className={s.statsButtonImg} />
         </button>
         <button
           className={s.statsButton}
           onClick={() => dispatch(openModal({ modalWindmill: true }))}
         >
-          <img src={svizIcon} alt="" className={s.statsButtonImg} />
+          <SvizIcon className={s.statsButtonImg} />
         </button>
       </div>
       <div className={s.TopsPlayers}>
         <div className={s.TopsPlayersHeader}>
-          <img src={topsIcon} alt="" />
+          <TopsIcon />
           ТОП 100 игроков
         </div>
         <div>
@@ -175,20 +178,16 @@ const PersonalStatistics = () => {
           </div>
           <div className={s.TopsPlayersBlock}>
             <div className={s.TopsPlayersBlockTitle}>
-              <div className={s.TopsPlayersBlockTitleLeft}>
                 <div>ID</div>
                 <div>Название</div>
-              </div>
               <div>Рейтинг</div>
             </div>
             <div className={s.TopsPlayersBlockList}>
-              <div className={s.TopsPlayersBlockItem}>
-                <div className={s.TopsPlayersBlockTitleLeft}>
-                  <div>123423</div>
-                  <div>ArtLab</div>
-                </div>
-                <div>243 562 434</div>
-              </div>
+              <PlayerItem />
+              <PlayerItem />
+              <PlayerItem />
+              <PlayerItem />
+              <PlayerItem />
             </div>
           </div>
         </div>

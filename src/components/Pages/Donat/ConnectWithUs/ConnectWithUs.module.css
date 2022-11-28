@@ -1,7 +1,7 @@
 .connestWithUs {
   max-width: 420px;
   margin: 0 auto;
-  background: #ffffff;
+  background: var(--background-modal);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.07);
   border-radius: 20px;
   padding: 36px 66px 44px;
@@ -16,7 +16,7 @@
   font-size: 16px;
   line-height: 19px;
   text-align: center;
-  color: #000000;
+  color: var(--text-color);
   position: relative;
   margin-bottom: 33px;
 }
@@ -28,12 +28,12 @@
   bottom: -7px;
   width: 33px;
   height: 2px;
-  background: #000000;
+  background: var(--text-color);
   border-radius: 100px;
 }
 
 .connestBtn {
-  background: #d3eaff;
+  background: var(--connect-with-us-btn);
   border: 2px solid #0085ff;
   border-radius: 15px;
   padding: 16px 15px 16px;

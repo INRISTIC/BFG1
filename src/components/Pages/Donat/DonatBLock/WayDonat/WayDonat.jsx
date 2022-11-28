@@ -1,9 +1,9 @@
 import { useSelector, useDispatch } from "react-redux";
 import { donatWay } from "../../../../../store/slices/sliceDonat";
 
-import card from "../../../../../assets/images/donat-card.svg";
-import qiwi from "../../../../../assets/images/donat-qiwi.svg";
-import money from "../../../../../assets/images/donat-money.svg";
+import { ReactComponent as Card} from "../../../../../assets/images/donat-card.svg";
+import { ReactComponent as Qiwi} from "../../../../../assets/images/donat-qiwi.svg";
+import { ReactComponent as Money} from "../../../../../assets/images/donat-money.svg";
 
 import s from "./WayDonat.module.css";
 
@@ -39,7 +39,7 @@ const WayDonat = () => {
           }
         >
           <div className={s.img}>
-            <img src={card} alt="" className={s.bankCardImg} />
+            <Card className={s.bankCardImg} />
           </div>
 
           <div className={s.bankCardText}>
@@ -56,8 +56,8 @@ const WayDonat = () => {
             onDonatWay({ ...donatQiwi, status: true }, "donatQiwi")
           }
         >
-          <div>
-            <img src={qiwi} alt="" className={s.bankCardImg} />
+          <div className={s.img}>
+            <Qiwi className={s.bankQiwiImg}/>
           </div>
           <div className={s.bankCardText}>
             <div className={s.bankCardTitle}>Qiwi Wallet</div>
@@ -71,8 +71,8 @@ const WayDonat = () => {
             onDonatWay({ ...donatMoney, status: true }, "donatMoney")
           }
         >
-          <div>
-            <img src={money} alt="" className={s.bankCardImg} />
+          <div className={s.img}>
+            <Money className={s.bankMoneyImg}/>
           </div>
 
           <div className={s.bankCardText}>

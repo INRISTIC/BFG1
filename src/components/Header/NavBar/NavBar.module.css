@@ -1,6 +1,7 @@
 nav {
   display: flex;
-  gap: 37px;
+  gap: 21px;
+  align-items: center;
 }
 
 nav a {
@@ -10,9 +11,20 @@ nav a {
   font-weight: 600;
   font-size: 15px;
   line-height: 18px;
+  padding: 10px 16px;
   color: var(--text-color);
 }
 
-.active {
+.disNone {
+  display: none;
+}
 
+.disBlock {
+  display: block;
+}
+
+.active {
+  background-color: rgba(0, 113, 255, 0.2);
+  border-radius: 19.5px;
+  padding: 10px 16px;
 }

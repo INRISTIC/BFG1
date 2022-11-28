@@ -16,7 +16,7 @@ const Post = () => {
       <div className={s.postContainer}>
         <div className={s.postHeader}>
           <div className={s.postTitle}>Название новости</div>
-          <Rate character={<Star />} style={{ fontSize: 23.4, marginInlineEnd: 0}} className={s.stars}/>
+          <Rate character={<Star className={s.star}/>} style={{ fontSize: 23.4, marginInlineEnd: 0}} className={s.stars}/>
           <div className={s.postData}>14.11.2022</div>
         </div>
         <div className={s.postDescription}>

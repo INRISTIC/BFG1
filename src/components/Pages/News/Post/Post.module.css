@@ -2,13 +2,13 @@
   display: flex;
   gap: 53px;
   padding: 13px 16px;
-  background: #dbebff;
+  background: var(--background-post);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.07);
   border-radius: 25px;
   font-weight: 500;
   font-size: 15px;
   line-height: 18px;
-  color: #000000;
+  color: var(--text-color);
 }
 
 .postImgContainer {
@@ -61,3 +61,5 @@
 .stars li {
   margin-inline-end: 0px!important;
 }
+
+

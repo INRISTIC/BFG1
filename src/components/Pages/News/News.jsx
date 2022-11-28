@@ -3,7 +3,7 @@ import s from "./News.module.css";
 import Post from "./Post/Post";
 
 import sort from "../../../assets/images/sort-icon.svg";
-import arrow from "../../../assets/images/arrow-bottom.svg";
+import { ReactComponent as Arrow} from "../../../assets/images/arrow-bottom.svg";
 
 const News = () => {
   return (
@@ -37,15 +37,18 @@ const News = () => {
             <div className={s.filterOptions}>
               <div className={s.sortBtns}>
               Рейтинг
-              <img src={arrow} alt="" />
+              <Arrow className={s.arrow}/>
               </div>
               <div className={s.sortBtns}>
               Дата
-              <img src={arrow} alt="" />
+              <Arrow className={s.arrow}/>
               </div>
             </div>
           </div>
           <div className={s.newsList}>
+            <Post />
+            <Post />
+            <Post />
             <Post />
             <Post />
             <Post />

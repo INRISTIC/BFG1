@@ -1,10 +1,12 @@
-import s from "./DonatQiwi.module.css";
-
 import { useSelector, useDispatch } from "react-redux";
 import { donatWay } from "../../../../../store/slices/sliceDonat";
-import card from "../../../../../assets/images/donat-card.svg";
-import qiwi from "../../../../../assets/images/donat-qiwi.svg";
-import money from "../../../../../assets/images/donat-money.svg";
+
+import { ReactComponent as Arrow } from "../../../../../assets/images/arrow-left.svg";
+import { ReactComponent as Card} from "../../../../../assets/images/donat-card.svg";
+import { ReactComponent as Qiwi} from "../../../../../assets/images/donat-qiwi.svg";
+import { ReactComponent as Money} from "../../../../../assets/images/donat-money.svg";
+
+import s from "./DonatQiwi.module.css";
 
 const DonatQiwi = () => {
   const donat = useSelector((state) => state.donat);
@@ -30,17 +32,19 @@ const DonatQiwi = () => {
       
       <div className={s.subTitle}>Заполните все поля</div>
       <div className={s.bankCard}>
-      <button onClick={onBack} className={s.back}></button>
+      <button onClick={onBack} className={s.back}>
+        <Arrow className={s.arrowLeft} />
+      </button>
         <div className={s.headerBlock}>
           <div className={s.img}>
             {donatCard.status && (
-              <img src={card} alt="" className={s.bankCardImg} />
+              <Card className={s.bankCardImg} />
             )}
             {donatQiwi.status && (
-              <img src={qiwi} alt="" className={s.bankCardImg} />
+              <Qiwi className={s.bankQiwiImg}/>
             )}
             {donatMoney.status && (
-              <img src={money} alt="" className={s.bankCardImg} />
+              <Money className={s.bankMoneyImg}/>
             )}
           </div>
 

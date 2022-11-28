@@ -5,7 +5,7 @@
   text-align: center;
   color: #0066ff;
   padding: 19px 28px;
-  background: #ffffff;
+  background: var(--background-modal-settings);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.07);
   border-radius: 20px;
   margin-bottom: 85px;
@@ -17,7 +17,7 @@
 .statsBlock {
   max-width: 876px;
   margin: 0 auto;
-  background: #ffffff;
+  background: var(--background-modal-settings);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.07);
   border-radius: 25px;
   padding-bottom: 115px;
@@ -30,7 +30,7 @@
   gap: 36px;
   padding-bottom: 21px;
   align-items: center;
-  background: #ffffff;
+  background: var(--stat-header);
   box-shadow: 0px 7px 13px rgba(0, 0, 0, 0.1);
   border-radius: 25px 25px 0px 0px;
   padding: 21px 22px 26px 44px;
@@ -48,13 +48,14 @@
   height: 62px;
   background-color: black;
   border-radius: 50%;
+  border: 2.54795px solid #4F9DFF;
 }
 
 .headerTitle {
   font-weight: 600;
   font-size: 24px;
   line-height: 28px;
-  color: #000000;
+  color: var(--text-color);
 }
 
 .dataRegister {
@@ -62,7 +63,7 @@
   font-weight: 500;
   font-size: 14px;
   line-height: 17px;
-  color: #000000;
+  color: var(--text-color);
   opacity: 0.5;
 }
 
@@ -72,15 +73,14 @@
 }
 
 .email {
-  background: #f2f2f2;
+  background: var(--pay-input);
   border-radius: 15px;
   border: none;
   padding: 19px 27px 18px;
   font-weight: 500;
   font-size: 13px;
   line-height: 15px;
-  color: #000000;
-  opacity: 0.2;
+  color: var(--stats-color);
 }
 
 .dataRegisterBtn {
@@ -103,13 +103,13 @@
 .statsItem {
   margin-bottom: 10px;
   padding: 15px 24px;
-  background: #ffffff;
+  background: var(--stats-item);
   box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.07);
   border-radius: 12.3707px;
   font-weight: 500;
   font-size: 15px;
   line-height: 18px;
-  color: #000000;
+  color: var(--text-color);
   display: flex;
   display: flex;
   gap: 8px;
@@ -150,7 +150,7 @@
   margin-bottom: 50px;
   max-width: 1180px;
   margin: 0 auto;
-  background: #ffffff;
+  background: var(--background-modal-settings);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.07);
   border-radius: 25px;
   padding-bottom: 55px;
@@ -186,7 +186,7 @@
   padding-bottom: 19px;
   width: 358px;
   margin-bottom: 25px;
-  background: #d0e5ff;
+  background: var(--top-filter-back);
   font-weight: 500;
   font-size: 16px;
   line-height: 19px;
@@ -203,10 +203,8 @@
 }
 
 .TopsPlayersBlockTitle {
-  display: flex;
-  justify-content: space-between;
   padding: 18px 48px;
-  background: #f0f7ff;
+  background: var(--top-header-table);
   border-radius: 17px 17px 0px 0px;
   width: 1095px;
   margin: 0 auto;
@@ -215,27 +213,21 @@
   line-height: 19px;
   color: #0071FF;
   margin-bottom: 25px;
+  display: grid;
+  align-items: center;
+  grid-template-columns: 2fr 4fr 1fr;
 }
 
-.TopsPlayersBlockTitleLeft {
+.TopsPlayersBlockList {
   display: flex;
-  gap: 203px;
+  flex-direction: column;
+  gap: 13px;
 }
 
-.TopsPlayersBlockItem {
-  padding: 23px 51px;
+.icon * {
+  stroke: var(--icon-fill);
 }
 
-.TopsPlayersBlockItem {
-  display: flex;
-  width: 1095px;
-  margin: 0 auto;
-  background: #FFFFFF;
-  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.07);
-  border-radius: 17px;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 19px;
-  color: #000000;
-  justify-content: space-between;
+.iconVert path {
+  fill: var(--icon-fill);
 }

@@ -8,7 +8,6 @@ const About = () => {
   return (
     <div className={s.about}>
       <div className={s.title}>О нас</div>
-
       <div className={s.block}>
         <div className={s.blockLeft}>
           <p className={s.blockLeftText}>

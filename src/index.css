@@ -21,13 +21,69 @@ body {
 :root[data-theme="light"] {
   --background-modal: #FFFFFF;
   --background-color: #F0FAFF;
+  --background-modal-settings:#FFFFFF;
+  --background-modal-settings-btn: #EDEDED;
+  --background-post: #dbebff;
   --text-color: #192028;
+
+  --card-back: #ECF4FF;
+  --card-line: #292D32;
+  --qiwi-back: #FFF4EC;
+  --money-back: #F9ECFF;
+
+  --pay-input: #F2F2F2;
+  --pay-color: rgba(194, 194, 194, 0.2);
+
+  --connect-with-us-btn: #D3EAFF;
+
+  --stat-header: #ffffff;
+
+  --stats-item: #FFFFFF;
+  --stats-color: rgba(0, 0, 0, 0.2);
+
+  --icon-fill: #292D32;
+
+  --top-filter-back: #D0E5FF;
+
+  --top-header-table: #F0F7FF;
+  
+  --top-header-item: white;
 }
 
 :root[data-theme="dark"] {
   --background-color: #192028;
   --text-color: #FFFFFF;
   --background-modal:#232C37;
+  --background-modal-settings:#2A3441;
+  --background-modal-settings-btn:#364251;
+  --background-post: #243A54;
+
+  --card-back: #2E3744;
+  --card-line: #FFFFFF;
+  --qiwi-back: #463427;
+  --money-back: #3F274A;
+
+  --pay-input: #2A3440;
+  --pay-color: rgba(85, 93, 102, 0.2);
+
+  --connect-with-us-btn: #1C3554;
+
+  --stat-header: #29394D;
+
+  --stats-item: #223E62;
+  --stats-color: rgba(255, 255, 255, 0.2);
+
+  --icon-fill: white;
+  
+  --top-filter-back: #20354F;
+  
+  --top-header-table: #263F5F;
+
+  --top-header-item: #223E62;
+}
+
+li.ant-rate-star-zero svg {
+  fill: #BED1EA!important;
 }
 
 body {

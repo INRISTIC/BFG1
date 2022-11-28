@@ -1,9 +1,10 @@
 import React from "react";
-import s from "./Description.module.css";
 
 import panda1 from '../../../../assets/images/panda-bottom1.png'
 import panda2 from '../../../../assets/images/panda-bottom2.png'
 import panda3 from '../../../../assets/images/panda-bottom3.png'
+
+import s from "./Description.module.css";
 
 const Description = () => {
   return (
