@@ -5,6 +5,16 @@ button {
   cursor: pointer;
 }
 
+@keyframes float {
+  0%   {opacity: 0;}
+  100% {opacity: 1;}
+}
+
+@keyframes damping {
+  0%   {opacity: 1;}
+  100% {opacity: 0;}
+}
+
 .settingsModal {
   position: absolute;
   padding: 20px;
@@ -14,6 +24,13 @@ button {
   box-shadow: 0px 5px 50px rgba(0, 0, 0, 0.05);
   border-radius: 20px 0px 20px 20px;
   transition:  0.3s;
+  animation-name: float;
+  animation-duration: 1s;
+}
+
+.unvis {
+  animation-name: damping;
+  animation-duration: 1s;
 }
 
 .translate {
