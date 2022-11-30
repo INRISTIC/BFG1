@@ -13,6 +13,7 @@ button {
   background: var(--background-modal-settings);
   box-shadow: 0px 5px 50px rgba(0, 0, 0, 0.05);
   border-radius: 20px 0px 20px 20px;
+  transition:  0.3s;
 }
 
 .translate {
@@ -31,6 +32,7 @@ button {
   text-align: center;
   color: var(--text-color);
   background: var(--background-modal-settings-btn);
+  transition:  0.3s;
 }
 
 .translate button:nth-child(1) {
@@ -65,12 +67,14 @@ button {
   background: var(--background-modal-settings-btn);
   border-radius: 10px 0px 0px 10px;
   padding: 9px 30px 8px;
+  transition:  0.3s;
 }
 
 .theme button:last-child {
   background: var(--background-modal-settings-btn);
   border-radius: 0px 10px 10px 0px;
   padding: 9px 30px 8px;
+  transition:  0.3s;
 }
 
 .theme button.active {
@@ -88,4 +92,5 @@ button {
 .dark {
   color: var(--text-color);
   background-color: var(--background-color);
+  transition:  0.3s;
 }

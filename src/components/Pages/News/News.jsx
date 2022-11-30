@@ -1,11 +1,23 @@
-import s from "./News.module.css";
+import { useState } from "react";
 
 import Post from "./Post/Post";
 
-import sort from "../../../assets/images/sort-icon.svg";
 import { ReactComponent as Arrow} from "../../../assets/images/arrow-bottom.svg";
 
+import sortIcon from "../../../assets/images/sort-icon.svg";
+
+import s from "./News.module.css";
+
 const News = () => {
+
+  const [sort, setSort] = useState({rating: false, time: false})
+
+  const btnActive = (arg) => {
+    setSort({...sort, [arg]: !sort[arg]})
+  }
+
+  console.log(sort)
+
   return (
     <>
       <h1 className={s.newsTitle}>News</h1>
@@ -31,18 +43,18 @@ const News = () => {
         <div className={s.newsBlockRight}>
           <div className={s.filter}>
             <div className={s.filterBtn}>
-              <img src={sort} alt="" />
+              <img src={sortIcon} alt="" />
               Сортировка
             </div>
             <div className={s.filterOptions}>
-              <div className={s.sortBtns}>
+              <button className={sort.rating ? s.sortBtns1 + ' ' + s.sortBtnsActive : s.sortBtns1} onClick={() => btnActive('rating')}>
               Рейтинг
               <Arrow className={s.arrow}/>
-              </div>
-              <div className={s.sortBtns}>
+              </button>
+              <button className={sort.time ? s.sortBtns2 + ' ' + s.sortBtnsActive : s.sortBtns2} onClick={() => btnActive('time')}>
               Дата
               <Arrow className={s.arrow}/>
-              </div>
+              </button>
             </div>
           </div>
           <div className={s.newsList}>

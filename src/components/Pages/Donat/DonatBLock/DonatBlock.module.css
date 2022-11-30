@@ -1,3 +1,8 @@
+@keyframes float {
+  0%   {opacity: 0;}
+  100% {opacity: 1;}
+}
+
 .donatBlock {
   margin-bottom: 289px;
 }
@@ -14,6 +19,9 @@
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.07);
   border-radius: 20px;
   padding: 19px 51px;
+  transition:  0.3s;
+  animation-name: float;
+  animation-duration: 1s;
 }
 
 .subTitle {
@@ -41,6 +49,7 @@
   padding: 16px 25px;
   gap: 17px;
   align-items: center;
+  
 }
 
 .bankCardTitle {

@@ -1,3 +1,8 @@
+@keyframes float {
+  0%   {opacity: 0;}
+  100% {opacity: 1;}
+}
+
 .title {
   font-weight: 700;
   font-size: 23px;
@@ -5,13 +10,15 @@
   text-align: center;
   color: #0066ff;
   padding: 19px 28px;
-  background: var(--background-modal-settings);
+  background: var(--background-modal);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.07);
   border-radius: 20px;
   margin-bottom: 85px;
   width: max-content;
   margin: 0 auto;
   margin-bottom: 85px;
+  animation-name: float;
+  animation-duration: 1s;
 }
 
 .statsBlock {
@@ -22,6 +29,8 @@
   border-radius: 25px;
   padding-bottom: 115px;
   margin-bottom: 50px;
+  animation-name: float;
+  animation-duration: 1s;
 }
 
 .statsBlockHeader {
@@ -48,7 +57,7 @@
   height: 62px;
   background-color: black;
   border-radius: 50%;
-  border: 2.54795px solid #4F9DFF;
+  border: 2.54795px solid #4f9dff;
 }
 
 .headerTitle {
@@ -56,6 +65,7 @@
   font-size: 24px;
   line-height: 28px;
   color: var(--text-color);
+  transition:  0.3s;
 }
 
 .dataRegister {
@@ -64,6 +74,7 @@
   font-size: 14px;
   line-height: 17px;
   color: var(--text-color);
+  transition:  0.3s;
   opacity: 0.5;
 }
 
@@ -81,6 +92,7 @@
   font-size: 13px;
   line-height: 15px;
   color: var(--stats-color);
+  transition:  0.3s;
 }
 
 .dataRegisterBtn {
@@ -114,6 +126,7 @@
   display: flex;
   gap: 8px;
   align-items: center;
+  transition:  0.3s;
 }
 
 .statsItem span {
@@ -149,12 +162,14 @@
 .TopsPlayers {
   margin-bottom: 50px;
   max-width: 1180px;
+  max-height: 1004px;
   margin: 0 auto;
   background: var(--background-modal-settings);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.07);
   border-radius: 25px;
   padding-bottom: 55px;
   margin-bottom: 50px;
+  transition:  0.3s;
 }
 
 .TopsPlayersHeader {
@@ -192,14 +207,52 @@
   line-height: 19px;
   text-align: center;
   color: #0071ff;
+  transition:  0.3s;
 }
 
-.TopsPlayyersFilterBtn:first-child {
+.ActiveTopsPlayyersFilterBtn {
+  padding-top: 19px;
+  padding-bottom: 19px;
+  width: 358px;
+  margin-bottom: 25px;
+  background: #0071FF;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+  color: #ffffff;
+}
+
+.TopsPlayyersFilterBtn:first-child,
+.ActiveTopsPlayyersFilterBtn:first-child {
   border-radius: 17px 0px 0px 17px;
 }
 
-.TopsPlayyersFilterBtn:last-child {
+.TopsPlayyersFilterBtn:last-child,
+.ActiveTopsPlayyersFilterBtn:last-child {
   border-radius: 0px 17px 17px 0px;
+}
+
+.TopsPlayersBlock {
+  max-height: 770px;
+  overflow-y: scroll;
+}
+
+.TopsPlayersBlock::-webkit-scrollbar {
+  scroll-padding-top: 30px;
+  width: 6px;
+  background-color: transparent;
+}
+
+.TopsPlayersBlock::-webkit-scrollbar-thumb {
+  background: rgba(0, 133, 255, 0.2);
+  border-radius: 100px;
+}
+
+.active::-webkit-scrollbar-thumb {
+  opacity: 0;
+  transition: 1s;
+  background: rgba(0, 133, 255, 1);
 }
 
 .TopsPlayersBlockTitle {
@@ -211,11 +264,12 @@
   font-weight: 500;
   font-size: 16px;
   line-height: 19px;
-  color: #0071FF;
+  color: #0071ff;
   margin-bottom: 25px;
   display: grid;
   align-items: center;
   grid-template-columns: 2fr 4fr 1fr;
+  transition:  0.3s;
 }
 
 .TopsPlayersBlockList {
@@ -226,8 +280,10 @@
 
 .icon * {
   stroke: var(--icon-fill);
+  transition:  0.3s;
 }
 
 .iconVert path {
   fill: var(--icon-fill);
+  transition:  0.3s;
 }

@@ -2,6 +2,11 @@
   box-sizing: border-box;
 }
 
+@keyframes float {
+  0%   {opacity: 0;}
+  100% {opacity: 1;}
+}
+
 body {
   margin: 0;
   -webkit-font-smoothing: antialiased;
@@ -19,6 +24,7 @@ body {
 }
 
 :root[data-theme="light"] {
+  transition:  0.2s;
   --background-modal: #FFFFFF;
   --background-color: #F0FAFF;
   --background-modal-settings:#FFFFFF;
@@ -51,6 +57,7 @@ body {
 }
 
 :root[data-theme="dark"] {
+  transition:  0.2s;
   --background-color: #192028;
   --text-color: #FFFFFF;
   --background-modal:#232C37;
@@ -89,5 +96,6 @@ li.ant-rate-star-zero svg {
 body {
   background: var(--background-color);
   color: var(--text-color);
+  transition:  0.3s;
 }
 

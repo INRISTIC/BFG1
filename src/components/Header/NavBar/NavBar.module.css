@@ -4,7 +4,7 @@ nav {
   align-items: center;
 }
 
-nav a {
+.nav {
   text-decoration: none;
   font-family: 'Rubik';
   font-style: normal;
@@ -13,6 +13,8 @@ nav a {
   line-height: 18px;
   padding: 10px 16px;
   color: var(--text-color);
+  border-radius: 19.5px;
+  transition: 0.3s;
 }
 
 .disNone {

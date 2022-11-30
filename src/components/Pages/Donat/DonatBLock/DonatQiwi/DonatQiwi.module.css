@@ -1,3 +1,13 @@
+@keyframes float {
+  0%   {opacity: 0;}
+  100% {opacity: 1;}
+}
+
+@keyframes textFLoat {
+  0%   {opacity: 0;}
+  100% {opacity: 0.5;}
+}
+
 .donatBlock {
   max-width: 420px;
   margin: 0 auto;
@@ -11,6 +21,9 @@
   color: var(--text-color);
   opacity: 0.5;
   margin-bottom: 23px;
+  transition:  0.3s;
+  animation-name: textFLoat;
+  animation-duration: 1s;
 }
 
 .headerBlock {
@@ -37,6 +50,7 @@
   font-size: 16px;
   line-height: 19px;
   color: var(--text-color);
+  transition:  0.3s;
 }
 
 .bankCard {
@@ -49,6 +63,9 @@
   padding: 16px 66px 53px;
   gap: 17px;
   position: relative;
+  transition:  0.3s;
+  animation-name: float;
+  animation-duration: 1s;
 }
 
 .inputList {
@@ -65,6 +82,7 @@
   line-height: 15px;
   color: var(--pay-color);
   width: 100%;
+  transition:  0.3s;
 }
 
 .input:not(:last-child) {
@@ -97,23 +115,29 @@
   position: absolute;
   left: -17px;
   top: 25px;
+  transition:  0.3s;
 }
 
 .bankCardImg rect {
   fill: var(--card-back);
+  transition:  0.3s;
 }
 .bankCardImg path {
   stroke: var(--card-line);
+  transition:  0.3s;
 }
 
 .bankQiwiImg rect {
   fill: var(--qiwi-back);
+  transition:  0.3s;
 }
 
 .bankMoneyImg rect {
   fill: var(--money-back);
+  transition:  0.3s;
 }
 
 .arrowLeft path {
   stroke: var(--text-color);
+  transition:  0.3s;
 }

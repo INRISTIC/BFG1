@@ -1,3 +1,8 @@
+@keyframes float {
+  0%   {opacity: 0;}
+  100% {opacity: 1;}
+}
+
 .newsTitle {
   width: max-content;
   background: var(--background-modal);
@@ -12,6 +17,9 @@
   text-align: center;
   color: #0066ff;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.07);
+  transition:  0.3s;
+  animation-name: float;
+  animation-duration: 1s;
 }
 
 .newsBlock {
@@ -19,6 +27,8 @@
   justify-content: center;
   gap: 25px;
   margin-bottom: 40px;
+  animation-name: float;
+  animation-duration: 1s;
 }
 
 .newsBlockLeft {
@@ -36,6 +46,7 @@
   background-image: url("../../../assets/images/news-tg-icon.png"), url("../../../assets/images/panda-news-tgBlock.png");
   background-repeat: no-repeat, no-repeat;
   background-position: left -4px bottom, right bottom -7px;
+  transition:  0.3s;
 }
 
 .tgTitle {
@@ -54,10 +65,12 @@
   line-height: 19px;
   color: var(--text-color);
   margin-bottom: 13px;
+  transition:  0.3s;
 }
 
 .arrow * {
   fill: var(--text-color);
+  transition:  0.3s;
 }
 
 .tgBtn {
@@ -81,6 +94,7 @@
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.07);
   border-radius: 13px;
   margin-bottom: 13px;
+  transition:  0.3s;
 }
 
 .stats div:not(:last-child) span {
@@ -108,6 +122,7 @@
   font-size: 15px;
   line-height: 18px;
   margin-bottom: 30px;
+  transition:  0.3s;
 }
 
 .filterBtn {
@@ -120,9 +135,23 @@
   color: #8f8f8f;
 }
 
-.sortBtns {
+.sortBtns1, .sortBtns2 {
   display: flex;
+  background: transparent;
+  color: var(--text-color);
   align-items: center;
+  transition:  0.2s;
+  transition:  0.3s;
+}
+
+.sortBtns1 .arrow, .sortBtns2 .arrow {
+  transform: rotate(0deg) translateY(-2px);
+  transition:  0.2s;
+}
+
+.sortBtnsActive .arrow{
+  transform: rotate(180deg) translateY(2px);
+  transition: 0.2s;
 }
 
 .filterOptions {
@@ -140,6 +169,7 @@
   box-shadow: 0px 3.14286px 3.14286px rgba(0, 0, 0, 0.07);
   border-radius: 25px;
   overflow-y: scroll;
+  transition:  0.3s;
 }
 
 .newsList::-webkit-scrollbar {
@@ -161,14 +191,14 @@
   content: '';
   background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, var(--background-modal) 100%);
   border-radius: 25px;
-  width: 839px;
+  width: 833px;
   height: 209px;
   display: block;
   position: absolute;
   bottom: 0;
   left: 0;
   pointer-events: none;
-  border-radius: 0;
+  transition:  0.3s;
 }
 
 .newsPost {

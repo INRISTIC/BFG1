@@ -1,4 +1,14 @@
 
+@keyframes float {
+  0%   {opacity: 0;}
+  100% {opacity: 1;}
+}
+
+@keyframes textFLoat {
+  0%   {opacity: 0;}
+  100% {opacity: 0.5;}
+}
+
 .title {
   margin-bottom: 77px;
   font-weight: 700;
@@ -10,6 +20,9 @@
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.07);
   border-radius: 20px;
   padding: 19px 51px;
+  transition:  0.3s;
+  animation-name: float;
+  animation-duration: 1s;
 }
 
 .subTitle {
@@ -20,6 +33,9 @@
   color: var(--text-color);
   opacity: 0.5;
   margin-bottom: 23px;
+  transition:  0.3s;
+  animation-name: textFLoat;
+  animation-duration: 1s;
 }
 
 .listBtn {
@@ -30,6 +46,8 @@
   display: flex;
   flex-direction: column;
   gap: 10px;
+  animation-name: float;
+  animation-duration: 1s;
 }
 
 .bankCard {
@@ -41,6 +59,7 @@
   gap: 17px;
   align-items: center;
   border: 3px solid #ffffff00;
+  transition:  0.3s;
 }
 
 .bankCard:hover {
@@ -52,6 +71,7 @@
   font-size: 16px;
   line-height: 19px;
   color: var(--text-color);
+  transition:  0.3s;
 }
 
 .bankCardSubTitle {
@@ -60,6 +80,7 @@
   line-height: 15px;
   color: var(--text-color);
   opacity: 0.3;
+  transition:  0.3s;
 }
 
 .bankCardText {
@@ -76,15 +97,19 @@
 
 .bankCardImg rect {
   fill: var(--card-back);
+  transition:  0.3s;
 }
 .bankCardImg path {
   stroke: var(--card-line);
+  transition:  0.3s;
 }
 
 .bankQiwiImg rect {
   fill: var(--qiwi-back);
+  transition:  0.3s;
 }
 
 .bankMoneyImg rect {
   fill: var(--money-back);
+  transition:  0.3s;
 }

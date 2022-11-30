@@ -7,4 +7,5 @@
 
 .icon * {
   fill: var(--text-color);
+  transition:  0.3s;
 }
