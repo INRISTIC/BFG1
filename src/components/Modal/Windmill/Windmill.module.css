@@ -1,7 +1,66 @@
 .modal {
-  padding: 40px 120px;
+  padding: 42px 120px 65px;
+  background: var(--background-modal);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.07);
+  border-radius: 25px;
 }
 
 .title {
   margin-bottom: 42px;
+  position: relative;
+  display: flex;
 }
+
+.title span {
+  display: block;
+  z-index: 1;
+  background: #0071FF;
+  border-radius: 15px;
+  padding: 18px 20px;
+  width: max-content;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+
+.title::after {
+  position: absolute;
+  content: "";
+  width: 86px;
+  height: 49.79px;
+  border-radius: 13.5789px;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 6px);
+  background: var(--title-acsec1);
+}
+
+.title::before {
+  position: absolute;
+  content: "";
+  width: 72px;
+  height: 50px;
+  border-radius: 13.5789px;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 13px);
+  background: var(--title-acsec2);
+}
+
+.listItem {
+  background: var(--stats-item);
+  padding: 16px 18px;
+  width: 280px;
+  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.07);
+  border-radius: 12.3707px;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 18px;
+  color: var(--text-color);
+}
+
+.listItem:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+

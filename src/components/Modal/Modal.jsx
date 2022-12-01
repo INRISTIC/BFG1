@@ -20,6 +20,7 @@ const Modal = () => {
       <div className={s.modalContent} onClick={(e) => e.stopPropagation()}>
         {modalWindmill && <Windmill />}
         {modalInventory && <Inventory />}
+        
       </div>
     </div>
   );

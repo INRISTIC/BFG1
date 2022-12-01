@@ -1,4 +1,4 @@
-import s from "./PersonalStatistics.module.css";
+
 import { useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { openModal } from "../../../store/slices/sliceModal";
@@ -21,15 +21,9 @@ import { ReactComponent as MedalIcon } from "../../../assets/images/medal-stat.s
 import { ReactComponent as MoreIcon } from "../../../assets/images/more-square-stat.svg";
 import { ReactComponent as VertolIcon } from "../../../assets/images/vertol-stat.svg";
 
-import { ReactComponent as WindowIcon } from "../../../assets/images/window-stat.svg";
-import { ReactComponent as ServerIcon } from "../../../assets/images/server-stat.svg";
-import { ReactComponent as KirkaIcon } from "../../../assets/images/kirka-stat.svg";
-import { ReactComponent as HouseIcon } from "../../../assets/images/house-stat.svg";
-import { ReactComponent as HouseTwoIcon } from "../../../assets/images/house2-stat.svg";
-import { ReactComponent as SvizIcon } from "../../../assets/images/sviz-stat.svg";
-import { ReactComponent as VetrycIcon } from "../../../assets/images/vetryc-stat.svg";
-
 import { ReactComponent as TopsIcon } from "../../../assets/images/tops-stat.svg";
+
+import s from "./PersonalStatistics.module.css";
 
 const PersonalStatistics = () => {
   const statsBtn = useSelector((state) => state.stats);
@@ -143,46 +137,48 @@ const PersonalStatistics = () => {
       </div>
       <div className={s.statsButtons}>
         <button
+          data-text = "Ветряк"
+          className={s.statsButton}
+          onClick={() => dispatch(openModal({ modalWindmill: true }))}
+        >
+        </button>
+        <button
+          data-text = "Склад"
           className={s.statsButton}
           onClick={() => dispatch(openModal({ modalInventory: true }))}
         >
-          <VetrycIcon className={s.statsButtonImg} />
         </button>
         <button
+          data-text = "Склад"
           className={s.statsButton}
-          onClick={() => dispatch(openModal({ modalWindmill: true }))}
+          onClick={() => dispatch(openModal({ modalInventory: true }))}
         >
-          <WindowIcon className={s.statsButtonImg} />
+        </button>
+
+        <button
+          data-text = "Склад"
+          className={s.statsButton}
+          onClick={() => dispatch(openModal({ modalInventory: true }))}
+        >
+        </button>
+        
+        <button
+          data-text = "Склад"
+          className={s.statsButton}
+          onClick={() => dispatch(openModal({ modalInventory: true }))}
+        >
         </button>
         <button
+          data-text = "Склад"
           className={s.statsButton}
-          onClick={() => dispatch(openModal({ modalWindmill: true }))}
+          onClick={() => dispatch(openModal({ modalInventory: true }))}
         >
-          <ServerIcon className={s.statsButtonImg} />
         </button>
         <button
+          data-text = "Склад"
           className={s.statsButton}
-          onClick={() => dispatch(openModal({ modalWindmill: true }))}
+          onClick={() => dispatch(openModal({ modalInventory: true }))}
         >
-          <KirkaIcon className={s.statsButtonImg} />
-        </button>
-        <button
-          className={s.statsButton}
-          onClick={() => dispatch(openModal({ modalWindmill: true }))}
-        >
-          <HouseIcon className={s.statsButtonImg} />
-        </button>
-        <button
-          className={s.statsButton}
-          onClick={() => dispatch(openModal({ modalWindmill: true }))}
-        >
-          <HouseTwoIcon className={s.statsButtonImg} />
-        </button>
-        <button
-          className={s.statsButton}
-          onClick={() => dispatch(openModal({ modalWindmill: true }))}
-        >
-          <SvizIcon className={s.statsButtonImg} />
         </button>
       </div>
       <div className={s.TopsPlayers}>

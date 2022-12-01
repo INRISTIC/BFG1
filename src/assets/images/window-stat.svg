@@ -1,14 +1,7 @@
-<svg width="118" height="120" viewBox="0 0 118 120" fill="none" xmlns="http://www.w3.org/2000/svg">
-<rect width="118" height="120" rx="23" fill="url(#paint0_linear_365_1103)"/>
-<path d="M45.2755 71.25H72.703C76.978 71.25 79.228 69 79.228 64.725V37.5H38.728V64.725C38.7505 69 41.0005 71.25 45.2755 71.25Z" stroke="white" stroke-width="3.8125" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M36.5 37.5H81.5" stroke="white" stroke-width="3.8125" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M50 82.5L59 78V71.25" stroke="white" stroke-width="3.8125" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M68 82.5L59 78" stroke="white" stroke-width="3.8125" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M48.875 57.75L55.9625 51.8325C56.525 51.36 57.2675 51.495 57.65 52.125L60.35 56.625C60.7325 57.255 61.475 57.3675 62.0375 56.9175L69.125 51" stroke="white" stroke-width="3.8125" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-<defs>
-<linearGradient id="paint0_linear_365_1103" x1="59" y1="0" x2="59" y2="120" gradientUnits="userSpaceOnUse">
-<stop stop-color="#0085FF"/>
-<stop offset="1" stop-color="#0047FF"/>
-</linearGradient>
-</defs>
+<svg width="54" height="54" viewBox="0 0 54 54" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M13.2755 38.25H40.703C44.978 38.25 47.228 36 47.228 31.725V4.5H6.72803V31.725C6.75053 36 9.00054 38.25 13.2755 38.25Z" stroke="white" stroke-width="3.8125" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M4.5 4.5H49.5" stroke="white" stroke-width="3.8125" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M18 49.5L27 45V38.25" stroke="white" stroke-width="3.8125" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M36 49.5L27 45" stroke="white" stroke-width="3.8125" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M16.875 24.75L23.9625 18.8325C24.525 18.36 25.2675 18.495 25.65 19.125L28.35 23.625C28.7325 24.255 29.475 24.3675 30.0375 23.9175L37.125 18" stroke="white" stroke-width="3.8125" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
 </svg>

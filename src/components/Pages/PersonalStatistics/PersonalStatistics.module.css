@@ -1,6 +1,28 @@
 @keyframes float {
-  0%   {opacity: 0;}
-  100% {opacity: 1;}
+  0% {
+    opacity: 0.3;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes floatArrow {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes shadow {
+  0% {
+    box-shadow: inset 120px 120px rgb(0 0 0 / 0%);
+  }
+  100% {
+    box-shadow: inset 120px 120px rgb(0 0 0 / 50%);
+  }
 }
 
 .title {
@@ -65,7 +87,7 @@
   font-size: 24px;
   line-height: 28px;
   color: var(--text-color);
-  transition:  0.3s;
+  transition: 0.3s;
 }
 
 .dataRegister {
@@ -74,7 +96,7 @@
   font-size: 14px;
   line-height: 17px;
   color: var(--text-color);
-  transition:  0.3s;
+  transition: 0.3s;
   opacity: 0.5;
 }
 
@@ -92,7 +114,7 @@
   font-size: 13px;
   line-height: 15px;
   color: var(--stats-color);
-  transition:  0.3s;
+  transition: 0.3s;
 }
 
 .dataRegisterBtn {
@@ -126,7 +148,7 @@
   display: flex;
   gap: 8px;
   align-items: center;
-  transition:  0.3s;
+  transition: 0.3s;
 }
 
 .statsItem span {
@@ -155,8 +177,91 @@
 .statsButton {
   width: 120px;
   height: 120px;
-  background: linear-gradient(180deg, #0085ff 0%, #0047ff 100%);
   border-radius: 23px;
+  position: relative;
+}
+
+.statsButton:hover {
+  box-shadow: inset 120px 120px rgb(0 0 0 / 50%);
+  animation-name: shadow;
+  animation-duration: 0.5s;
+}
+
+.statsButton:hover::after {
+  z-index: 1;
+  content: attr(data-text);
+  padding: 11px 21px;
+  background: #2894f8;
+  border-radius: 9px;
+  display: block;
+  position: absolute;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 14px;
+  text-align: center;
+  color: #ffffff;
+  top: -75px;
+  left: 50%;
+  animation-name: float;
+  animation-duration: 0.4s;
+  transform: translate(-50%, 6px);
+}
+
+.statsButton:hover::before {
+  z-index: 1;
+  width: 27px;
+  height: 24px;
+  background-size: auto;
+  content: "";
+  background-image: url("../../../assets/images/2.svg");
+  background-repeat: no-repeat;
+  display: block;
+  position: absolute;
+  top: -50px;
+  left: 50%;
+  animation-name: float;
+  animation-duration: 0.5s;
+  transform: translate(-50%, 6px);
+}
+
+.statsButton:nth-child(1),
+.statsButton:nth-child(2),
+.statsButton:nth-child(3),
+.statsButton:nth-child(4),
+.statsButton:nth-child(5),
+.statsButton:nth-child(6),
+.statsButton:nth-child(7) {
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: center;
+}
+
+.statsButton:nth-child(1) {
+  background-image: url("../../../assets/images/vetryc-stat.svg"), linear-gradient(180deg, #0085ff 0%, #0047ff 100%);
+}
+
+.statsButton:nth-child(2) {
+  background-image: url("../../../assets/images/window-stat.svg"), linear-gradient(180deg, #0085ff 0%, #0047ff 100%);
+}
+
+.statsButton:nth-child(3) {
+  background-image: url("../../../assets/images/server-stat.svg"), linear-gradient(180deg, #0085ff 0%, #0047ff 100%);
+}
+
+.statsButton:nth-child(4) {
+  background-image: url("../../../assets/images/kirka-stat.svg"), linear-gradient(180deg, #0085ff 0%, #0047ff 100%);
+}
+
+.statsButton:nth-child(5) {
+  background-image: url("../../../assets/images/house-stat.svg"), linear-gradient(180deg, #0085ff 0%, #0047ff 100%);
+}
+
+.statsButton:nth-child(6) {
+  background-image: url("../../../assets/images/house2-stat.svg"), linear-gradient(180deg, #0085ff 0%, #0047ff 100%);
+}
+
+.statsButton:nth-child(7) {
+  background-image: url("../../../assets/images/sviz-stat.svg"), linear-gradient(180deg, #0085ff 0%, #0047ff 100%);
 }
 
 .TopsPlayers {
@@ -169,7 +274,7 @@
   border-radius: 25px;
   padding-bottom: 55px;
   margin-bottom: 50px;
-  transition:  0.3s;
+  transition: 0.3s;
 }
 
 .TopsPlayersHeader {
@@ -207,7 +312,7 @@
   line-height: 19px;
   text-align: center;
   color: #0071ff;
-  transition:  0.3s;
+  transition: 0.3s;
 }
 
 .ActiveTopsPlayyersFilterBtn {
@@ -215,7 +320,7 @@
   padding-bottom: 19px;
   width: 358px;
   margin-bottom: 25px;
-  background: #0071FF;
+  background: #0071ff;
   font-weight: 500;
   font-size: 16px;
   line-height: 19px;
@@ -269,7 +374,7 @@
   display: grid;
   align-items: center;
   grid-template-columns: 2fr 4fr 1fr;
-  transition:  0.3s;
+  transition: 0.3s;
 }
 
 .TopsPlayersBlockList {
@@ -280,10 +385,10 @@
 
 .icon * {
   stroke: var(--icon-fill);
-  transition:  0.3s;
+  transition: 0.3s;
 }
 
 .iconVert path {
   fill: var(--icon-fill);
-  transition:  0.3s;
+  transition: 0.3s;
 }
