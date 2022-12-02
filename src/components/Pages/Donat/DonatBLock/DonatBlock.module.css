@@ -80,3 +80,10 @@
   gap: 4px;
 }
 
+
+
+@media (max-width: 500px) {
+  .donatBlock {
+    margin-bottom: 224px;
+  }
+}

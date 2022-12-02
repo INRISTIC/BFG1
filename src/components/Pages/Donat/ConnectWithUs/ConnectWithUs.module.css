@@ -16,6 +16,7 @@
   transition:  0.3s;
   animation-name: float;
   animation-duration: 1s;
+  background-size: auto;
 }
 
 .title {
@@ -33,7 +34,8 @@
 .title::after {
   content: "";
   position: absolute;
-  left: 44%;
+  left: 50%;
+  transform: translate(-50%);
   bottom: -7px;
   width: 33px;
   height: 2px;
@@ -79,4 +81,30 @@
   margin-left: auto;
   width: 25px;
   height: 25px;
+}
+
+@media (max-width: 500px) {
+  .title {
+    font-size: 12.5714px;
+  }
+
+  .connestBtn {
+    font-size: 10.2143px;
+    padding: 13px 18px;
+  }
+
+  .imgRobot, .imgRobot img{
+    width: 18.86px;
+    height: 18.86px;
+  }
+
+  .imgTg, .imgTg img {
+    width: 22.79px;
+    height: 22.79px;
+  }
+
+  .connestWithUs {
+    padding: 29.29px 51.86px 42.43px;
+    background-size: 144px 256px;
+  }
 }

@@ -27,6 +27,8 @@ const DonatQiwi = () => {
     );
   };
 
+  console.log(donatCard)
+
   return (
     <>
       

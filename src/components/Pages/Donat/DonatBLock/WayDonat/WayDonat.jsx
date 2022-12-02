@@ -18,6 +18,8 @@ const WayDonat = () => {
   const [active, setActive] = useState({});
   const donat = useSelector((state) => state.donat);
 
+  console.log(donat)
+
   const donatCard = donat.donatCard;
   const donatQiwi = donat.donatQiwi;
   const donatMoney = donat.donatMoney;
@@ -30,7 +32,7 @@ const WayDonat = () => {
     if (nameObj === "donatCard") {
       newObj = {
         ...donat,
-        [nameObj]: { ...donatMoney, status: true },
+        [nameObj]: { ...donatCard, status: true },
         donatWay: false,
       };
     } else if (nameObj === "donatQiwi") {
@@ -42,10 +44,12 @@ const WayDonat = () => {
     } else if (nameObj === "donatMoney") {
       newObj = {
         ...donat,
-        [nameObj]: { ...donatCard, status: true },
+        [nameObj]: { ...donatMoney, status: true },
         donatWay: false,
       };
     }
+
+    console.log(newObj, nameObj)
     setActive({});
     dispatch(donatWay(newObj));
   };
@@ -56,7 +60,7 @@ const WayDonat = () => {
     // } else {
     //   setActive(...obj);
     // }
-
+    console.log(...obj)
     setActive(...obj);
   };
 
