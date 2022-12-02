@@ -7,6 +7,7 @@
   margin-bottom: 110px;
   animation-name: float;
   animation-duration: 1s;
+  
 }
 
 .title {
@@ -60,4 +61,28 @@
   padding: 16px 33px;
   color: #FFFFFF;
   text-align: right;
+}
+
+@media (max-width: 1070px) {
+  .about {
+    background-image: url('../../../../assets/images/back-about.svg');
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+
+  .blockLeft {
+    max-width: 330px;
+  }
+
+  .blockLeftText {
+    font-size: 10px;
+  }
+
+  .title {
+    margin-bottom: 70px;
+  }
+
+  .blockRight {
+    display: none;
+  }
 }

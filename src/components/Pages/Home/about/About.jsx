@@ -1,7 +1,5 @@
 import React from "react";
 
-import panda from "../../../../assets/images/panda-about.png";
-
 import s from "./About.module.css";
 
 const About = () => {
@@ -24,7 +22,7 @@ const About = () => {
           <button className={s.button}>Перейти в бота</button>
         </div>
         <div className={s.blockRight}>
-          <img src={panda} alt="" />
+          <img src={require("../../../../assets/images/panda-about.png")} alt="" />
         </div>
       </div>
     </div>
