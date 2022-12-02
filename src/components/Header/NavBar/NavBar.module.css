@@ -30,3 +30,25 @@ nav {
   border-radius: 19.5px;
   padding: 10px 16px;
 }
+
+@media (max-width: 1040px) {
+  .nav {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 1040px) {
+  .nav {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 970px) {
+  .nav {
+    font-size: 10px;
+  }
+
+  nav {
+    gap: 5px;
+  }
+}

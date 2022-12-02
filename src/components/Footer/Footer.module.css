@@ -39,3 +39,13 @@
   align-items: center;
   gap: 25px;
 }
+
+@media (max-width: 810px) {
+  .footerBlockLeft {
+    align-items: center;
+  }
+
+  .footerBlockRight {
+    display: none;
+  }
+}

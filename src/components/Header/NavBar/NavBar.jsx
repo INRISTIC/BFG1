@@ -1,7 +1,8 @@
 import { NavLink } from "react-router-dom";
 import { useLocation } from "react-router-dom";
-import classNames from "classnames";
 import s from "./NavBar.module.css";
+
+
 
 const NavBar = () => {
   let { pathname } = useLocation();
@@ -11,6 +12,10 @@ const NavBar = () => {
   } else {
     navStat = false;
   }
+
+  
+  
+
   return (
     <nav>
       <NavLink to="/" className={({ isActive }) => (isActive ? s.active + ' ' + s.nav : s.nav)}>

@@ -58,11 +58,39 @@
   position: relative;
 }
 
+.block p {
+  margin: 0;
+}
+
+.block p:not(:last-child) {
+  margin-bottom: 15px;
+}
+
 .listImg {
   display: flex;
-  gap: 25px;
+  gap: 8px;
+}
+
+.listImg div {
+  max-width: 310px;
 }
 
 .listImg img {
-  width: 310px;
+  width: 100%;
+}
+
+@media (max-width: 650px) {
+  .block::before {
+    content: "";
+    background-image: none;
+  }
+
+  .block {
+    font-size: 10px;
+    padding: 30px 33px;
+  }
+
+  .title {
+    margin-bottom: 41px;
+  }
 }

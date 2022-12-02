@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { openModal } from "../../../store/slices/sliceModal";
@@ -72,114 +71,113 @@ const PersonalStatistics = () => {
           </div>
         </div>
         <div className={s.stats}>
-          <div className={s.statsLeft}>
-            <div className={s.statsItem}>
-              <ProfileIcon className={s.icon} />
-              Статус: <span>Создатель</span>
+          <div className={s.statsInfo}>
+            <div className={s.statsLeft}>
+              <div className={s.statsItem}>
+                <ProfileIcon className={s.icon} />
+                Статус: <span>Создатель</span>
+              </div>
+              <div className={s.statsItem}>
+                <DollarIcon className={s.icon} />
+                Денег: <span>100 000$</span>
+              </div>
+              <div className={s.statsItem}>
+                <HomeIcon className={s.icon} />В банке:{" "}
+                <span>100 000 000$</span>
+              </div>
+              <div className={s.statsItem}>
+                <BCoinsIcon className={s.icon} />
+                B-Coins: <span>142 743 ед.</span>
+              </div>
+              <div className={s.statsItem}>
+                <BitcoinIcon className={s.icon} />
+                Биткоины: <span>0.000534 btc</span>
+              </div>
+              <div className={s.statsItem}>
+                <EnerguIcon className={s.icon} />
+                Энергия: <span>215 623 ед.</span>
+              </div>
+              <div className={s.statsItem}>
+                <StatusIcon className={s.icon} />
+                Рейтинг: <span>623 072 ед.</span>
+              </div>
             </div>
-            <div className={s.statsItem}>
-              <DollarIcon className={s.icon} />
-              Денег: <span>100 000$</span>
+            <div className={s.statsRight}>
+              <div className={s.statsItem}>
+                <HomeRightIcon className={s.icon} />
+                Имущество: <span>название</span>
+              </div>
+              <div className={s.statsItem}>
+                <HomeTwoIcon className={s.icon} />
+                Дом: <span>название</span>
+              </div>
+              <div className={s.statsItem}>
+                <CarIcon className={s.icon} />
+                Машина: <span>название</span>
+              </div>
+              <div className={s.statsItem}>
+                <AirplanIcon className={s.icon} />
+                Самолёт: <span>название</span>
+              </div>
+              <div className={s.statsItem}>
+                <VertolIcon className={s.iconVert} />
+                Вертолёт: <span>название</span>
+              </div>
+              <div className={s.statsItem}>
+                <MedalIcon className={s.icon} />
+                Опыт: <span>56 347 ед.</span>
+              </div>
+              <div className={s.statsItem}>
+                <MoreIcon className={s.icon} />
+                Всего сыграно игр: <span>50 раз</span>
+              </div>
             </div>
-            <div className={s.statsItem}>
-              <HomeIcon className={s.icon} />В банке: <span>100 000 000$</span>
-            </div>
-            <div className={s.statsItem}>
-              <BCoinsIcon className={s.icon} />
-              B-Coins: <span>142 743 ед.</span>
-            </div>
-            <div className={s.statsItem}>
-              <BitcoinIcon className={s.icon} />
-              Биткоины: <span>0.000534 btc</span>
-            </div>
-            <div className={s.statsItem}>
-              <EnerguIcon className={s.icon} />
-              Энергия: <span>215 623 ед.</span>
-            </div>
-            <div className={s.statsItem}>
-              <StatusIcon className={s.icon} />
-              Рейтинг: <span>623 072 ед.</span>
-            </div>
-            <button className={s.statsItemBtn}>Статистика по играм</button>
           </div>
-          <div className={s.statsRight}>
-            <div className={s.statsItem}>
-              <HomeRightIcon className={s.icon} />
-              Имущество: <span>название</span>
-            </div>
-            <div className={s.statsItem}>
-              <HomeTwoIcon className={s.icon} />
-              Дом: <span>название</span>
-            </div>
-            <div className={s.statsItem}>
-              <CarIcon className={s.icon} />
-              Машина: <span>название</span>
-            </div>
-            <div className={s.statsItem}>
-              <AirplanIcon className={s.icon} />
-              Самолёт: <span>название</span>
-            </div>
-            <div className={s.statsItem}>
-              <VertolIcon className={s.iconVert} />
-              Вертолёт: <span>название</span>
-            </div>
-            <div className={s.statsItem}>
-              <MedalIcon className={s.icon} />
-              Опыт: <span>56 347 ед.</span>
-            </div>
-            <div className={s.statsItem}>
-              <MoreIcon className={s.icon} />
-              Всего сыграно игр: <span>50 раз</span>
-            </div>
+
+          <div className={s.buttons}>
+            <button className={s.statsItemBtn}>Статистика по играм</button>
             <button className={s.statsItemBtn}>Последние действия</button>
           </div>
         </div>
       </div>
       <div className={s.statsButtons}>
         <button
-          data-text = "Ветряк"
+          data-text="Ветряк"
           className={s.statsButton}
           onClick={() => dispatch(openModal({ modalWindmill: true }))}
-        >
-        </button>
+        ></button>
         <button
-          data-text = "Склад"
+          data-text="Склад"
           className={s.statsButton}
           onClick={() => dispatch(openModal({ modalInventory: true }))}
-        >
-        </button>
+        ></button>
         <button
-          data-text = "Склад"
+          data-text="Склад"
           className={s.statsButton}
           onClick={() => dispatch(openModal({ modalInventory: true }))}
-        >
-        </button>
+        ></button>
 
         <button
-          data-text = "Склад"
+          data-text="Склад"
           className={s.statsButton}
           onClick={() => dispatch(openModal({ modalInventory: true }))}
-        >
-        </button>
-        
+        ></button>
+
         <button
-          data-text = "Склад"
+          data-text="Склад"
           className={s.statsButton}
           onClick={() => dispatch(openModal({ modalInventory: true }))}
-        >
-        </button>
+        ></button>
         <button
-          data-text = "Склад"
+          data-text="Склад"
           className={s.statsButton}
           onClick={() => dispatch(openModal({ modalInventory: true }))}
-        >
-        </button>
+        ></button>
         <button
-          data-text = "Склад"
+          data-text="Склад"
           className={s.statsButton}
           onClick={() => dispatch(openModal({ modalInventory: true }))}
-        >
-        </button>
+        ></button>
       </div>
       <div className={s.TopsPlayers}>
         <div className={s.TopsPlayersHeader}>

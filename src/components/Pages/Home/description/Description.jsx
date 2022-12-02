@@ -1,8 +1,8 @@
 import React from "react";
 
-import panda1 from '../../../../assets/images/panda-bottom1.png'
-import panda2 from '../../../../assets/images/panda-bottom2.png'
-import panda3 from '../../../../assets/images/panda-bottom3.png'
+import panda1 from "../../../../assets/images/panda-bottom1.png";
+import panda2 from "../../../../assets/images/panda-bottom2.png";
+import panda3 from "../../../../assets/images/panda-bottom3.png";
 
 import s from "./Description.module.css";
 
@@ -36,9 +36,15 @@ const Description = () => {
         </p>
       </div>
       <div className={s.listImg}>
-        <img src={panda1} alt=""/>
-        <img src={panda2} alt=""/>
-        <img src={panda3} alt=""/>
+        <div>
+          <img src={panda1} alt="" />
+        </div>
+        <div>
+          <img src={panda2} alt="" />
+        </div>
+        <div>
+          <img src={panda3} alt="" />
+        </div>
       </div>
     </div>
   );

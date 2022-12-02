@@ -16,10 +16,13 @@ export const modalSlice = createSlice({
     },
     closeModal: () => {
       return {modalWindmill: false, modalStatus: false, modalInventory: false}
+    },
+    openModalCommon: () => {
+      return { modalStatus: true}
     }
   },
 })
 
-export const { openModal, closeModal } = modalSlice.actions
+export const { openModal, closeModal, openModalCommon } = modalSlice.actions
 
 export default modalSlice.reducer

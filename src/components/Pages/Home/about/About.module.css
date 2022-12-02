@@ -72,10 +72,12 @@
 
   .blockLeft {
     max-width: 330px;
+    padding: 27px 36px 27px 36px;
   }
 
   .blockLeftText {
     font-size: 10px;
+    line-height: 160%;
   }
 
   .title {

@@ -13,6 +13,22 @@ header {
   width: 100%;
   position: relative;
   transition:  0.3s;
+  z-index: 1;
+}
+
+.modal {
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0,0,0,0.4);
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 1;
+  pointer-events: all;
+  transition: 0.5s;
 }
 
 .headerLeft {
@@ -31,5 +47,18 @@ header {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  text-fill-color: transparent;
+}
+
+.navOpen {
+  border-radius: 0px 0px 0px 35px;
+}
+
+@media (max-width: 830px) {
+  header {
+    padding: 28px 25px 37px;
+    border-radius: 0px 0px 35px 35px;
+    gap: 23px;
+    /* margin-left: 7px;
+    margin-right: 7px; */
+  }
 }

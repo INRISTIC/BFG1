@@ -1,6 +1,6 @@
 .TopsPlayersBlockItem {
   padding: 23px 51px;
-  width: 1095px;
+  max-width: 1095px;
   margin: 0 auto;
   background: var(--top-header-item);
   box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.07);
@@ -12,6 +12,8 @@
   justify-content: space-between;
   display: grid;
   align-items: center;
-  grid-template-columns: 2fr 4fr 1fr;
+  grid-template-columns: 2fr 2fr 1fr;
   transition:  0.3s;
+  width: 100%;
 }
+

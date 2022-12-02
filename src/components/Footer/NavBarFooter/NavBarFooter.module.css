@@ -19,3 +19,29 @@
   color: var(--text-color);
   transition:  0.3s;
 }
+
+.nav .navBlock .child {
+  display: none;
+}
+
+@media (max-width: 810px) {
+  .nav .navBlock {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+  }
+
+  .nav .navBlock div {
+    gap: 6.8px;
+    flex-direction: column;
+  }
+
+  .nav .navBlock .child {
+    display: block;
+    font-size: 12px;
+  }
+
+  .nav a {
+    font-size: 12px;
+  }
+}

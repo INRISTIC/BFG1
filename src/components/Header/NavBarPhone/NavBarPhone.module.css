@@ -1,0 +1,66 @@
+@keyframes float {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.navList {
+  display: flex;
+  gap: 0;
+  align-items: center;
+  flex-direction: column;
+  position: absolute;
+  background: var(--background-modal);
+  right: 0;
+  bottom: -200px;
+  max-width: 209px;
+  width: 100%;
+  border-radius: 0px 0px 35px 35px;
+  z-index: 1;
+  animation-name: float;
+  animation-duration: 0.3s;
+}
+
+.navListFive {
+  bottom: -250px;
+}
+
+.button {
+  background-color: transparent;
+}
+
+.nav {
+  text-decoration: none;
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 18px;
+  padding-top: 14px;
+  padding-bottom: 18px;
+  color: var(--text-color);
+  transition: 0.3s;
+  width: 100%;
+  text-align: center;
+  height: 50px;
+  border-top: 1px solid #2A4261;
+}
+
+.nav:last-child {
+  border-radius: 0px 0px 35px 35px;
+}
+
+.disNone {
+  display: none;
+}
+
+.disBlock {
+  display: block;
+}
+
+.active {
+  background-color: rgba(0, 113, 255, 0.2);
+}
