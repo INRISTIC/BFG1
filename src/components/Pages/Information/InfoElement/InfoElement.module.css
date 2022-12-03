@@ -1,3 +1,68 @@
 .infoElement {
   width: 100%;
+
+  background: var(--background-modal);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.07);
+  border-radius: 18px;
+}
+
+.infoElement__header_block {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 14px;
+
+  padding: 19.5px 32px 19.5px 22px;
+}
+
+.infoElement__header_block::before {
+  content: "";
+
+  width: 29px;
+  height: 29px;
+
+  background-image: url('/src/assets/images/faqElementQuestion.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 29px;
+}
+
+.infoElement__header_btn {
+  display: flex;
+  background: transparent;
+  color: var(--text-color);
+  align-items: center;
+}
+
+.infoElement__header_text {
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+
+  color: #0071FF;
+
+  transition: all 0.2s;
+
+  margin-right: auto;
+}
+
+.hidden {
+  
+}
+
+.arrow * {
+  fill: var(--text-color);
+  transition: 0.2s;
+}
+
+.infoElement__header_btn .arrow {
+  transform: rotate(270deg);
+  transition: 0.2s;
+}
+
+.infoElement__header_btn_active .arrow {
+  transform: rotate(360deg);
+  transition: 0.2s;
 }
