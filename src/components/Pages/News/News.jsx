@@ -1,22 +1,36 @@
-import { useState } from "react";
-
+import { useLayoutEffect, useState } from "react";
+import ReactSwipe from "react-swipe";
 import Post from "./Post/Post";
 
-import { ReactComponent as Arrow} from "../../../assets/images/arrow-bottom.svg";
-
+import { ReactComponent as Arrow } from "../../../assets/images/arrow-bottom.svg";
+import { ReactComponent as ArrowRight } from "../../../assets/images/arrow-left.svg";
+import { ReactComponent as ArrowLeft } from "../../../assets/images/arrow-left.svg";
 import sortIcon from "../../../assets/images/sort-icon.svg";
 
 import s from "./News.module.css";
 
+function useWindowSize() {
+  const [size, setSize] = useState([0]);
+  useLayoutEffect(() => {
+    function updateSize() {
+      setSize([window.innerWidth]);
+    }
+    window.addEventListener("resize", updateSize);
+    updateSize();
+    return () => window.removeEventListener("resize", updateSize);
+  }, []);
+  return size;
+}
+
 const News = () => {
-
-  const [sort, setSort] = useState({rating: false, time: false})
-
+  const [width] = useWindowSize();
+  const [sort, setSort] = useState({ rating: false, time: false });
   const btnActive = (arg) => {
-    setSort({...sort, [arg]: !sort[arg]})
-  }
+    setSort({ ...sort, [arg]: !sort[arg] });
+  };
 
-  console.log(sort)
+  console.log(width)
+  let reactSwipeEl;
 
   return (
     <>
@@ -47,24 +61,51 @@ const News = () => {
               Сортировка
             </div>
             <div className={s.filterOptions}>
-              <button className={sort.rating ? s.sortBtns1 + ' ' + s.sortBtnsActive : s.sortBtns1} onClick={() => btnActive('rating')}>
-              Рейтинг
-              <Arrow className={s.arrow}/>
+              <button
+                className={
+                  sort.rating
+                    ? s.sortBtns1 + " " + s.sortBtnsActive
+                    : s.sortBtns1
+                }
+                onClick={() => btnActive("rating")}
+              >
+                Рейтинг
+                <Arrow className={s.arrow} />
               </button>
-              <button className={sort.time ? s.sortBtns2 + ' ' + s.sortBtnsActive : s.sortBtns2} onClick={() => btnActive('time')}>
-              Дата
-              <Arrow className={s.arrow}/>
+              <button
+                className={
+                  sort.time ? s.sortBtns2 + " " + s.sortBtnsActive : s.sortBtns2
+                }
+                onClick={() => btnActive("time")}
+              >
+                Дата
+                <Arrow className={s.arrow} />
               </button>
             </div>
           </div>
-          <div className={s.newsList}>
-            <Post />
-            <Post />
-            <Post />
-            <Post />
-            <Post />
-            <Post />
-          </div>
+          {width > 850 ? (
+            <div className={s.newsList}>
+              <Post />
+              <Post />
+              <Post />
+              <Post />
+              <Post />
+              <Post />
+            </div>
+          ) : (
+            <div className={s.sliderBlock}>
+              <ReactSwipe
+                swipeOptions={{ continuous: true }}
+                ref={(el) => (reactSwipeEl = el)}
+              >
+                <div><Post /></div>
+                <div><Post /></div>
+                <div><Post /></div>
+              </ReactSwipe>
+              <button className={s.leftBtn} onClick={() => reactSwipeEl.next()}><ArrowRight className={s.arrowBtnPrevRight}/></button>
+              <button className={s.rightBtn} onClick={() => reactSwipeEl.prev()}><ArrowLeft className={s.arrowBtnPrevLeft}/></button>
+            </div>
+          )}
         </div>
       </div>
     </>
