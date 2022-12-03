@@ -84,7 +84,7 @@
 }
 
 .hoverEl div {
-    font-weight: 500;
+  font-weight: 500;
   font-size: 12px;
   line-height: 14px;
   color: #ffffff;
@@ -123,4 +123,24 @@
   transform: translate(-33%, 6px);
   animation-name: float;
   animation-duration: 0.5s;
+}
+
+.img {
+  width: 100%;
+}
+
+@media (max-width: 540px) {
+  .modal {
+    padding: 38px 47px 66px;
+  }
+  
+  .listItem {
+    width: 48.28px;
+    height: 48.28px;
+  }
+
+  .list {
+    gap: 11.4px;
+    grid-template-columns: repeat(5, 48.28px);
+  }
 }

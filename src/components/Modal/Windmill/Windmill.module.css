@@ -63,4 +63,9 @@
   margin-bottom: 10px;
 }
 
+@media (max-width: 540px) {
+  .modal {
+    padding: 42px 30px 65px;
+  }
+}
 

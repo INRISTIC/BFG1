@@ -1,4 +1,5 @@
 import { Outlet } from "react-router-dom";
+import BtnScrollUp from "../BtnScrollUp/BtnScrollUp";
 import Footer from "../Footer/Footer";
 import Header from "../Header/Header";
 import Modal from "../Modal/Modal";
@@ -12,6 +13,7 @@ const Layout = () => {
       <Header />
       <main className={s.main}>
         <Outlet />
+        <BtnScrollUp />
       </main>
       <Footer />
       <Modal />

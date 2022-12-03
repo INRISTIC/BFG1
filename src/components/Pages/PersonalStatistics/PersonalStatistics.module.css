@@ -136,10 +136,11 @@
   gap: 29px;
 }
 
-.statsLeft, .statsRight {
+.statsLeft,
+.statsRight {
   max-width: 280px;
   width: 100%;
-} 
+}
 
 .statsItem {
   margin-bottom: 10px;
@@ -419,10 +420,6 @@
   justify-content: center;
 }
 
-
-
-
-
 @media (max-width: 700px) {
   .buttons {
     flex-wrap: wrap;
@@ -442,6 +439,132 @@
   }
 
   .statsButtons {
-    margin-bottom: 116px
+    margin-bottom: 116px;
+  }
+}
+
+@media (max-width: 540px) {
+  .headerTitle {
+    font-size: 12px;
+  }
+
+  .avatarContainerImg {
+    width: 35.7px;
+    height: 35.7px;
+  }
+
+  .dataRegister {
+    font-size: 12px;
+  }
+
+  .email {
+    font-size: 9.22581px;
+    padding: 13px 19px;
+  }
+
+  .dataRegisterBtn {
+    font-size: 9.93548px;
+    padding: 12px 20px;
+  }
+
+  .statsBlockHeader {
+    gap: 13px;
+    padding: 23px 22px 24px 23px;
+  }
+
+  .statsButton {
+    width: 81.38px;
+    height: 82.76px;
+  }
+
+  .statsButton:nth-child(1) {
+    background-image: url("../../../assets/images/vetryc-stat.svg"), linear-gradient(180deg, #0085ff 0%, #0047ff 100%);
+    background-size: 81.38px 82.76px;
+  }
+
+  .TopsRatings {
+    padding-left: 15px;
+  }
+
+  .TopsPlayersHeader {
+    font-size: 13px;
+    line-height: 15px;
+    padding-top: 12px;
+    padding-bottom: 11.2px;
+    margin-bottom: 21px;
+  }
+
+  .TopsPlayersFilter {
+    padding-right: 15px;
+  }
+
+  .topIcon {
+    width: 19.72px;
+    height: 19.72px;
+  }
+
+  .TopsPlayyersFilterBtn {
+    font-size: 9.04969px;
+    line-height: 11px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+  }
+
+  .ActiveTopsPlayyersFilterBtn {
+    font-size: 9.04969px;
+    line-height: 11px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+  }
+
+  .TopsPlayyersFilterBtn:first-child,
+  .ActiveTopsPlayyersFilterBtn:first-child {
+    border-radius: 8.54094px 0px 0px 8.54094px;
+  }
+
+  .TopsPlayyersFilterBtn:last-child,
+  .ActiveTopsPlayyersFilterBtn:last-child {
+    border-radius: 0px 8.54094px 8.54094px 0px;
+  }
+
+  .TopsPlayersFilter {
+    gap: 4.5px;
+  }
+
+  .TopsPlayersBlockTitle {
+    font-size: 12px;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 9px 14px;
+    margin-bottom: 21px;
+    margin-right: 8px;
+  }
+
+  .TopsPlayersBlockList {
+    margin-right: 8px;
+  }
+
+  .TopsPlayersBlock::-webkit-scrollbar {
+    scroll-padding-top: 30px;
+    width: 6px;
+    background-color: transparent;;
+  }
+  
+  .TopsPlayersBlock::-webkit-scrollbar-thumb {
+    background: rgba(0, 133, 255, 0.2);
+    border-radius: 100px;
+  }
+  
+  .active::-webkit-scrollbar-thumb {
+    opacity: 0;
+    transition: 1s;
+    background: rgba(0, 133, 255, 1);
+  }
+
+  .title {
+    font-size: 18.0714px;
+    padding: 15px 17px;
+    margin-bottom: 42px;
   }
 }

@@ -181,10 +181,10 @@ const PersonalStatistics = () => {
       </div>
       <div className={s.TopsPlayers}>
         <div className={s.TopsPlayersHeader}>
-          <TopsIcon />
+          <TopsIcon className={s.topIcon}/>
           ТОП 100 игроков
         </div>
-        <div className={s}>
+        <div className={s.TopsRatings}>
           <div className={s.TopsPlayersFilter}>
             <button
               className={

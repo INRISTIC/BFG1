@@ -17,3 +17,11 @@
   width: 100%;
 }
 
+@media (max-width: 540px) {
+  .TopsPlayersBlockItem {
+    grid-template-columns: 1fr 1fr 1fr;
+    font-size: 12px;
+    padding: 9px 14px;
+  }
+}
+

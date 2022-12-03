@@ -13,7 +13,7 @@ const Inventory = () => {
           data-title="Кирпич"
           className={s.listItem + " " + s.active}
         >
-          <img src={require("../../../assets/images/kirpich.png")} alt="" />
+          <img src={require("../../../assets/images/kirpich.png")} alt="" className={s.img} />
           <div className={s.hoverEl}>
             <div>Название: Кирпич</div>
             <div>Количество: 56 шт.</div>

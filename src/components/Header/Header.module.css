@@ -58,7 +58,10 @@ header {
     padding: 28px 25px 37px;
     border-radius: 0px 0px 35px 35px;
     gap: 23px;
-    /* margin-left: 7px;
-    margin-right: 7px; */
   }
+
+  .logo {
+    font-size: 40px;
+  }
+  
 }
