@@ -18,7 +18,7 @@ function changeHeightPostContant(ref, func) {
       return;
     }
 
-    let newHieght = Math.round(ref.current.clientHeight);
+    let newHieght = Math.round(ref.current.scrollHeight);
 
     if (oldHieght === newHieght) {
       changeHTML = false;
@@ -36,7 +36,7 @@ function changeHeightPostContant(ref, func) {
     }
 
     if (!changeHTML) {
-      let height = Math.round(ref.current.clientHeight);
+      let height = Math.round(ref.current.scrollHeight);
       func(height);
 
       clearInterval(intervalIdClear);
@@ -46,12 +46,19 @@ function changeHeightPostContant(ref, func) {
 
 const Post = () => {
   const [heightPostContant, ChangeHeightPostContantState] = useState(0);
+  const [open, setOpen] = useState(false);
+
   const refComponent = createRef();
+
+  const classesDescHiddenClose = `${s.postDescription} ${s.postDescription_hidden}`;
+  const classesDescHiddenOpen = `${classesDescHiddenClose} ${s.postDescription_shadow}`;
+
+  const classesPostOpen = `${s.newsPost} ${s.newsPost_open}`;
 
   useEffect(() => changeHeightPostContant(refComponent, ChangeHeightPostContantState), [refComponent]);
 
   return (
-    <div className={s.newsPost}>
+    <div className={heightPostContant > 120 ? open ? classesPostOpen : s.newsPost : s.newsPost}>
       <div className={s.postImgContainer}>
         <img src={ava} alt="" className={s.postImg} />
       </div>
@@ -65,15 +72,33 @@ const Post = () => {
           </div>
 
         </div>
-        <div className={heightPostContant <= 72 ? s.postDescription : ''} ref={refComponent}>
+        <div className={heightPostContant > 120 ? !open ? classesDescHiddenOpen : classesDescHiddenClose : s.postDescription} ref={refComponent}>
           Описание новости Описание новости Описание новости Описание новости
-          Описание новости Описание новостиОписание новости Описание новости
-          Описание новости Описание новости Описание новостиОписание новости
+          Описание новости Описание новости Описание новости Описание новости
+          Описание новости Описание новости Описание новости Описание новости
+          Описание новости Описание новости Описание новости Описание новости
+          Описание новости Описание новости Описание новости Описание новости
+          Описание новости Описание новости Описание новости Описание новости
+          Описание новости Описание новости Описание новости Описание новости
+          Описание новости Описание новости Описание новости Описание новости
+          Описание новости Описание новости Описание новости Описание новости
+          Описание новости Описание новости Описание новости Описание новости
+          Описание новости Описание новости Описание новости Описание новости
+          Описание новости Описание новости Описание новости Описание новости
+          Описание новости Описание новости Описание новости Описание новости
+          Описание новости Описание новости Описание новости Описание новости
+          Описание новости Описание новости Описание новости Описание новости
         </div>
-        <button className={s.postFullBtn}>
-          Развернуть
-          <Arrow className={s.arrow} />
-        </button>
+
+        {heightPostContant > 120 ?
+          (
+            <button className={s.postFullBtn} onClick={() => setOpen(!open)}>
+              {!open ? "Развернуть" : "Скрыть"}
+              <Arrow className={s.arrow} style={{ width: 19, height: 20 }} />
+            </button>
+          ) : false
+        }
+
       </div>
     </div>
   );

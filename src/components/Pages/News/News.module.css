@@ -251,7 +251,7 @@
   }
 }
 
-@media (max-width: 850px) {
+/* @media (max-width: 850px) {
   .leftBtn, .rightBtn {
     background: #323E4E;
     box-shadow: 0px 4px 13px rgba(0, 0, 0, 0.07);
@@ -314,4 +314,4 @@
     display: none;
   }
 
-}
+} */
