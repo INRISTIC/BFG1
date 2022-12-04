@@ -29,7 +29,6 @@ const News = () => {
     setSort({ ...sort, [arg]: !sort[arg] });
   };
 
-  console.log(width);
   let reactSwipeEl;
 
   return (
@@ -84,13 +83,15 @@ const News = () => {
             </div>
           </div>
           {width > 850 ? (
-            <div className={s.newsList}>
-              <Post />
-              <Post />
-              <Post />
-              <Post />
-              <Post />
-              <Post />
+            <div className={s.newsListContainer}>
+              <div className={s.newsList}>
+                <Post />
+                <Post />
+                <Post />
+                <Post />
+                <Post />
+                <Post />
+              </div>
             </div>
           ) : (
             <div className={s.sliderBlock}>

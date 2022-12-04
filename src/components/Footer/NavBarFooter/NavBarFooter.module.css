@@ -1,7 +1,27 @@
+.nav {
+  max-width: 100%;
+  width: 100%;
+}
+
+.span {
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 18px;
+
+  color: #000000;
+
+  margin-left: auto;
+}
+
 .nav .navBlock {
   display: flex;
   flex-direction: column;
   gap: 10px;
+
+  max-width: 100%;
+  width: 100%;
 }
 
 .nav .navBlock div {
@@ -22,6 +42,14 @@
 
 .nav .navBlock .child {
   display: none;
+
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 18px;
+
+  color: #000000;
 }
 
 @media (max-width: 810px) {

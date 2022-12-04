@@ -3,6 +3,10 @@ button {
   border: none;
   padding: 0;
   cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 @keyframes float {
@@ -80,18 +84,28 @@ button {
   font-size: 20px;
 }
 
+.theme button {
+  padding-top: 8.5px;
+  padding-bottom: 8.5px;
+
+  max-width: 50%;
+  width: 100%;
+
+  transition:  0.3s;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .theme button:first-child {
   background: var(--background-modal-settings-btn);
   border-radius: 10px 0px 0px 10px;
-  padding: 9px 30px 8px;
-  transition:  0.3s;
 }
 
 .theme button:last-child {
   background: var(--background-modal-settings-btn);
   border-radius: 0px 10px 10px 0px;
-  padding: 9px 30px 8px;
-  transition:  0.3s;
 }
 
 .theme button.active {
