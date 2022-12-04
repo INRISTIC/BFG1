@@ -29,7 +29,7 @@ const News = () => {
     setSort({ ...sort, [arg]: !sort[arg] });
   };
 
-  console.log(width)
+  console.log(width);
   let reactSwipeEl;
 
   return (
@@ -98,12 +98,25 @@ const News = () => {
                 swipeOptions={{ continuous: true }}
                 ref={(el) => (reactSwipeEl = el)}
               >
-                <div><Post /></div>
-                <div><Post /></div>
-                <div><Post /></div>
+                <div>
+                  <Post />
+                </div>
+                <div>
+                  <Post />
+                </div>
+                <div>
+                  <Post />
+                </div>
               </ReactSwipe>
-              <button className={s.leftBtn} onClick={() => reactSwipeEl.next()}><ArrowRight className={s.arrowBtnPrevRight}/></button>
-              <button className={s.rightBtn} onClick={() => reactSwipeEl.prev()}><ArrowLeft className={s.arrowBtnPrevLeft}/></button>
+              <button className={s.leftBtn} onClick={() => reactSwipeEl.next()}>
+                <ArrowRight className={s.arrowBtnPrevRight} />
+              </button>
+              <button
+                className={s.rightBtn}
+                onClick={() => reactSwipeEl.prev()}
+              >
+                <ArrowLeft className={s.arrowBtnPrevLeft} />
+              </button>
             </div>
           )}
         </div>
