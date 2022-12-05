@@ -1,4 +1,4 @@
-import { useLayoutEffect, useState } from "react";
+import { useLayoutEffect, useState, useEffect, createRef } from "react";
 import ReactSwipe from "react-swipe";
 import Post from "./Post/Post";
 
@@ -22,6 +22,18 @@ function useWindowSize() {
   return size;
 }
 
+function changeScroll(e, func) {
+  let scrollBottom = e.target.scrollHeight - e.target.scrollTop - e.target.clientHeight;
+  scrollBottom = Math.round(scrollBottom);
+
+  if (!scrollBottom) {
+    func(true);
+
+  } else {
+    func(false);
+  }
+}
+
 const News = () => {
   const [width] = useWindowSize();
   const [sort, setSort] = useState({ rating: false, time: false });
@@ -30,6 +42,11 @@ const News = () => {
   };
 
   let reactSwipeEl;
+
+  const [scrollDown, setScrolling] = useState(false);
+
+  const classesLists = `${s.newsList}`;
+  const classesListsShadow = `${classesLists} ${s.newsList_shadow}`;
 
   return (
     <>
@@ -82,9 +99,10 @@ const News = () => {
               </button>
             </div>
           </div>
+          {scrollDown ? (<div style={{ height: 10, width: 10 }}></div>) : false}
           {width > 850 ? (
             <div className={s.newsListContainer}>
-              <div className={s.newsList}>
+              <div className={!scrollDown ? classesListsShadow : classesLists} onScroll={(e) => changeScroll(e, setScrolling)}>
                 <Post />
                 <Post />
                 <Post />

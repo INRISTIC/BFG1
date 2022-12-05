@@ -197,7 +197,7 @@
   border-radius: 100px;
 }
 
-.newsList::after {
+.newsList.newsList_shadow::after {
   content: '';
   background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, var(--background-modal) 100%);
   border-radius: 25px;
