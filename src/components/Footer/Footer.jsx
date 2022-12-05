@@ -11,9 +11,6 @@ const Footer = () => {
           <div className={s.logo}>BFG</div>
           <NavBarFooter />
         </div>
-        <div className={s.footerBlockRight}>
-          <div>Все права защищены © 2022 </div>
-        </div>
       </div>
     </footer>
   );

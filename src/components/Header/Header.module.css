@@ -5,7 +5,6 @@ header {
   align-items: center;
   gap: 47px;
   padding: 28px 85px 37px;
-  margin-bottom: 59px;
   max-width: 1350px;
   background: var(--background-modal);
   box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.05);
@@ -51,6 +50,12 @@ header {
 
 .navOpen {
   border-radius: 0px 0px 0px 35px;
+}
+
+@media (max-width: 970px) {
+  header {
+    padding: 28px 85px;
+  }
 }
 
 @media (max-width: 830px) {

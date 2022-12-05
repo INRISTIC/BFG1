@@ -23,6 +23,8 @@ const NavBarFooter = () => {
           <NavLink to="/info" className={setActive}>
             Информация
           </NavLink>
+
+          <span className={s.span}>Все права защищены © 2022 </span>
         </div>
         <div>
           <NavLink to="/terms-of-use" className={setActive}>
@@ -32,10 +34,7 @@ const NavBarFooter = () => {
           <NavLink to="/user-conditions" className={setActive}>
             Условия пользования
           </NavLink>
-
-          <div className={s.child}>Все права защищены © 2022 </div>
         </div>
-        
       </div>
     </nav>
   );

@@ -6,6 +6,7 @@
 .newsTitle {
   width: max-content;
   background: var(--background-modal);
+  margin-top: 59px;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 79px;
@@ -24,7 +25,7 @@
 
 .newsBlock {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   gap: 25px;
   margin-bottom: 40px;
   animation-name: float;
@@ -93,7 +94,7 @@
   background: var(--background-modal);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.07);
   border-radius: 13px;
-  margin-bottom: 13px;
+  margin-bottom: 17px;
   transition:  0.3s;
 }
 
@@ -126,6 +127,9 @@
 }
 
 .filterBtn {
+  max-width: 423px;
+  width: 100%;
+
   font-weight: 500;
   font-size: 15px;
   line-height: 18px;
@@ -156,30 +160,36 @@
 
 .filterOptions {
   display: flex;
-  gap: 169px;
+  justify-content: space-between;
+
+  max-width: 299px;
+  width: 100%;
+}
+
+.newsListContainer {
+  box-sizing: border-box;
+  background: var(--background-modal);
+  box-shadow: 0px 3.14286px 3.14286px rgb(0 0 0 / 7%);
+  padding-top: 30px;
+  padding-bottom: 52px;
+  max-height: 783px;
+  height: 100%;
+  border-radius: 25px;
 }
 
 .newsList {
   display: flex;
   flex-direction: column;
   gap: 22px;
-  max-height: 783px;
-  padding: 30px 20px;
-  background: var(--background-modal);
-  box-shadow: 0px 3.14286px 3.14286px rgba(0, 0, 0, 0.07);
-  border-radius: 25px;
+  height: 701px;
+  padding: 0px 20px 0px 20px;
   overflow-y: scroll;
   transition:  0.3s;
 }
 
 .newsList::-webkit-scrollbar {
-  scroll-padding-top: 30px;
   width: 6px;
   background-color: transparent;
-}
-
-.newsList::-webkit-scrollbar-track {
-  margin: 30px 0;
 }
 
 .newsList::-webkit-scrollbar-thumb {
@@ -187,7 +197,7 @@
   border-radius: 100px;
 }
 
-.newsList::after {
+.newsList.newsList_shadow::after {
   content: '';
   background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, var(--background-modal) 100%);
   border-radius: 25px;
@@ -241,7 +251,7 @@
   }
 }
 
-@media (max-width: 850px) {
+/* @media (max-width: 850px) {
   .leftBtn, .rightBtn {
     background: #323E4E;
     box-shadow: 0px 4px 13px rgba(0, 0, 0, 0.07);
@@ -304,4 +314,4 @@
     display: none;
   }
 
-}
+} */
