@@ -20,8 +20,9 @@
 @media (max-width: 540px) {
   .TopsPlayersBlockItem {
     grid-template-columns: 1fr 1fr 1fr;
-    font-size: 12px;
-    padding: 9px 14px;
+    padding: 16px 36px;
+    font-size: 10.6762px;
+    line-height: 13px;
   }
 }
 

@@ -1,19 +1,13 @@
-import React, { useState } from "react";
+import React from "react";
 import s from "./Settings.module.css";
 import {ReactComponent as Setting} from "../../../assets/images/settings.svg"
 import SettingModal from "./SettingModal/SettingModal";
 
-const SettingsBlock = () => {
-
-  const [active, setActive] = useState(false);
-
-  let modalSettings = () => {
-    setActive(!active)
-  }
+const SettingsBlock = ({active, openSettings}) => {
 
   return (
     <>
-      <button className={s.button} onClick={modalSettings}>
+      <button className={s.button} onClick={openSettings}>
         <Setting className={s.icon} />
       </button>
       {active && <SettingModal/>}

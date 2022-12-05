@@ -12,7 +12,7 @@ header {
   width: 100%;
   position: relative;
   transition:  0.3s;
-  z-index: 2;
+  
 }
 
 .modal {
@@ -50,6 +50,7 @@ header {
 
 .navOpen {
   border-radius: 0px 0px 0px 35px;
+  z-index: 2;
 }
 
 @media (max-width: 970px) {

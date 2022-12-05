@@ -3,7 +3,7 @@ import s from "./Header.module.css";
 import NavBar from "./NavBar/NavBar";
 import NavBarPhone from "./NavBarPhone/NavBarPhone";
 import Settings from "./Settings/Settings";
-import { openModalCommon, closeModal } from "../../store/slices/sliceModal";
+import { openHeader, closeHeader, openSettings } from "../../store/slices/sliceHeader";
 import { useSelector, useDispatch } from "react-redux";
 
 function useWindowSize() {
@@ -20,20 +20,32 @@ function useWindowSize() {
 }
 
 const Header = () => {
-  const modalActive = useSelector((state) => state.modal.modalStatus);
+  const header = useSelector((state) => state.header.headerStatus);
+  const settings = useSelector((state) => state.header.settingsStatus);
   const dispatch = useDispatch();
-  const [active, setActive] = useState(false);
   const [width] = useWindowSize();
 
+  const [ settingLocal, setSettingLocal ] = useState(settings)
+
   const openNavList = () => {
-    if (!modalActive) {
-      dispatch(openModalCommon())
-      setActive(!active)
+    if (!header) {
+      dispatch(openHeader())
     } else {
-      dispatch(closeModal())
-      setActive(!active)
+      dispatch(closeHeader())
     }
-    
+  }
+
+  const openSetting = () => {
+    console.log(settings)
+    if (!settings) {
+      dispatch(openSettings())
+    } else {
+      dispatch(closeHeader())
+    }
+  }
+
+  const activeSettings = () => {
+    setSettingLocal(!settingLocal)
   }
 
   if (width > 830) {
@@ -43,15 +55,15 @@ const Header = () => {
           <div className={s.logo}>BFG</div>
           <NavBar />
         </div>
-        <Settings />
+        <Settings active={settingLocal} openSettings={activeSettings} />
       </header>
     );
   } else {
     return (
-      <header className={active ? s.navOpen : undefined}>
+      <header className={header || settings ? s.navOpen : undefined}>
         <div className={s.logo}>BFG</div>
-        <Settings />
-        <NavBarPhone active={active} openNavList={openNavList}/>
+        <Settings active={settings} openSettings={openSetting}/>
+        <NavBarPhone active={header} openNavList={openNavList}/>
       </header>
     );
   }

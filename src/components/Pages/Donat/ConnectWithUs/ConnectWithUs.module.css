@@ -109,6 +109,8 @@
   .connestWithUs {
     padding: 28.29px 51.86px 42.43px;
     background-size: 144px 221px;
+    margin-bottom: 449px;
+    max-width: 330px;
   }
 
   .buttons {

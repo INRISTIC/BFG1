@@ -11,6 +11,7 @@
   width: max-content;
   margin: 0 auto;
   margin-bottom: 59px;
+  margin-top: 59px;
   font-weight: 700;
   font-size: 23px;
   line-height: 27px;
@@ -49,6 +50,7 @@
   padding: 16px 25px;
   gap: 17px;
   align-items: center;
+  justify-content: flex-start;
   
 }
 
@@ -86,4 +88,12 @@
   .donatBlock {
     margin-bottom: 224px;
   }
+
+  .title {
+    margin-top: 47px;
+    margin-bottom: 47px;
+    padding: 14.93px 39.16px;
+    font-size: 18.0714px;
+    line-height: 21px;
+   }
 }

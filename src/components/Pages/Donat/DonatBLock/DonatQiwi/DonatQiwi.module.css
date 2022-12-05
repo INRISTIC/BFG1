@@ -1,11 +1,19 @@
 @keyframes float {
-  0%   {opacity: 0;}
-  100% {opacity: 1;}
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 @keyframes textFLoat {
-  0%   {opacity: 0;}
-  100% {opacity: 0.5;}
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0.5;
+  }
 }
 
 .donatBlock {
@@ -21,7 +29,7 @@
   color: var(--text-color);
   opacity: 0.5;
   margin-bottom: 23px;
-  transition:  0.3s;
+  transition: 0.3s;
   animation-name: textFLoat;
   animation-duration: 1s;
 }
@@ -50,7 +58,7 @@
   font-size: 16px;
   line-height: 19px;
   color: var(--text-color);
-  transition:  0.3s;
+  transition: 0.3s;
 }
 
 .bankCard {
@@ -63,7 +71,7 @@
   padding: 16px 66px 53px;
   gap: 17px;
   position: relative;
-  transition:  0.3s;
+  transition: 0.3s;
   animation-name: float;
   animation-duration: 1s;
 }
@@ -82,11 +90,12 @@
   line-height: 15px;
   color: var(--pay-color);
   width: 100%;
-  transition:  0.3s;
+  transition: 0.3s;
+  margin-bottom: 20px;
 }
 
-.input:not(:last-child) {
-  margin-bottom: 20px;
+.input:last-child {
+  margin-bottom: 0;
 }
 
 .pay {
@@ -115,29 +124,89 @@
   position: absolute;
   left: -17px;
   top: 25px;
-  transition:  0.3s;
+  transition: 0.3s;
 }
 
 .bankCardImg rect {
   fill: var(--card-back);
-  transition:  0.3s;
+  transition: 0.3s;
 }
 .bankCardImg path {
   stroke: var(--card-line);
-  transition:  0.3s;
+  transition: 0.3s;
 }
 
 .bankQiwiImg rect {
   fill: var(--qiwi-back);
-  transition:  0.3s;
+  transition: 0.3s;
 }
 
 .bankMoneyImg rect {
   fill: var(--money-back);
-  transition:  0.3s;
+  transition: 0.3s;
 }
 
 .arrowLeft path {
   stroke: var(--text-color);
-  transition:  0.3s;
+  transition: 0.3s;
+}
+
+@media (max-width: 500px) {
+  .subTitle {
+    margin-bottom: 17.96px;
+    font-size: 16px;
+    line-height: 19px;
+  }
+
+  .back {
+    width: 28.25px;
+    height: 28.25px;
+  }
+
+  .bankCard {
+    max-width: 330px;
+    padding: 12.56px 51.79px 41.59px;
+  }
+
+  .arrowLeft {
+    width: 18.83px;
+    height: 18.83px;
+  }
+
+  .img {
+    width: 45.51px;
+    height: 45.51px;
+  }
+
+  .img svg {
+    width: 45.51px;
+    height: 45.51px;
+  }
+
+  .headerBlock {
+    gap: 13.34px;
+    margin-bottom: 20.4px;
+  }
+
+  .bankCardTitle {
+    font-size: 12.5556px;
+    line-height: 15px;
+  }
+
+  .input {
+    font-size: 10.2014px;
+    line-height: 12px;
+    padding: 16.48px 21.19px;
+    margin-bottom: 15.69px;
+  }
+
+  .inputList {
+    margin-bottom: 20.4px;
+  }
+
+  .pay {
+    padding: 15px;
+    font-size: 10.9861px;
+    line-height: 13px;
+  }
 }

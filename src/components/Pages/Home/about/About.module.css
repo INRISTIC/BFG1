@@ -1,27 +1,32 @@
 @keyframes float {
-  0%   {opacity: 0;}
-  100% {opacity: 1;}
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 .about {
   margin-bottom: 110px;
   animation-name: float;
   animation-duration: 1s;
-  
 }
 
 .title {
-  width: 176px;
+  width: max-content;
   padding: 18px 56px 19px;
   background: var(--background-modal);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.07);
   border-radius: 20px;
   margin: 0 auto;
   font-weight: 700;
+  line-height: 28px;
   font-size: 23px;
   text-align: center;
-  color: #0066FF;
-  transition:  0.3s;
+  color: #0066ff;
+  transition: 0.3s;
+  margin-top: 184px;
 }
 
 .block {
@@ -35,7 +40,8 @@
   background: var(--background-modal);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.07);
   border-radius: 30px 30px 30px 0px;
-  padding: 42px 35px 28px 57px;
+  padding: 42px 57px 81px;
+  position: relative;
   font-weight: 500;
   font-size: 16px;
   line-height: 160%;
@@ -44,35 +50,51 @@
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  transition:  0.3s;
+  transition: 0.3s;
 }
 
 .blockLeftText {
   max-width: 399px;
-  margin: 0 auto 0 0 ;
+  margin: 0 auto 0 0;
   text-align: left;
 }
 
 .button {
-  background: #0071FF;
+  background: #0071ff;
   border-radius: 0px 18px 18px 18px;
   font-weight: 500;
   font-size: 14px;
   padding: 16px 33px;
-  color: #FFFFFF;
+  color: #ffffff;
   text-align: right;
+  position: absolute;
+  bottom: 28px;
+  line-height: 160%;
+  right: 35px;
 }
 
 @media (max-width: 1070px) {
   .about {
-    background-image: url('../../../../assets/images/back-about.svg');
+    background-image: url("../../../../assets/images/back-about.svg");
     background-repeat: no-repeat;
     background-position: center center;
   }
 
+  .title {
+    margin-bottom: 69.92px;
+  }
+
+
+  .blockRight {
+    display: none;
+  }
+}
+
+@media (max-width: 650px) {
   .blockLeft {
     max-width: 330px;
-    padding: 27px 36px 27px 36px;
+    padding: 27.02px 36.67px 47.02px;
+    line-height: 160%;
   }
 
   .blockLeftText {
@@ -80,11 +102,17 @@
     line-height: 160%;
   }
 
-  .title {
-    margin-bottom: 70px;
+  .button {
+    padding: 10.29px 21.06px;
+    bottom: 14.01px;
+    right: 22.51px;
+    font-size: 9.00585px;
   }
 
-  .blockRight {
-    display: none;
+  .title {
+    margin-bottom: 34.76px;
+    font-size: 16.5966px;
+    line-height: 20px;
+    padding: 13.71px 39.35px;
   }
 }

@@ -77,6 +77,7 @@
   align-items: center;
   border: 3px solid #ffffff00;
   transition: 0.3s;
+  justify-content: flex-start;
 }
 
 .active {
@@ -163,6 +164,8 @@
     padding: 10.99857px 19.64px;
     border: 1.57143px solid #ffffff00;
   }
+
+  
   
   .active {
     border: 1.57143px solid #0085FF;
@@ -194,11 +197,13 @@
     padding-top: 20px;
     padding-bottom: 20px;
     max-width: none;
+    max-width: 420px;
   }
 
   .listBtn {
     gap: 18.07px;
     margin-bottom: 30.07px;
+    max-width: 330px;
   }
   
 }

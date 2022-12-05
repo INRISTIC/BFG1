@@ -39,18 +39,20 @@
   width: max-content;
   margin: 0 auto;
   margin-bottom: 85px;
+  margin-top: 59px;
   animation-name: float;
   animation-duration: 1s;
 }
 
 .statsBlock {
-  max-width: 876px;
+  max-width: 867px;
   margin: 0 auto;
   background: var(--background-modal-settings);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.07);
   border-radius: 25px;
   padding-bottom: 115px;
   margin-bottom: 50px;
+
   animation-name: float;
   animation-duration: 1s;
 }
@@ -60,13 +62,12 @@
   justify-content: space-between;
   flex-wrap: wrap;
   gap: 36px;
-  padding-bottom: 21px;
   align-items: center;
   background: var(--stat-header);
   box-shadow: 0px 7px 13px rgba(0, 0, 0, 0.1);
   border-radius: 25px 25px 0px 0px;
-  padding: 21px 22px 26px 44px;
-  margin-bottom: 75px;
+  padding: 21px 22px 22px 44px;
+  margin-bottom: 59px;
 }
 
 .avatarContainer {
@@ -140,6 +141,7 @@
 .statsRight {
   max-width: 280px;
   width: 100%;
+  margin-bottom: 10px;
 }
 
 .statsItem {
@@ -157,6 +159,10 @@
   gap: 8px;
   align-items: center;
   transition: 0.3s;
+}
+
+.statsItem:last-child {
+  margin-bottom: 0;
 }
 
 .statsItem span {
@@ -295,6 +301,20 @@
   padding-bottom: 55px;
   margin-bottom: 50px;
   transition: 0.3s;
+  position: relative;
+}
+
+.TopsPlayers::before {
+  content: "";
+  width: 165px;
+  height: 153.16px;
+  position: absolute;
+  background-image: url("../../../assets/images/perStat-topPlayers.png");
+  background-repeat: no-repeat;
+  background-size: auto;
+  top: -153px;
+  right: 50%;
+  transform: translateX(50%);
 }
 
 .TopsPlayersHeader {
@@ -332,7 +352,12 @@
   line-height: 19px;
   text-align: center;
   color: #0071ff;
+  gap: 8px;
   transition: 0.3s;
+}
+
+.TopsPlayyersFilterBtn svg path {
+  stroke: #0071ff;
 }
 
 .ActiveTopsPlayyersFilterBtn {
@@ -346,6 +371,11 @@
   line-height: 19px;
   text-align: center;
   color: #ffffff;
+  gap: 8px;
+}
+
+.ActiveTopsPlayyersFilterBtn svg path {
+  stroke: white;
 }
 
 .TopsPlayyersFilterBtn:first-child,
@@ -420,7 +450,15 @@
   justify-content: center;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 945px) {
+  .statsBlock {
+    margin-left: 31px;
+    margin-right: 31px;
+    padding-bottom: 49px;
+  }
+}
+
+@media (max-width: 735px) {
   .buttons {
     flex-wrap: wrap;
     gap: 10px;
@@ -444,6 +482,13 @@
 }
 
 @media (max-width: 540px) {
+  .TopsPlayers::before {
+    width: 94px;
+    height: 87.16px;
+    background-size: 94px 87.16px;
+    top: -87px;
+  }
+
   .headerTitle {
     font-size: 12px;
   }
@@ -470,6 +515,7 @@
   .statsBlockHeader {
     gap: 13px;
     padding: 23px 22px 24px 23px;
+    margin-bottom: 35px;
   }
 
   .statsButton {
@@ -505,6 +551,8 @@
 
   .TopsPlayyersFilterBtn {
     font-size: 9.04969px;
+    padding-top: 9.61px;
+    padding-bottom: 8.85px;
     line-height: 11px;
     padding-top: 10px;
     padding-bottom: 10px;
@@ -513,10 +561,18 @@
 
   .ActiveTopsPlayyersFilterBtn {
     font-size: 9.04969px;
+    padding-top: 9.61px;
+    padding-bottom: 8.85px;
     line-height: 11px;
     padding-top: 10px;
     padding-bottom: 10px;
     margin-bottom: 15px;
+  }
+
+  .ActiveTopsPlayyersFilterBtn svg,
+  .TopsPlayyersFilterBtn svg {
+    width: 13.57px;
+    height: 13.57px;
   }
 
   .TopsPlayyersFilterBtn:first-child,
@@ -536,26 +592,32 @@
   .TopsPlayersBlockTitle {
     font-size: 12px;
     grid-template-columns: 1fr 1fr 1fr;
-    padding: 9px 14px;
+    padding: 9px 36px;
     margin-bottom: 21px;
     margin-right: 8px;
   }
 
+  .TopsPlayers {
+    padding-bottom: 35px;
+    margin-bottom: 69px;
+  }
+
   .TopsPlayersBlockList {
     margin-right: 8px;
+    gap: 15.16px;
   }
 
   .TopsPlayersBlock::-webkit-scrollbar {
     scroll-padding-top: 30px;
     width: 6px;
-    background-color: transparent;;
+    background-color: transparent;
   }
-  
+
   .TopsPlayersBlock::-webkit-scrollbar-thumb {
     background: rgba(0, 133, 255, 0.2);
     border-radius: 100px;
   }
-  
+
   .active::-webkit-scrollbar-thumb {
     opacity: 0;
     transition: 1s;
@@ -565,6 +627,6 @@
   .title {
     font-size: 18.0714px;
     padding: 15px 17px;
-    margin-bottom: 42px;
+    margin-bottom: 43px;
   }
 }

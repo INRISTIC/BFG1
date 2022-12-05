@@ -2,9 +2,9 @@ import { useSelector, useDispatch } from "react-redux";
 import { donatWay } from "../../../../../store/slices/sliceDonat";
 
 import { ReactComponent as Arrow } from "../../../../../assets/images/arrow-left.svg";
-import { ReactComponent as Card} from "../../../../../assets/images/donat-card.svg";
-import { ReactComponent as Qiwi} from "../../../../../assets/images/donat-qiwi.svg";
-import { ReactComponent as Money} from "../../../../../assets/images/donat-money.svg";
+import { ReactComponent as Card } from "../../../../../assets/images/donat-card.svg";
+import { ReactComponent as Qiwi } from "../../../../../assets/images/donat-qiwi.svg";
+import { ReactComponent as Money } from "../../../../../assets/images/donat-money.svg";
 
 import s from "./DonatQiwi.module.css";
 
@@ -27,27 +27,20 @@ const DonatQiwi = () => {
     );
   };
 
-  console.log(donatCard)
+  console.log(donatCard);
 
   return (
     <>
-      
       <div className={s.subTitle}>Заполните все поля</div>
       <div className={s.bankCard}>
-      <button onClick={onBack} className={s.back}>
-        <Arrow className={s.arrowLeft} />
-      </button>
+        <button onClick={onBack} className={s.back}>
+          <Arrow className={s.arrowLeft} />
+        </button>
         <div className={s.headerBlock}>
           <div className={s.img}>
-            {donatCard.status && (
-              <Card className={s.bankCardImg} />
-            )}
-            {donatQiwi.status && (
-              <Qiwi className={s.bankQiwiImg}/>
-            )}
-            {donatMoney.status && (
-              <Money className={s.bankMoneyImg}/>
-            )}
+            {donatCard.status && <Card className={s.bankCardImg} />}
+            {donatQiwi.status && <Qiwi className={s.bankQiwiImg} />}
+            {donatMoney.status && <Money className={s.bankMoneyImg} />}
           </div>
 
           <div className={s.bankCardText}>

@@ -18,8 +18,6 @@ const WayDonat = () => {
   const [active, setActive] = useState({});
   const donat = useSelector((state) => state.donat);
 
-  console.log(donat)
-
   const donatCard = donat.donatCard;
   const donatQiwi = donat.donatQiwi;
   const donatMoney = donat.donatMoney;

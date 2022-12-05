@@ -5,10 +5,10 @@ import ConnectWithUs from "./ConnectWithUs/ConnectWithUs";
 const Donat = () => {
   return (
     <>
-    <DonatBlock />
-    <ConnectWithUs />
+      <DonatBlock />
+      <ConnectWithUs />
     </>
-  )
-}
+  );
+};
 
 export default Donat;

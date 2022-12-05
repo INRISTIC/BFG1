@@ -19,6 +19,9 @@ import { ReactComponent as AirplanIcon } from "../../../assets/images/airplane-s
 import { ReactComponent as MedalIcon } from "../../../assets/images/medal-stat.svg";
 import { ReactComponent as MoreIcon } from "../../../assets/images/more-square-stat.svg";
 import { ReactComponent as VertolIcon } from "../../../assets/images/vertol-stat.svg";
+import { ReactComponent as DollarTopIcon } from "../../../assets/images/dollarTop-stat.svg";
+import { ReactComponent as ClansIcon } from "../../../assets/images/clans-stat.svg";
+import { ReactComponent as Up } from "../../../assets/images/status-up-stat.svg";
 
 import { ReactComponent as TopsIcon } from "../../../assets/images/tops-stat.svg";
 
@@ -181,7 +184,7 @@ const PersonalStatistics = () => {
       </div>
       <div className={s.TopsPlayers}>
         <div className={s.TopsPlayersHeader}>
-          <TopsIcon className={s.topIcon}/>
+          <TopsIcon className={s.topIcon} />
           ТОП 100 игроков
         </div>
         <div className={s.TopsRatings}>
@@ -194,6 +197,7 @@ const PersonalStatistics = () => {
               }
               onClick={() => onChangeStats({ rating: true })}
             >
+                <Up />
               Рейтинг
             </button>
             <button
@@ -204,6 +208,7 @@ const PersonalStatistics = () => {
               }
               onClick={() => onChangeStats({ valute: true })}
             >
+                <DollarTopIcon />
               Валюта
             </button>
             <button
@@ -214,6 +219,7 @@ const PersonalStatistics = () => {
               }
               onClick={() => onChangeStats({ clan: true })}
             >
+                <ClansIcon />
               Кланы
             </button>
           </div>
