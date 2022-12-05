@@ -84,8 +84,11 @@
 }
 
 @media (max-width: 500px) {
+
   .title {
     font-size: 12.5714px;
+    margin-bottom: 25.86px;
+    line-height: 15px;
   }
 
   .connestBtn {
@@ -93,18 +96,41 @@
     padding: 13px 18px;
   }
 
-  .imgRobot, .imgRobot img{
+  .imgRobot{
     width: 18.86px;
     height: 18.86px;
   }
 
-  .imgTg, .imgTg img {
+  .imgTg  {
     width: 22.79px;
     height: 22.79px;
   }
 
   .connestWithUs {
-    padding: 29.29px 51.86px 42.43px;
-    background-size: 144px 256px;
+    padding: 28.29px 51.86px 42.43px;
+    background-size: 144px 221px;
+  }
+
+  .buttons {
+    gap: 15.71px;
+  }
+
+  .connestBtn {
+    border: 1.57143px solid #0085FF;
+    border-radius: 11.7857px;
+    padding: 10.99857px 15.71px 10.99857px 18.07px;
+    line-height: 12px;
+  }
+  
+  .connestBtn:last-child {
+    padding: 9.42857px 15.71px;
+  }
+
+  .imgArrow {
+    width: 19.64px;
+    height: 19.64px;
+  }
+  .imgArrow img, .imgTg img, .imgRobot img {
+    width: 100%;
   }
 }

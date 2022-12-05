@@ -29,7 +29,6 @@ const News = () => {
     setSort({ ...sort, [arg]: !sort[arg] });
   };
 
-  console.log(width);
   let reactSwipeEl;
 
   return (

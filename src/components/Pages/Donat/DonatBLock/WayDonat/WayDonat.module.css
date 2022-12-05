@@ -41,8 +41,6 @@
   animation-duration: 1s;
 }
 
-
-
 .subTitle {
   font-weight: 500;
   font-size: 16px;
@@ -63,7 +61,7 @@
   margin-left: auto;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 23px;
   margin-bottom: 23px;
   animation-name: float;
   animation-duration: 1s;
@@ -74,7 +72,7 @@
   background: var(--background-modal);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.07);
   border-radius: 20px;
-  padding: 16px 25px;
+  padding: 13px 25px;
   gap: 17px;
   align-items: center;
   border: 3px solid #ffffff00;
@@ -92,17 +90,16 @@
   width: 100%;
   padding-top: 18px;
   padding-bottom: 19px;
-  background: #0085FF;
+  background: #0085ff;
   box-shadow: 0px 4.58333px 4.58333px rgba(0, 0, 0, 0.07);
   border-radius: 17.1875px;
   font-weight: 500;
   font-size: 16.0417px;
   line-height: 19px;
   text-align: center;
-  color: #FFFFFF;
+  color: #ffffff;
   animation-name: float;
   animation-duration: 1s;
-  
 }
 
 .none {
@@ -163,13 +160,18 @@
 
 @media (max-width: 500px) {
   .bankCard {
-    padding: 12.5px 19.6px;
+    padding: 10.99857px 19.64px;
+    border: 1.57143px solid #ffffff00;
+  }
+  
+  .active {
+    border: 1.57143px solid #0085FF;
   }
 
   .img svg,
   .img {
-    width: 45.5px;
-    height: 45.5px;
+    width: 45.57px;
+    height: 45.57px;
   }
 
   .bankCardTitle {
@@ -193,4 +195,10 @@
     padding-bottom: 20px;
     max-width: none;
   }
+
+  .listBtn {
+    gap: 18.07px;
+    margin-bottom: 30.07px;
+  }
+  
 }
