@@ -1,9 +1,13 @@
-import { useLayoutEffect, useState } from "react";
+import { useLayoutEffect, useState, useEffect } from "react";
 import s from "./Header.module.css";
 import NavBar from "./NavBar/NavBar";
 import NavBarPhone from "./NavBarPhone/NavBarPhone";
 import Settings from "./Settings/Settings";
-import { openHeader, closeHeader, openSettings } from "../../store/slices/sliceHeader";
+import {
+  openHeader,
+  closeHeader,
+  openSettings,
+} from "../../store/slices/sliceHeader";
 import { useSelector, useDispatch } from "react-redux";
 
 function useWindowSize() {
@@ -25,48 +29,38 @@ const Header = () => {
   const dispatch = useDispatch();
   const [width] = useWindowSize();
 
-  const [ settingLocal, setSettingLocal ] = useState(settings)
+  // const [settingLocal, setSettingLocal] = useState(settings);
 
   const openNavList = () => {
     if (!header) {
-      dispatch(openHeader())
+      dispatch(openHeader());
     } else {
-      dispatch(closeHeader())
+      dispatch(closeHeader());
     }
-  }
+  };
 
   const openSetting = () => {
-    console.log(settings)
     if (!settings) {
-      dispatch(openSettings())
+      dispatch(openSettings());
     } else {
-      dispatch(closeHeader())
+      dispatch(closeHeader());
     }
-  }
+  };
 
-  const activeSettings = () => {
-    setSettingLocal(!settingLocal)
-  }
+  // const activeSettings = () => {
+  //   setSettingLocal(!settingLocal);
+  // };
 
-  if (width > 830) {
-    return (
-      <header>
-        <div className={s.headerLeft}>
-          <div className={s.logo}>BFG</div>
-          <NavBar />
-        </div>
-        <Settings active={settingLocal} openSettings={activeSettings} />
-      </header>
-    );
-  } else {
     return (
       <header className={header || settings ? s.navOpen : undefined}>
-        <div className={s.logo}>BFG</div>
-        <Settings active={settings} openSettings={openSetting}/>
-        <NavBarPhone active={header} openNavList={openNavList}/>
+        <div className={s.headerLeft}>
+          <div className={s.logo}>BFG</div>
+          {width > 830 && <NavBar />}
+        </div>
+        <Settings active={settings} openSettings={openSetting}  />
+        {width <= 830 && <NavBarPhone active={header} openNavList={openNavList} />}
       </header>
     );
-  }
 };
 
 export default Header;

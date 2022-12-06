@@ -1,11 +1,27 @@
 import s from "./Modal.module.css";
+import { useLayoutEffect, useState } from "react";
 import Windmill from "./Windmill/Windmill";
 import Inventory from "./Inventory/Inventory";
 import { useSelector, useDispatch } from "react-redux";
 import { closeModal } from "../../store/slices/sliceModal";
 import { openHeader, closeHeader } from "../../store/slices/sliceHeader";
 
+function useWindowSize() {
+  const [size, setSize] = useState([0]);
+  useLayoutEffect(() => {
+    function updateSize() {
+      setSize([window.innerWidth]);
+    }
+    window.addEventListener("resize", updateSize);
+    updateSize();
+    return () => window.removeEventListener("resize", updateSize);
+  }, []);
+  return size;
+}
+
 const Modal = () => {
+  const [width] = useWindowSize();
+
   const modal = useSelector((state) => state.modal);
   const header = useSelector((state) => state.header);
   const dispatch = useDispatch();
@@ -17,8 +33,7 @@ const Modal = () => {
   const headerActive = header.headerStatus;
   const settingsActiv = header.settingsStatus;
 
-  if (headerActive || settingsActiv) {
-    console.log(10)
+  if ((headerActive || settingsActiv) && width <= 830) {
     return (
       <div
         className={headerActive || settingsActiv ? s.modal + " " + s.active : s.modal}
