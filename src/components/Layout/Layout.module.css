@@ -1,5 +1,16 @@
 .main {
-  max-width: 1180px;
+  position: relative;
+  max-width: 1350px;
+  padding-left: 85px;
+  padding-right: 85px;
   align-self: center;
   width: 100%;
+}
+
+
+@media (max-width: 900px) {
+  .main {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
 }

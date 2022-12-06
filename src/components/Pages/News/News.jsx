@@ -1,4 +1,4 @@
-import { useLayoutEffect, useState, useEffect, createRef } from "react";
+import { useLayoutEffect, useState } from "react";
 import ReactSwipe from "react-swipe";
 import Post from "./Post/Post";
 
@@ -99,7 +99,6 @@ const News = () => {
               </button>
             </div>
           </div>
-          {scrollDown ? (<div style={{ height: 10, width: 10 }}></div>) : false}
           {width > 850 ? (
             <div className={s.newsListContainer}>
               <div className={!scrollDown ? classesListsShadow : classesLists} onScroll={(e) => changeScroll(e, setScrolling)}>

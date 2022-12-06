@@ -27,7 +27,7 @@
   display: flex;
   justify-content: space-between;
   gap: 25px;
-  margin-bottom: 40px;
+  margin-bottom: 210px;
   animation-name: float;
   animation-duration: 1s;
 }
@@ -114,7 +114,7 @@
 
 .filter {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   padding: 22px 81px 23px 36px;
   background: var(--background-modal);
   box-shadow: 0px 3.0662px 3.0662px rgba(0, 0, 0, 0.07);
@@ -162,7 +162,7 @@
   display: flex;
   justify-content: space-between;
 
-  max-width: 299px;
+  max-width: 285px;
   width: 100%;
 }
 
@@ -201,7 +201,7 @@
   content: '';
   background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, var(--background-modal) 100%);
   border-radius: 25px;
-  width: 833px;
+  width: 100%;
   height: 209px;
   display: block;
   position: absolute;
@@ -244,7 +244,7 @@
   padding: 15px;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1400px) {
   .newsBlock {
     flex-direction: column-reverse;
     align-items: center;

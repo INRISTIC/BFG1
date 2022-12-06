@@ -1,12 +1,10 @@
 .topToBtm{
-  position: relative;
-  height: 70px;
-  width: 70px;
+  position: absolute;
 }
-.iconPosition{
+.iconPosition {
   position: fixed;
-  bottom: 40px;
-  right: 50px;
+  bottom: 213px;
+  right: 126px;
   z-index: 20;
 }
 .iconStyle{
@@ -36,6 +34,31 @@
   }
   100%{
     transform: translateY(0px);
+  }
+}
+
+@media (max-width: 1700px) {
+  .iconPosition {
+    right: 63px;
+  }
+}
+
+@media (max-width: 1530px) {
+  .iconPosition {
+    right: 31.5px;
+  }
+}
+
+@media (max-width: 1430px) {
+  .iconStyle {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+@media (max-width: 1055px) {
+  .iconPosition { 
+    right: 17.5px;
   }
 }
 
