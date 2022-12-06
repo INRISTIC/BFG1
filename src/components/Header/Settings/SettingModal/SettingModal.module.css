@@ -3,7 +3,6 @@ button {
   border: none;
   padding: 0;
   cursor: pointer;
-
   display: flex;
   align-items: center;
   justify-content: center;
@@ -30,6 +29,7 @@ button {
   transition:  0.3s;
   animation-name: float;
   animation-duration: 1s;
+  z-index: 1;
 }
 
 .unvis {

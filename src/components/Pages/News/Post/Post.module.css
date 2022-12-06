@@ -112,7 +112,7 @@
   background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, var(--background-post) 100%);
 }
 
-/* @media (max-width: 850px) {
+@media (max-width: 850px) {
 
   .postImgContainer {
     width: 241px;
@@ -169,5 +169,5 @@
     padding: 13px 12px;
   }
   
-} */
+}
 

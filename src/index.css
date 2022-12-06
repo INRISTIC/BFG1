@@ -55,6 +55,8 @@ body {
   --title-acsec: #C6DFFF;
 
   --modal-sclad: #acd7ff;
+
+  --slide-back: #FFFFFF;
 }
 
 :root[data-theme="dark"] {
@@ -93,6 +95,8 @@ body {
   --title-acsec2: #1A3658;
 
   --modal-sclad: #007DF1;
+
+  --slide-back: #232C37;
 }
 
 li.ant-rate-star-zero svg {
