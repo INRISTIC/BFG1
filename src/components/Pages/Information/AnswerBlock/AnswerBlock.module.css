@@ -164,6 +164,7 @@ textarea {
 @media (max-width: 500px) {
   .answerBlock {
     padding: 36px 34px 51px;
+    margin-bottom: 44px;
   }
 
   .answerBlock::before {

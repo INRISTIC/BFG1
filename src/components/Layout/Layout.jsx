@@ -27,7 +27,7 @@ const Layout = () => {
 
   return (
     <>
-      <div className={(header || settings) && width <= 830  ? s.header : undefined}>
+      <div className={ width <= 830  ? s.header : undefined}>
         <Header />
       </div>
 

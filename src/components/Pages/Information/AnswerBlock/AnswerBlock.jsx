@@ -50,7 +50,7 @@ const AnswerBlock = () => {
         />
         <div className={s.labelCheckbox}>
           <input type="checkbox" className={s.checkbox} id="checkbox" name="checkbox"/>
-          <label className={s.checkboxText} for="checkbox">
+          <label className={s.checkboxText} htmlFor="checkbox">
             я соглашаюсь с условиями пользовательского соглашение и политикой
             конфиденциальности
           </label>

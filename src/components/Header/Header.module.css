@@ -49,11 +49,15 @@ header {
 }
 
 .navOpen {
-  border-radius: 0px 0px 0px 35px;
+
   z-index: 2;
   position: fixed;
   top: 0;
   left: 0;
+}
+
+.navNoOpen {
+  border-radius: 0px 0px 0px 35px;
 }
 
 @media (max-width: 970px) {

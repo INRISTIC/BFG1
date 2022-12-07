@@ -46,7 +46,7 @@ const Header = () => {
   };
 
     return (
-      <header className={(header || settings) && width <= 830  ? s.navOpen : undefined}>
+      <header className={(width <= 830  ? s.navOpen : undefined) + ' ' + (header || settings ? s.navNoOpen : undefined)}>
         <div className={s.headerLeft}>
           <div className={s.logo}>BFG</div>
           {width > 830 && <NavBar />}
