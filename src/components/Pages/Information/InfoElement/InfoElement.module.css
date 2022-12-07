@@ -1,6 +1,23 @@
+@keyframes float {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes antiFloat {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
 .infoElement {
   width: 100%;
-
   background: var(--background-modal);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.07);
   border-radius: 18px;
@@ -17,11 +34,9 @@
 
 .infoElement__header_block::before {
   content: "";
-
   width: 29px;
   height: 29px;
-
-  background-image: url('/src/assets/images/faqElementQuestion.svg');
+  background-image: url("/src/assets/images/faqElementQuestion.svg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: 29px;
@@ -35,26 +50,30 @@
 }
 
 .infoElement__header_text {
-  font-family: 'Rubik';
+  font-family: "Rubik";
   font-style: normal;
   font-weight: 500;
   font-size: 16px;
   line-height: 19px;
 
-  color: #0071FF;
+  color: white;
 
   transition: all 0.2s;
 
   margin-right: auto;
 }
 
-.hidden {
-  
+.activeColor {
+  color: #0071ff;
 }
 
 .arrow * {
   fill: var(--text-color);
   transition: 0.2s;
+}
+
+.arrowActive path {
+  fill: #0071ff;
 }
 
 .infoElement__header_btn .arrow {
@@ -65,4 +84,60 @@
 .infoElement__header_btn_active .arrow {
   transform: rotate(360deg);
   transition: 0.2s;
+}
+
+.text {
+  display: block;
+  border-top: 1px solid #3c3c3c;
+  padding-left: 44px;
+  padding-right: 44px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  color: #9b9b9b;
+  padding: 22px 44px 27px;
+}
+
+.defaultBlosk {
+  overflow: hidden;
+}
+
+.closed {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.25s cubic-bezier(0.5, 0, 0.1, 1);
+}
+
+.activeText {
+  max-height: 500px;
+  transition: max-height 0.25s cubic-bezier(0.5, 0, 0.1, 1);
+}
+
+@media (max-width: 500px) {
+  .infoElement__header_block {
+    padding: 16.24px 23.32px 17.75px 23.32px;
+  }
+
+  .infoElement__header_block::before {
+    width: 21.9px;
+    height: 21.9px;
+    background-size: 21.9px;
+  }
+
+  .infoElement__header_text {
+    font-weight: 500;
+    font-size: 12.0824px;
+    line-height: 14px;
+  }
+
+  .arrow {
+    width: 16.83px;
+    height: 18.08px;
+  }
+
+  .text {
+    padding: 16.61px 33.23px 21.08px;
+    font-size: 12.0824px;
+    line-height: 14px;
+  }
 }

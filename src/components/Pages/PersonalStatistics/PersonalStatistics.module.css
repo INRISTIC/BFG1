@@ -452,8 +452,6 @@
 
 @media (max-width: 945px) {
   .statsBlock {
-    margin-left: 31px;
-    margin-right: 31px;
     padding-bottom: 49px;
   }
 }
@@ -489,6 +487,10 @@
     top: -87px;
   }
 
+  .avatarContainer {
+    gap: 11.3px;
+  }
+
   .headerTitle {
     font-size: 12px;
   }
@@ -500,6 +502,8 @@
 
   .dataRegister {
     font-size: 12px;
+    line-height: 14px;
+    max-width: 127px;
   }
 
   .email {

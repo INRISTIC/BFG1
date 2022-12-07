@@ -51,6 +51,9 @@ header {
 .navOpen {
   border-radius: 0px 0px 0px 35px;
   z-index: 2;
+  position: fixed;
+  top: 0;
+  left: 0;
 }
 
 @media (max-width: 970px) {
@@ -64,6 +67,7 @@ header {
     padding: 28px 25px 37px;
     border-radius: 0px 0px 35px 35px;
     gap: 23px;
+
   }
 
   .logo {

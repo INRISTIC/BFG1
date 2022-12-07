@@ -1,0 +1,236 @@
+.answerBlock {
+  position: relative;
+  max-width: 420px;
+  background: #232c37;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.07);
+  border-radius: 20px;
+  padding: 39px 66px 87px;
+  margin: 0 auto;
+  margin-bottom: 122px;
+}
+
+.answerBlock::before {
+  content: "";
+  position: absolute;
+  width: 147px;
+  height: 107.39px;
+  background-image: url("../../../../assets/images/answer-block.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  top: -107px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.title {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+  color: #ffffff;
+  margin-bottom: 7px;
+}
+
+.subTitle {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+  color: #959595;
+  margin-bottom: 36px;
+}
+
+.input {
+  background: var(--pay-input);
+  border-radius: 15px;
+  padding: 21px 27px;
+  border: none;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 15px;
+  color: var(--pay-color);
+  width: 100%;
+  transition: 0.3s;
+  margin-bottom: 20px;
+}
+
+.input:last-child {
+  margin-bottom: 0;
+}
+
+.label {
+  position: relative;
+  background: var(--pay-input);
+  border-radius: 15px;
+  padding: 21px 27px;
+  border: none;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 15px;
+  color: var(--pay-color);
+  width: 100%;
+  transition: 0.3s;
+  margin-bottom: 20px;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+}
+
+.inputLabel {
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 15px;
+  color: var(--pay-color);
+  background: var(--pay-input);
+  border: none;
+}
+
+.buttonLabel {
+  padding: 11px 18px;
+  position: absolute;
+  background: #1f3c61;
+  border-radius: 10px;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 15px;
+  color: #ffffff;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+textarea {
+  resize: none;
+}
+
+.labelCheckbox {
+  display: flex;
+  gap: 7px;
+}
+
+.checkbox {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+
+.checkbox + label {
+  display: inline-flex;
+  align-items: center;
+  user-select: none;
+}
+.checkbox + label::before {
+  content: "";
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  margin-right: 5px;
+  flex-shrink: 0;
+  flex-grow: 0;
+  background: #1e334e;
+  border: 2px solid #0071ff;
+  border-radius: 5px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 50% 50%;
+}
+
+.checkbox:checked + label::before {
+  background-image: url("../../../../assets/images/check.svg");
+  background-size: auto;
+}
+
+.checkboxText {
+  font-weight: 500;
+  font-size: 11px;
+  line-height: 13px;
+  color: #bebebe;
+  margin-bottom: 16px;
+}
+
+.buttonQuastion {
+  width: 100%;
+  background: #0085ff;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.07);
+  border-radius: 15px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  padding: 19px;
+  text-align: center;
+  color: #ffffff;
+}
+
+@media (max-width: 500px) {
+  .answerBlock {
+    padding: 36px 34px 51px;
+  }
+
+  .answerBlock::before {
+    width: 126px;
+    height: 91.89px;
+    background-size: 126px 91.89px;
+    background-image: url("../../../../assets/images/answer-block.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    top: -92px;
+  }
+
+  .title {
+    font-size: 14.4572px;
+    line-height: 17px;
+    margin-bottom: 6.49px;
+  }
+
+  .subTitle {
+    font-size: 14.4572px;
+    line-height: 17px;
+    margin-bottom: 32.7px;
+  }
+
+  .label {
+    padding: 19px 24.4px;
+    margin-bottom: 18.07px;
+  }
+
+  .inputLabel {
+    font-size: 11.7465px;
+    line-height: 14px;
+  }
+
+  .buttonLabel {
+    padding: 9px 16px;
+    font-size: 11.7465px;
+    line-height: 14px;
+  }
+
+  .input {
+    padding: 18px 24px;
+    font-size: 11.7465px;
+    line-height: 14px;
+    margin-bottom: 18.07px;
+  }
+
+  .checkbox + label::before {
+    content: "";
+    display: inline-block;
+    width: 12.399999999999999px;
+    height: 12.4px;
+    border: 1.80715px solid #0071ff;
+  }
+
+  .checkboxText {
+    font-size: 9.93933px;
+    line-height: 12px;
+  }
+
+  .checkbox:checked + label::before {
+    background-size: 10px;
+  }
+
+  .buttonQuastion {
+    padding: 16.26px;
+    font-size: 12.6501px;
+    line-height: 15px;
+  }
+}

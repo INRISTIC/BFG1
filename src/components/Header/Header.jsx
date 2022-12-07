@@ -1,4 +1,4 @@
-import { useLayoutEffect, useState, useEffect } from "react";
+import { useLayoutEffect, useState } from "react";
 import s from "./Header.module.css";
 import NavBar from "./NavBar/NavBar";
 import NavBarPhone from "./NavBarPhone/NavBarPhone";
@@ -29,8 +29,6 @@ const Header = () => {
   const dispatch = useDispatch();
   const [width] = useWindowSize();
 
-  // const [settingLocal, setSettingLocal] = useState(settings);
-
   const openNavList = () => {
     if (!header) {
       dispatch(openHeader());
@@ -46,10 +44,6 @@ const Header = () => {
       dispatch(closeHeader());
     }
   };
-
-  // const activeSettings = () => {
-  //   setSettingLocal(!settingLocal);
-  // };
 
     return (
       <header className={(header || settings) && width <= 830  ? s.navOpen : undefined}>

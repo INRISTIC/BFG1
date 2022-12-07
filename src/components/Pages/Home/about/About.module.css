@@ -18,6 +18,7 @@
   padding: 18px 56px 19px;
   background: var(--background-modal);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.07);
+  margin-top: 59px;
   border-radius: 20px;
   margin: 0 auto;
   font-weight: 700;
@@ -26,7 +27,7 @@
   text-align: center;
   color: #0066ff;
   transition: 0.3s;
-  margin-top: 184px;
+  margin-top: 59px;
 }
 
 .block {
@@ -73,26 +74,25 @@
   right: 35px;
 }
 
-@media (max-width: 1070px) {
+@media (max-width: 1200px) {
+  .blockRight {
+    display: none;
+  }
+
+  .title {
+    margin-bottom: 69.92px;
+    margin-top: 47px;
+  }
+  
   .about {
     background-image: url("../../../../assets/images/back-about.svg");
     background-repeat: no-repeat;
     background-position: center center;
   }
-
-  .title {
-    margin-bottom: 69.92px;
-  }
-
-
-  .blockRight {
-    display: none;
-  }
 }
 
 @media (max-width: 650px) {
   .blockLeft {
-    max-width: 330px;
     padding: 27.02px 36.67px 47.02px;
     line-height: 160%;
   }

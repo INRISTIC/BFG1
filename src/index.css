@@ -74,14 +74,14 @@ body {
   --money-back: #3F274A;
 
   --pay-input: #2A3440;
-  --pay-color: rgba(85, 93, 102, 0.2);
+  --pay-color: rgba(85, 93, 102, 1);
 
   --connect-with-us-btn: #1C3554;
 
   --stat-header: #29394D;
 
   --stats-item: #223E62;
-  --stats-color: rgba(255, 255, 255, 0.2);
+  --stats-color: rgba(255, 255, 255, 1);
 
   --icon-fill: white;
   
