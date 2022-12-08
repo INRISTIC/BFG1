@@ -1,14 +1,14 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-  modalStatus: true,
+  modalStatus: false,
   modalWindmill: false,
   modalInventory: false,
   modalComplete: false,
   modalFatal: false,
   modalPersonInfo: false,
   modalBotProtect: false,
-  modalBlock: true,
+  modalBlock: false,
 };
 
 export const modalSlice = createSlice({
