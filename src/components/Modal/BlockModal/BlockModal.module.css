@@ -1,0 +1,151 @@
+.modal {
+  padding: 91px 86px 87px;
+  background: var(--background-modal);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.07);
+  border-radius: 25px;
+}
+
+.modal::before {
+  content: "";
+  background-image: url("../../../assets/images/panda-blockModal.png");
+  width: 145px;
+  height: 127px;
+  position: absolute;
+  top: -35px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-size: 145px 144px;
+  background-repeat: no-repeat;
+}
+
+.blockTitle {
+  margin: 0;
+  background: #ff6464;
+  box-shadow: 0px 7px 13px rgba(0, 0, 0, 0.13);
+  border-radius: 33px;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28px;
+  text-align: center;
+  margin-bottom: 38px;
+  padding: 19px 50px;
+}
+
+.title {
+  margin-bottom: 24px;
+  position: relative;
+  display: flex;
+}
+
+.title span {
+  display: block;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+  z-index: 1;
+  background: #0071ff;
+  border-radius: 17px;
+  padding: 18px 64px;
+  width: max-content;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.title::after {
+  position: absolute;
+  content: "";
+  width: 328px;
+  height: 49.79px;
+  border-radius: 13.5789px;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 6px);
+  background: var(--title-acsec1);
+}
+
+.title::before {
+  position: absolute;
+  content: "";
+  width: 289px;
+  height: 50px;
+  border-radius: 13.5789px;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 13px);
+  background: var(--title-acsec2);
+}
+
+.desc {
+  padding: 26px 21px 31px;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 18px;
+  text-align: center;
+  color: #0071ff;
+  background: #193b65;
+  border-radius: 17px;
+  margin-bottom: 26px;
+  max-width: 350px;
+}
+
+.button {
+  background: #0071ff;
+  margin: 0 auto;
+  border-radius: 17px;
+  padding: 21px 60px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  text-align: center;
+  color: #ffffff;
+}
+
+@media (max-width: 580px) {
+  .modal::before {
+    width: 111px;
+    height: 96.23px;
+    position: absolute;
+    top: 39px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-size: 111px 110px;
+    background-repeat: no-repeat;
+  }
+
+  .blockTitle {
+    padding: 14.16px 35px;
+    font-size: 18.5143px;
+    line-height: 22px;
+  }
+
+  .modal {
+    padding: 135.4px 35px 71px;
+  }
+  .title {
+    margin-bottom: 18.52px;
+  }
+
+  .title span {
+    padding: 134x 49px;
+  }
+
+  .title::after {
+    width: 253.03px;
+  }
+
+  .title::before {
+    width: 222.94px;
+  }
+
+  .desc {
+    font-size: 11.5714px;
+    line-height: 14px;
+    padding: 20.06px 16px 24px;
+    margin-bottom: 20.06px;
+  }
+
+  .button {
+    padding: 16px 47px;
+  }
+}

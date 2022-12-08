@@ -34,7 +34,7 @@ body {
   --money-back: #F9ECFF;
 
   --pay-input: #F2F2F2;
-  --pay-color: rgba(194, 194, 194, 0.2);
+  --pay-color: rgba(194, 194, 194, 1);
 
   --connect-with-us-btn: #D3EAFF;
 
@@ -57,6 +57,13 @@ body {
   --modal-sclad: #acd7ff;
 
   --slide-back: #FFFFFF;
+
+  --info-border-top: #D9D9D9;
+  --info-btn-input: #7BB6FF;
+  --info-checkbox: #BEDBFF;
+
+  --modal-complete-back: #A0FFD2;
+  --modal-fatal-back: #FFA4A4;
 }
 
 :root[data-theme="dark"] {
@@ -97,6 +104,13 @@ body {
   --modal-sclad: #007DF1;
 
   --slide-back: #232C37;
+
+  --info-border-top: #3c3c3c;
+  --info-btn-input: #1f3c61;
+  --info-checkbox: #1e334e;
+
+  --modal-complete-back: #1F4F38;
+  --modal-fatal-back: #611E1E;
 }
 
 li.ant-rate-star-zero svg {

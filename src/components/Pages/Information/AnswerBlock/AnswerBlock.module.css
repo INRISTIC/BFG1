@@ -1,7 +1,7 @@
 .answerBlock {
   position: relative;
   max-width: 420px;
-  background: #232c37;
+  background: var(--background-modal);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.07);
   border-radius: 20px;
   padding: 39px 66px 87px;
@@ -27,7 +27,7 @@
   font-size: 16px;
   line-height: 19px;
   text-align: center;
-  color: #ffffff;
+  color: var(--text-color);
   margin-bottom: 7px;
 }
 
@@ -81,14 +81,18 @@
   font-size: 13px;
   line-height: 15px;
   color: var(--pay-color);
-  background: var(--pay-input);
+  background: transparent;
   border: none;
+}
+
+.input::-webkit-input-placeholder, .inputLabel::-webkit-input-placeholder {
+  opacity: 0.5;
 }
 
 .buttonLabel {
   padding: 11px 18px;
   position: absolute;
-  background: #1f3c61;
+  background: var(--info-btn-input);
   border-radius: 10px;
   font-weight: 500;
   font-size: 13px;
@@ -101,6 +105,7 @@
 
 textarea {
   resize: none;
+  
 }
 
 .labelCheckbox {
@@ -127,7 +132,7 @@ textarea {
   margin-right: 5px;
   flex-shrink: 0;
   flex-grow: 0;
-  background: #1e334e;
+  background: var(--info-checkbox);
   border: 2px solid #0071ff;
   border-radius: 5px;
   background-repeat: no-repeat;

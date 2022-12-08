@@ -84,7 +84,10 @@
     margin-top: 47px;
   }
   
-  .about {
+  .about::before {
+    content: "";
+    width: 549px;
+    height: 549px;
     background-image: url("../../../../assets/images/back-about.svg");
     background-repeat: no-repeat;
     background-position: center center;
@@ -92,6 +95,9 @@
 }
 
 @media (max-width: 650px) {
+  .about {
+    margin-bottom: 74px;
+  }
   .blockLeft {
     padding: 27.02px 36.67px 47.02px;
     line-height: 160%;

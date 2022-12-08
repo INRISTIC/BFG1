@@ -48,12 +48,17 @@ header {
   background-clip: text;
 }
 
-.navOpen {
 
-  z-index: 2;
+
+.navDefault {
   position: fixed;
   top: 0;
   left: 0;
+  z-index: 2;
+}
+
+.navOpen {
+  z-index: 3;
 }
 
 .navNoOpen {

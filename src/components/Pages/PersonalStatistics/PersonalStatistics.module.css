@@ -291,7 +291,6 @@
 }
 
 .TopsPlayers {
-  margin-bottom: 50px;
   max-width: 1180px;
   max-height: 1004px;
   margin: 0 auto;
@@ -299,7 +298,6 @@
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.07);
   border-radius: 25px;
   padding-bottom: 55px;
-  margin-bottom: 50px;
   transition: 0.3s;
   position: relative;
 }
@@ -603,7 +601,6 @@
 
   .TopsPlayers {
     padding-bottom: 35px;
-    margin-bottom: 69px;
   }
 
   .TopsPlayersBlockList {

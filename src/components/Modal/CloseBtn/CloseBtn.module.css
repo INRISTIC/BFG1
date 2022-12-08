@@ -23,9 +23,10 @@
     padding: 11px;
     background-image: url('../../../assets/images/close-btn.svg');
     background-repeat: no-repeat;
+    background-size: 9.28px;
     position: absolute;
     background-position: center center;
-    top: 24px;
-    right: 22px;
+    top: 19px;
+    right: 20px;
   }  
 }

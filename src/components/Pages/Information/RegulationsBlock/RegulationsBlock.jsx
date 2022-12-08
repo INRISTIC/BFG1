@@ -1,5 +1,5 @@
 import s from "./RegulationsBlock.module.css";
-import InfoElement from "../InfoElement/InfoElement";
+import RulesItem from "../RulesItem/RulesItem";
 
 const RegulationsBlock = () => {
   return (
@@ -7,13 +7,13 @@ const RegulationsBlock = () => {
       <h1 className={s.title}>Правила</h1>
       <div className={s.informationRow}>
         <div className={s.informationCol}>
-          <InfoElement />
-          <InfoElement />
+          <RulesItem />
+          <RulesItem />
         </div>
 
         <div className={s.informationCol}>
-          <InfoElement />
-          <InfoElement />
+          <RulesItem />
+          <RulesItem />
         </div>
       </div>
     </div>

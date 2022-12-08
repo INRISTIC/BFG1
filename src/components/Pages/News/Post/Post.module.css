@@ -140,6 +140,7 @@
     margin: 31px 25px;
     padding: 16px 19px 33.5px;
     gap: 21px;
+    max-height: 627.8px;
   }
   
   .postHeader {
