@@ -10,7 +10,7 @@ const NavBarFooter = () => {
   const [width] = useWindowSize();
   const dispatch = useDispatch();
   const onModalOpen = () => {
-    dispatch(openModal({modalPersonInfo: true}))
+    dispatch(openModal({ modalPersonInfo: true }))
   }
 
 
@@ -24,28 +24,28 @@ const NavBarFooter = () => {
                 <NavLink to="/" className={setActive}>
                   Главная
                 </NavLink>
-                <NavLink to="/terms-of-use" className={setActive}>
+                <button className={s.button} onClick={onModalOpen}>
                   Пользовательское соглашение
-                </NavLink>
+                </button>
               </div>
 
               <div className={s.linkPhone}>
                 <NavLink to="/news" className={setActive}>
                   Новости
                 </NavLink>
-                <NavLink to="/user-conditions" className={setActive}>
+                <button className={s.button} onClick={onModalOpen}>
                   Условия пользования
-                </NavLink>
+                </button>
               </div>
             </>
           ) : (
             <>
-            <NavLink to="/" className={setActive}>
-                  Главная
-                </NavLink>
-            <NavLink to="/" className={setActive}>
-                  Главная
-                </NavLink>
+              <NavLink to="/" className={setActive}>
+                Главная
+              </NavLink>
+              <NavLink to="/" className={setActive}>
+                Главная
+              </NavLink>
             </>
           )}
           <NavLink to="/donat" className={setActive}>
@@ -59,15 +59,15 @@ const NavBarFooter = () => {
           <span className={s.span}>Все права защищены © 2022 </span>
         </div>
         {width > 810 && (
-            <div className={s.footerBlock}>
-                <button className={s.button} onClick={onModalOpen}>
-                  Пользовательское соглашение
-                </button>
-                <NavLink to="/user-conditions" className={setActive} >
-                  Условия пользования
-                </NavLink>
-            </div>
-          )}
+          <div className={s.footerBlock}>
+            <button className={s.button} onClick={onModalOpen}>
+              Пользовательское соглашение
+            </button>
+            <button className={s.button} onClick={onModalOpen} >
+              Условия пользования
+            </button>
+          </div>
+        )}
 
       </div>
     </nav>

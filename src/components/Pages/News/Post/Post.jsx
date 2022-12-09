@@ -57,7 +57,7 @@ function changeHeightPostContant(ref, func) {
   }, 100);
 }
 
-const Post = () => {
+const Post = (props) => {
   const [width] = useWindowSize();
 
   const [heightPostContant, ChangeHeightPostContantState] = useState(180);
@@ -79,6 +79,21 @@ const Post = () => {
   } else {
     flag = heightPostContant > 170;
   }
+
+  useEffect(() => {
+    if (props.flagClose) {
+      if (props.flagsOpen[props.index]) {
+        setOpen(false);
+
+        let arr = props.flagsOpen;
+        arr[props.index] = false;
+        props.changeFlagOpen(arr);
+        props.changeFlagClose(false);
+      }
+    }
+
+
+  }, [props]);
 
   return (
     <div className={flag ? open ? classesPostOpen : s.newsPost : s.newsPost}>
@@ -115,7 +130,14 @@ const Post = () => {
 
         {flag ?
           (
-            <button className={s.postFullBtn} onClick={() => setOpen(!open)}>
+            <button className={s.postFullBtn} onClick={() => {
+              setOpen(!open);
+
+              let arr = props.flagsOpen;
+              arr[props.index] = !arr[props.index];
+              props.changeFlagOpen(arr);
+
+            }}>
               {!open ? "Развернуть" : "Скрыть"}
               <Arrow className={s.arrow} style={{ width: 19, height: 20 }} />
             </button>

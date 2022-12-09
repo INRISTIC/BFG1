@@ -1,5 +1,5 @@
-import { useLayoutEffect, useState, useEffect, createRef } from "react";
-import ReactSwipe from "react-swipe";
+import { useLayoutEffect, useState, useRef } from "react";
+import { Swiper, SwiperSlide } from 'swiper/react';
 import Post from "./Post/Post";
 
 import { ReactComponent as Arrow } from "../../../assets/images/arrow-bottom.svg";
@@ -8,6 +8,8 @@ import { ReactComponent as ArrowLeft } from "../../../assets/images/arrow-left.s
 import sortIcon from "../../../assets/images/sort-icon.svg";
 
 import s from "./News.module.css";
+import 'swiper/css';
+
 
 function useWindowSize() {
   const [size, setSize] = useState([0]);
@@ -26,110 +28,26 @@ function changeScroll(e, func) {
   let scrollBottom = e.target.scrollHeight - e.target.scrollTop - e.target.clientHeight;
   scrollBottom = Math.round(scrollBottom);
 
-  if (!scrollBottom) {
-    func(true);
-
-  } else {
-    func(false);
-  }
-}
-
-function changeStyleSlide(slides, newWidth) {
-  slides.forEach((el, i) => {
-    let left = i ? newWidth * i : 0;
-    let transitionDuration = el.current.style.transitionDuration;
-    let transformMove = i ? newWidth : 0;
-    transformMove = el.current.style.transform.indexOf('-') !== -1 ? -transformMove : transformMove;
-
-    let styles = 'float: left;' +
-      'position: relative;' +
-      'transition-property: transform;' +
-      `width:${newWidth}px;` +
-      `left: -${left}px;` +
-      `transition-duration: ${transitionDuration};` +
-      `transform: translate(${transformMove}px, 0px) translateZ(0px);`;
-
-    el.current.setAttribute('style', styles);
-  });
-}
-
-function rerenderStyleSlide(slides, width) {
-  slides.forEach((el) => {
-    let transitionDuration = el.current.style.transitionDuration;
-
-    let transformStyle = el.current.style.transform;
-    let transformMove = parseFloat(transformStyle.split('translate(')[1].split('px')[0]);
-
-    if (transformMove !== 0) {
-
-      if (transformMove < 0) {
-        transformMove = -width;
-
-      } else {
-        transformMove = width;
-      }
-    }
-
-    transformStyle = `translate(${transformMove}px, 0px) translateZ(0px)`;
-
-    let leftStyle = el.current.style.left;
-
-    let styles = 'float: left;' +
-      'position: relative;' +
-      'transition-property: transform;' +
-      `width:${width}px;` +
-      `left: ${leftStyle};` +
-      `transition-duration: ${transitionDuration};` +
-      `transform: ${transformStyle};`;
-
-    el.current.setAttribute('style', styles);
-  });
-}
-
-function changeStyleSlidesContainer(ref, slides, func) {
-  let parent = ref.current;
-  let widthSlidesContainer = parent.clientWidth;
-  func(widthSlidesContainer);
-
-  let styles = 'overflow: hidden;' +
-    'position: relative;' +
-    'transition-property: transform;' +
-    `width:${widthSlidesContainer * slides.length}px;`;
-
-  ref.current.children[0].children[0].setAttribute('style', styles);
+  func(!scrollBottom);
 }
 
 const News = () => {
   const [width] = useWindowSize();
   const [sort, setSort] = useState({ rating: false, time: false });
+
   const btnActive = (arg) => {
     setSort({ ...sort, [arg]: !sort[arg] });
   };
-
-  let reactSwipeEl;
 
   const [scrollDown, setScrolling] = useState(false);
 
   const classesLists = `${s.newsList}`;
   const classesListsShadow = `${classesLists} ${s.newsList_shadow}`;
 
-  const [widthSlide, ChangeWidthSlide] = useState(786);
+  const [flagsOpen, setFlags] = useState([false, false, false, false, false, false]);
+  const [flagClose, setClose] = useState(false);
 
-  const refComponent = createRef();
-  const checkWidth = [createRef(), createRef(), createRef(), createRef(), createRef(), createRef()];
-
-  useEffect(() => {
-    if (width <= 850) {
-      changeStyleSlidesContainer(refComponent, checkWidth, ChangeWidthSlide);
-    }
-  }, [refComponent, checkWidth, width]);
-
-
-  useEffect(() => {
-    if (width <= 850) {
-      changeStyleSlide(checkWidth, widthSlide);
-    }
-  }, [checkWidth, widthSlide, width]);
+  const swiperRef = useRef();
 
   return (
     <>
@@ -194,39 +112,38 @@ const News = () => {
               </div>
             </div>
           ) : (
-            <div className={s.sliderBlock} ref={refComponent}>
-              <ReactSwipe
-                swipeOptions={{ continuous: true }}
-                ref={(el) => (reactSwipeEl = el)}
-              >
-                <div className={s.slidePostContainer} ref={checkWidth[0]}>
-                  <Post />
-                </div>
+            <div className={s.sliderBlock}>
+              <Swiper spaceBetween={300} slidesPerView={1} onBeforeInit={(swiper) => {
+                swiperRef.current = swiper;
+              }}>
+                <SwiperSlide className={s.slidePostContainer}>
+                  <Post flagsOpen={flagsOpen} changeFlagOpen={setFlags} flagClose={flagClose} changeFlagClose={setClose} index='0' />
+                </SwiperSlide>
 
-                <div className={s.slidePostContainer} ref={checkWidth[1]}>
-                  <Post />
-                </div>
+                <SwiperSlide className={s.slidePostContainer}>
+                  <Post flagsOpen={flagsOpen} changeFlagOpen={setFlags} flagClose={flagClose} changeFlagClose={setClose} index='1' />
+                </SwiperSlide>
 
-                <div className={s.slidePostContainer} ref={checkWidth[2]}>
-                  <Post />
-                </div>
+                <SwiperSlide className={s.slidePostContainer}>
+                  <Post flagsOpen={flagsOpen} changeFlagOpen={setFlags} flagClose={flagClose} changeFlagClose={setClose} index='2' />
+                </SwiperSlide>
 
-                <div className={s.slidePostContainer} ref={checkWidth[3]}>
-                  <Post />
-                </div>
+                <SwiperSlide className={s.slidePostContainer}>
+                  <Post flagsOpen={flagsOpen} changeFlagOpen={setFlags} flagClose={flagClose} changeFlagClose={setClose} index='3' />
+                </SwiperSlide>
 
-                <div className={s.slidePostContainer} ref={checkWidth[4]}>
-                  <Post />
-                </div>
+                <SwiperSlide className={s.slidePostContainer}>
+                  <Post flagsOpen={flagsOpen} changeFlagOpen={setFlags} flagClose={flagClose} changeFlagClose={setClose} index='4' />
+                </SwiperSlide>
 
-                <div className={s.slidePostContainer} ref={checkWidth[5]}>
-                  <Post />
-                </div>
-              </ReactSwipe>
+                <SwiperSlide className={s.slidePostContainer}>
+                  <Post flagsOpen={flagsOpen} changeFlagOpen={setFlags} flagClose={flagClose} changeFlagClose={setClose} index='5' />
+                </SwiperSlide>
+              </Swiper>
 
               <button className={s.leftBtn} onClick={() => {
-                reactSwipeEl.next();
-                rerenderStyleSlide(checkWidth, widthSlide);
+                swiperRef.current?.slideNext();
+                flagsOpen.forEach(el => el ? setClose(true) : '');
               }}>
 
                 <ArrowRight className={s.arrowBtnPrevRight} />
@@ -234,8 +151,8 @@ const News = () => {
               </button>
 
               <button className={s.rightBtn} onClick={() => {
-                reactSwipeEl.prev();
-                rerenderStyleSlide(checkWidth, widthSlide);
+                swiperRef.current?.slidePrev();
+                flagsOpen.forEach(el => el ? setClose(true) : '');
               }}>
 
                 <ArrowLeft className={s.arrowBtnPrevLeft} />

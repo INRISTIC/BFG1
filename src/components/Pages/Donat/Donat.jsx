@@ -10,7 +10,7 @@ const Donat = () => {
   useEffect(() => {
     const timer = setTimeout(() => {
       dispatch(openModal({ modalBotProtect: true }))
-    }, 5000)
+    }, 2000)
     return () => {
       clearTimeout(timer);
     }

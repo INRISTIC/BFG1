@@ -9,7 +9,6 @@ import { ReactComponent as Sun } from "../../../../assets/images/sun.svg";
 import { ReactComponent as Moon } from "../../../../assets/images/moon.svg";
 
 const SettingModal = ({ className, active, closeSetting, btnRef }) => {
-  console.log(active)
 
   const settingRef = useRef(null);
 
