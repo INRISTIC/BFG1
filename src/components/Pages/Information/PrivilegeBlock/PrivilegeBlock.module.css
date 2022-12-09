@@ -33,6 +33,10 @@
   gap: 20px;
 }
 
+.PrivilegeBlock {
+  margin-bottom: 177px;
+}
+
 @media (max-width: 1050px) {
   .informationCol {
     gap: 15px;
@@ -52,5 +56,9 @@
     line-height: 21px;
     margin-top: 37px;
     margin-bottom: 51px;
+  }
+
+  .PrivilegeBlock {
+    margin-bottom: 200px;
   }
 }
