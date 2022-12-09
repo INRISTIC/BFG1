@@ -2,15 +2,16 @@ import React from "react";
 import s from "./Settings.module.css";
 import {ReactComponent as Setting} from "../../../assets/images/settings.svg"
 import SettingModal from "./SettingModal/SettingModal";
+import { useRef } from "react";
 
-const SettingsBlock = ({active, openSettings}) => {
-
+const SettingsBlock = ({active, openSettings, closeSetting}) => {
+  const btnRef = useRef(null)
   return (
     <>
-      <button className={s.button} onClick={openSettings}>
+      <button className={s.button} onClick={openSettings} ref={btnRef}>
         <Setting className={s.icon} />
       </button>
-      {active && <SettingModal/>}
+      <SettingModal active={active} closeSetting={closeSetting} btnRef={btnRef}/>
     </>
   )
 }

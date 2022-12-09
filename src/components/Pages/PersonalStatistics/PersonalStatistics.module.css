@@ -337,6 +337,7 @@
   display: flex;
   justify-content: center;
   gap: 10px;
+  padding-right: 36px;
 }
 
 .TopsPlayyersFilterBtn {
@@ -419,6 +420,7 @@
   line-height: 19px;
   color: #0071ff;
   margin-bottom: 25px;
+  margin-right: 36px;
   display: grid;
   align-items: center;
   grid-template-columns: 2fr 2fr 1fr;
@@ -448,6 +450,14 @@
   justify-content: center;
 }
 
+.TopsPlayersBlockList {
+  margin-right: 36px;
+}
+
+.TopsRatings {
+  padding-left: 36px;
+}
+
 @media (max-width: 945px) {
   .statsBlock {
     padding-bottom: 49px;
@@ -472,9 +482,7 @@
     gap: 22px;
   }
 
-  .statsButtons {
-    margin-bottom: 116px;
-  }
+
 }
 
 @media (max-width: 540px) {
@@ -502,6 +510,10 @@
     font-size: 12px;
     line-height: 14px;
     max-width: 127px;
+  }
+
+  .statsButtons {
+    margin-bottom: 116px;
   }
 
   .email {
@@ -544,6 +556,7 @@
 
   .TopsPlayersFilter {
     padding-right: 15px;
+    gap: 4.5px;
   }
 
   .topIcon {
@@ -585,10 +598,6 @@
   .TopsPlayyersFilterBtn:last-child,
   .ActiveTopsPlayyersFilterBtn:last-child {
     border-radius: 0px 8.54094px 8.54094px 0px;
-  }
-
-  .TopsPlayersFilter {
-    gap: 4.5px;
   }
 
   .TopsPlayersBlockTitle {

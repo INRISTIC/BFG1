@@ -1,11 +1,17 @@
 import { useLocation, NavLink } from "react-router-dom";
 import s from "./NavBarPhone.module.css";
 import { ReactComponent as Burger } from "../../../assets/images/burger.svg";
+import { closeHeader } from "../../../store/slices/sliceHeader";
+import {  useDispatch } from "react-redux";
 
 
 
 const NavBarPhone = ({active, openNavList}) => {
-  
+  const dispatch = useDispatch();
+
+  const closeFon = () => {
+    dispatch(closeHeader())
+  }
 
   let { pathname } = useLocation();
   let navStat = false;
@@ -29,6 +35,7 @@ const NavBarPhone = ({active, openNavList}) => {
           className={({ isActive }) =>
             isActive ? s.active + " " + s.nav : s.nav
           }
+          onClick={closeFon}
         >
           Главная
         </NavLink>
@@ -38,6 +45,7 @@ const NavBarPhone = ({active, openNavList}) => {
           className={({ isActive }) =>
             isActive ? s.active + " " + s.nav : s.nav
           }
+          onClick={closeFon}
         >
           Новости
         </NavLink>
@@ -47,6 +55,7 @@ const NavBarPhone = ({active, openNavList}) => {
           className={({ isActive }) =>
             isActive ? s.active + " " + s.nav : s.nav
           }
+          onClick={closeFon}
         >
           Донат
         </NavLink>
@@ -57,6 +66,7 @@ const NavBarPhone = ({active, openNavList}) => {
             className={({ isActive }) =>
               isActive ? s.active + " " + s.nav : s.nav
             }
+            onClick={closeFon}
           >
             Личная статистика
           </NavLink>
@@ -67,6 +77,7 @@ const NavBarPhone = ({active, openNavList}) => {
           className={({ isActive }) =>
             isActive ? s.active + " " + s.nav : s.nav
           }
+          onClick={closeFon}
         >
           Информация
         </NavLink>

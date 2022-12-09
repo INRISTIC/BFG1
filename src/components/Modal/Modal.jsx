@@ -37,7 +37,7 @@ const Modal = () => {
   const modalComplete = modal.modalComplete;
   const modalFatal = modal.modalFatal;
   const personalInfo = modal.modalPersonInfo;
-  const modalBot = modal.modalBotProtext;
+  const modalBot = modal.modalBotProtect;
   const modalBlock = modal.modalBlock;
 
   const headerActive = header.headerStatus;

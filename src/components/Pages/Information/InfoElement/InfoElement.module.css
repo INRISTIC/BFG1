@@ -88,7 +88,7 @@
 
 .text {
   display: block;
-  border-top: 1px solid var(--info-border-top);
+  
   padding-left: 44px;
   padding-right: 44px;
   font-weight: 500;
@@ -111,6 +111,7 @@
 .activeText {
   max-height: 500px;
   transition: max-height 0.25s cubic-bezier(0.5, 0, 0.1, 1);
+  border-top: 1px solid var(--info-border-top);
 }
 
 @media (max-width: 500px) {

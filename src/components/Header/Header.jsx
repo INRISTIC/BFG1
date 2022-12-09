@@ -34,6 +34,10 @@ const Header = () => {
     }
   };
 
+  const closeSetting = () => {
+    dispatch(closeHeader());
+  };
+
   return (
     <header
       className={
@@ -48,7 +52,7 @@ const Header = () => {
         <div className={s.logo}>BFG</div>
         {width > 830 && <NavBar />}
       </div>
-      <Settings active={settings} openSettings={openSetting} />
+      <Settings active={settings} openSettings={openSetting} closeSetting={closeSetting}/>
       {width <= 830 && (
         <NavBarPhone active={header} openNavList={openNavList} />
       )}

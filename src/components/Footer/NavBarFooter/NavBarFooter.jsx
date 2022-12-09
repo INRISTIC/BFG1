@@ -1,11 +1,19 @@
 import { NavLink } from "react-router-dom";
 import useWindowSize from "../../../hooks/widthHook";
 import s from "./NavBarFooter.module.css";
+import { openModal } from "../../../store/slices/sliceModal";
+import { useDispatch } from "react-redux";
 
 const setActive = ({ isActive }) => (isActive ? s.active : s.notActive);
 
 const NavBarFooter = () => {
   const [width] = useWindowSize();
+  const dispatch = useDispatch();
+  const onModalOpen = () => {
+    dispatch(openModal({modalPersonInfo: true}))
+  }
+
+
   return (
     <nav className={s.nav}>
       <div className={s.navBlock}>
@@ -52,10 +60,10 @@ const NavBarFooter = () => {
         </div>
         {width > 810 && (
             <div className={s.footerBlock}>
-                <NavLink to="/terms-of-use" className={setActive}>
+                <button className={s.button} onClick={onModalOpen}>
                   Пользовательское соглашение
-                </NavLink>
-                <NavLink to="/user-conditions" className={setActive}>
+                </button>
+                <NavLink to="/user-conditions" className={setActive} >
                   Условия пользования
                 </NavLink>
             </div>

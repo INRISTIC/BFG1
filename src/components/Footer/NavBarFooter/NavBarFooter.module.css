@@ -30,7 +30,10 @@
   gap: 37px;
 }
 
-.nav a {
+.nav a, .button {
+  padding: 0;
+  border: none;
+  background-color: transparent;
   text-decoration: none;
   font-family: 'Rubik';
   font-style: normal;
@@ -87,7 +90,7 @@
     font-weight: 500;
   }
 
-  .nav a {
+  .nav a, .button {
     font-size: 12px;
     line-height: 14px;
     font-weight: 500;

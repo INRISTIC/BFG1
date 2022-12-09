@@ -3,11 +3,11 @@
 }
 .iconPosition {
   position: fixed;
-  bottom: 213px;
+  bottom: 168px;
   right: 126px;
   z-index: 20;
 }
-.iconStyle{
+.iconStyle {
   background: #0071FF;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
   border-radius: 50%;
@@ -19,18 +19,16 @@
   animation: movebtn 3s ease-in-out infinite;
   transition: all .5s ease-in-out;
 }
+
+.iconStyle path {
+  fill: var(--background-modal);
+}
 @keyframes movebtn {
   0%{
     transform: translateY(0px);
   }
-  25%{
-    transform: translateY(20px);
-  }
   50%{
-    transform: translateY(0px);
-  }
-  75%{
-    transform: translateY(-20px);
+    transform: translateY(20px);
   }
   100%{
     transform: translateY(0px);
