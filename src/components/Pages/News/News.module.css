@@ -27,7 +27,6 @@
   display: flex;
   justify-content: space-between;
   gap: 25px;
-  margin-bottom: 210px;
   animation-name: float;
   animation-duration: 1s;
 }
@@ -334,4 +333,17 @@
     display: none;
   }
 
+  .newsBlock {
+    gap: 32px;
+  }
+}
+
+@media (max-width: 550px) {
+  .newsTitle {
+    margin-top: 47px;
+    margin-bottom: 47px;
+    padding: 14.93px 39.16px;
+    font-size: 18.0714px;
+    line-height: 21px;
+  }
 }
