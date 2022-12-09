@@ -1,12 +1,8 @@
-.informationBlockContainer {
-  width: auto;
-}
-
 .title {
   width: max-content;
   margin: 0 auto;
   margin-bottom: 78px;
-  margin-top: 59px;
+  margin-top: 78px;
   font-weight: 700;
   font-size: 23px;
   line-height: 27px;
@@ -37,17 +33,20 @@
 .informationCol {
   max-width: 437px;
   width: 100%;
-
   display: flex;
   flex-direction: column;
   gap: 20px;
+}
+
+.PrivilegeBlock {
+  margin-bottom: 177px;
 }
 
 @media (max-width: 1050px) {
   .informationCol {
     gap: 15px;
   }
-  
+
   .informationRow {
     flex-wrap: wrap;
     gap: 15px;
@@ -64,7 +63,11 @@
     padding: 15px 46px;
     font-size: 18.0714px;
     line-height: 21px;
-    margin-top: 47px;
-    margin-bottom: 37px;
+    margin-top: 37px;
+    margin-bottom: 51px;
+  }
+
+  .PrivilegeBlock {
+    margin-bottom: 200px;
   }
 }

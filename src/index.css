@@ -58,6 +58,9 @@ body {
 
   --slide-back: #FFFFFF;
 
+  --slide-btn: #FFFFFF;
+  --slide-arrow: #2D264B;
+
   --info-border-top: #D9D9D9;
   --info-btn-input: #7BB6FF;
   --info-checkbox: #BEDBFF;
@@ -107,6 +110,9 @@ body {
   --modal-sclad: #007DF1;
 
   --slide-back: #232C37;
+
+  --slide-btn: #323E4E;
+  --slide-arrow: #FFFFFF;
 
   --info-border-top: #3c3c3c;
   --info-btn-input: #1f3c61;

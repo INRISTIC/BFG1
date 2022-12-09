@@ -1,12 +1,25 @@
 import s from "./Post.module.css";
 import React from "react";
-import { useState, useEffect, createRef } from "react";
+import { useLayoutEffect, useState, useEffect, createRef } from "react";
 import { Rate } from 'antd';
 
 import { ReactComponent as Star } from "../../../../assets/images/star-gray.svg"
 
 import ava from "../../../../assets/images/panda-post.png";
 import { ReactComponent as Arrow } from "../../../../assets/images/arrow-right.svg";
+
+function useWindowSize() {
+  const [size, setSize] = useState([0]);
+  useLayoutEffect(() => {
+    function updateSize() {
+      setSize([window.innerWidth]);
+    }
+    window.addEventListener("resize", updateSize);
+    updateSize();
+    return () => window.removeEventListener("resize", updateSize);
+  }, []);
+  return size;
+}
 
 function changeHeightPostContant(ref, func) {
   let changeHTML = true;
@@ -45,7 +58,9 @@ function changeHeightPostContant(ref, func) {
 }
 
 const Post = () => {
-  const [heightPostContant, ChangeHeightPostContantState] = useState(0);
+  const [width] = useWindowSize();
+
+  const [heightPostContant, ChangeHeightPostContantState] = useState(180);
   const [open, setOpen] = useState(false);
 
   const refComponent = createRef();
@@ -57,8 +72,16 @@ const Post = () => {
 
   useEffect(() => changeHeightPostContant(refComponent, ChangeHeightPostContantState), [refComponent]);
 
+  let flag;
+
+  if (width > 850) {
+    flag = heightPostContant > 120;
+  } else {
+    flag = heightPostContant > 170;
+  }
+
   return (
-    <div className={heightPostContant > 120 ? open ? classesPostOpen : s.newsPost : s.newsPost}>
+    <div className={flag ? open ? classesPostOpen : s.newsPost : s.newsPost}>
       <div className={s.postImgContainer}>
         <img src={ava} alt="" className={s.postImg} />
       </div>
@@ -72,25 +95,25 @@ const Post = () => {
           </div>
 
         </div>
-        <div className={heightPostContant > 120 ? !open ? classesDescHiddenOpen : classesDescHiddenClose : s.postDescription} ref={refComponent}>
-          Описание новости Описание новости Описание новости Описание новости
-          Описание новости Описание новости Описание новости Описание новости
-          Описание новости Описание новости Описание новости Описание новости
-          Описание новости Описание новости Описание новости Описание новости
-          Описание новости Описание новости Описание новости Описание новости
-          Описание новости Описание новости Описание новости Описание новости
-          Описание новости Описание новости Описание новости Описание новости
-          Описание новости Описание новости Описание новости Описание новости
-          Описание новости Описание новости Описание новости Описание новости
-          Описание новости Описание новости Описание новости Описание новости
-          Описание новости Описание новости Описание новости Описание новости
-          Описание новости Описание новости Описание новости Описание новости
-          Описание новости Описание новости Описание новости Описание новости
-          Описание новости Описание новости Описание новости Описание новости
-          Описание новости Описание новости Описание новости Описание новости
+        <div className={flag ? !open ? classesDescHiddenOpen : classesDescHiddenClose : s.postDescription} ref={refComponent}>
+          <p>Описание новости Описание новости Описание новости Описание новости
+            Описание новости Описание новости Описание новости Описание новости
+            Описание новости Описание новости Описание новости Описание новости
+            Описание новости Описание новости Описание новости Описание новости
+            Описание новости Описание новости Описание новости Описание новости
+            Описание новости Описание новости Описание новости Описание новости
+            Описание новости Описание новости Описание новости Описание новости
+            Описание новости Описание новости Описание новости Описание новости
+            Описание новости Описание новости Описание новости Описание новости
+            Описание новости Описание новости Описание новости Описание новости
+            Описание новости Описание новости Описание новости Описание новости
+            Описание новости Описание новости Описание новости Описание новости
+            Описание новости Описание новости Описание новости Описание новости
+            Описание новости Описание новости Описание новости Описание новости
+            Описание новости Описание новости Описание новости Описание новости</p>
         </div>
 
-        {heightPostContant > 120 ?
+        {flag ?
           (
             <button className={s.postFullBtn} onClick={() => setOpen(!open)}>
               {!open ? "Развернуть" : "Скрыть"}
