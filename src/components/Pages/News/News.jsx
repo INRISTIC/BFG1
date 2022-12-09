@@ -113,16 +113,18 @@ const News = () => {
           ) : (
             <div className={s.sliderBlock}>
               <ReactSwipe
-                swipeOptions={{ continuous: true }}
+                swipeOptions={{ continuous: true, widthOfSiblingSlidePreview: 0 }}
                 ref={(el) => (reactSwipeEl = el)}
               >
-                <div>
+                <div className={s.slidePostContainer} >
                   <Post />
                 </div>
-                <div>
+
+                <div className={s.slidePostContainer} >
                   <Post />
                 </div>
-                <div>
+
+                <div className={s.slidePostContainer} >
                   <Post />
                 </div>
               </ReactSwipe>
