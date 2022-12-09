@@ -32,7 +32,7 @@
 
 .block {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   gap: 75px;
 }
@@ -41,17 +41,27 @@
   background: var(--background-modal);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.07);
   border-radius: 30px 30px 30px 0px;
+
   padding: 42px 57px 81px;
+
   position: relative;
+
   font-weight: 500;
   font-size: 16px;
   line-height: 160%;
   color: var(--text-color);
-  width: 513px;
+
+  max-width: 513px;
+  min-width: 450px;
+  width: 100%;
+
   display: flex;
   flex-direction: column;
   align-items: flex-end;
   transition: 0.3s;
+
+  margin-top: 70px;
+  margin-bottom: 70px;
 }
 
 .blockLeftText {
@@ -75,6 +85,14 @@
 }
 
 @media (max-width: 1200px) {
+  .block {
+    justify-content: center;
+  }
+
+  .blockLeft {
+    margin: 0;
+  }
+
   .blockRight {
     display: none;
   }
@@ -99,7 +117,8 @@
     margin-bottom: 74px;
   }
   .blockLeft {
-    padding: 27.02px 36.67px 47.02px;
+    min-width: 320px;
+    padding: 27.02px 36.67px 60px;
     line-height: 160%;
   }
 
@@ -110,7 +129,7 @@
 
   .button {
     padding: 10.29px 21.06px;
-    bottom: 14.01px;
+    bottom: 18.01px;
     right: 22.51px;
     font-size: 9.00585px;
   }

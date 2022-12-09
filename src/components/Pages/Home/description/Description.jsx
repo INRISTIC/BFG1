@@ -36,13 +36,13 @@ const Description = () => {
         </p>
       </div>
       <div className={s.listImg}>
-        <div>
+        <div className={s.listItemImg}>
           <img src={panda1} alt="" />
         </div>
-        <div>
+        <div className={s.listItemImg}>
           <img src={panda2} alt="" />
         </div>
-        <div>
+        <div className={s.listItemImg}>
           <img src={panda3} alt="" />
         </div>
       </div>
