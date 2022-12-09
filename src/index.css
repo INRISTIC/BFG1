@@ -57,6 +57,8 @@ body {
   --modal-sclad: #acd7ff;
 
   --slide-back: #FFFFFF;
+  --slide-btn: #FFFFFF;
+  --slide-arrow: #2D264B;
 }
 
 :root[data-theme="dark"] {
@@ -97,6 +99,8 @@ body {
   --modal-sclad: #007DF1;
 
   --slide-back: #232C37;
+  --slide-btn: #323E4E;
+  --slide-arrow: #FFFFFF;
 }
 
 li.ant-rate-star-zero svg {

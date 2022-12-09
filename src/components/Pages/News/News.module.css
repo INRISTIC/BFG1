@@ -255,7 +255,7 @@
 
 @media (max-width: 850px) {
   .leftBtn, .rightBtn {
-    background: #323E4E;
+    background: var(--slide-btn);
     box-shadow: 0px 4px 13px rgba(0, 0, 0, 0.07);
     border-radius: 9.75px;
     width: 36px;
@@ -277,7 +277,7 @@
   }
 
   .arrowBtnPrevRight path, .arrowBtnPrevLeft path {
-    stroke: #FFFFFF;
+    stroke: var(--slide-arrow);
   }
 
   .arrowBtnPrevRight {
