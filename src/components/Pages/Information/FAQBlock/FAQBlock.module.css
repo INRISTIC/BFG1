@@ -29,6 +29,11 @@
   margin-right: auto;
 }
 
+.informationRowOnly {
+  justify-content: center;
+  margin-top: 20px;
+}
+
 .informationCol {
   max-width: 437px;
   width: 100%;
@@ -47,6 +52,10 @@
     flex-wrap: wrap;
     gap: 15px;
     justify-content: center;
+  }
+
+  .informationRowOnly {
+    margin-top: 15px;
   }
 }
 

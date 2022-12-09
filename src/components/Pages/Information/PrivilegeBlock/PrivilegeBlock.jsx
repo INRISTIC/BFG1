@@ -9,11 +9,16 @@ const PrivilegeBlock = () => {
         <div className={s.informationCol}>
           <InfoElement />
           <InfoElement />
-          <InfoElement />
         </div>
 
         <div className={s.informationCol}>
           <InfoElement />
+          <InfoElement />
+        </div>
+      </div>
+
+      <div className={s.informationRow + ' ' + s.informationRowOnly}>
+        <div className={s.informationCol}>
           <InfoElement />
         </div>
       </div>
