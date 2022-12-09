@@ -5,6 +5,11 @@ import Inventory from "./Inventory/Inventory";
 import { useSelector, useDispatch } from "react-redux";
 import { closeModal } from "../../store/slices/sliceModal";
 import { openHeader, closeHeader } from "../../store/slices/sliceHeader";
+import CompletPay from "./CompletPay/CompletPay";
+import FatalPay from "./FatalPay/FatalPay";
+import PersonalInfo from "./PersonalInfo/PersonalInfo";
+import BotProtect from "./BotProtect/BotProtect";
+import BlockModal from "./BlockModal/BlockModal";
 
 function useWindowSize() {
   const [size, setSize] = useState([0]);
@@ -29,6 +34,11 @@ const Modal = () => {
   const active = modal.modalStatus;
   const modalWindmill = modal.modalWindmill;
   const modalInventory = modal.modalInventory;
+  const modalComplete = modal.modalComplete;
+  const modalFatal = modal.modalFatal;
+  const personalInfo = modal.modalPersonInfo;
+  const modalBot = modal.modalBotProtext;
+  const modalBlock = modal.modalBlock;
 
   const headerActive = header.headerStatus;
   const settingsActiv = header.settingsStatus;
@@ -36,7 +46,7 @@ const Modal = () => {
   if ((headerActive || settingsActiv) && width <= 830) {
     return (
       <div
-        className={headerActive || settingsActiv ? s.modal + " " + s.active : s.modal}
+        className={headerActive || settingsActiv ? s.modal + " " + s.activeHeader : s.modal}
         onClick={() => dispatch(closeHeader())}
       >
         <div className={s.modalContent} onClick={(e) => e.stopPropagation()}>
@@ -52,6 +62,11 @@ const Modal = () => {
         <div className={s.modalContent} onClick={(e) => e.stopPropagation()}>
           {modalWindmill && <Windmill />}
           {modalInventory && <Inventory />}
+          {modalComplete && <CompletPay />}
+          {modalFatal && <FatalPay />}
+          {personalInfo && <PersonalInfo />}
+          {modalBot && <BotProtect />}
+          {modalBlock && <BlockModal />}
         </div>
       </div>
     );

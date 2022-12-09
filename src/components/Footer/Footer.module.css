@@ -7,6 +7,7 @@
   margin-top: auto;
   padding: 58px 30px 35px;
   transition:  0.3s;
+  margin-top: 330px;
 }
 
 .footerBlock {
@@ -44,11 +45,28 @@
 }
 
 @media (max-width: 810px) {
+
+  .footer {
+    padding: 25px 32px;
+    height: auto;
+  }
   .footerBlockLeft {
     align-items: center;
   }
 
   .footerBlockRight {
     display: none;
+  }
+}
+
+@media (max-width: 520px) {
+  .logo {
+    margin-right: 21px;
+  }
+}
+
+@media (max-width: 500px) {
+  .footer {
+    margin-top: 446px
   }
 }

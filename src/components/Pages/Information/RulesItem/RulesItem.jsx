@@ -1,9 +1,9 @@
-import s from "./InfoElement.module.css";
+import s from "./RulesItem.module.css";
 import { ReactComponent as Arrow } from "../../../../assets/images/arrow-bottom.svg";
 
 import { useState } from "react";
 
-const InfoElement = () => {
+const RulesItem = () => {
   const [open, setOpen] = useState(false);
   console.log(open);
   return (
@@ -43,4 +43,4 @@ const InfoElement = () => {
   );
 };
 
-export default InfoElement;
+export default RulesItem;

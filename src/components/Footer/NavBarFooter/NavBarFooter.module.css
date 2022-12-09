@@ -9,6 +9,7 @@
   font-weight: 600;
   font-size: 15px;
   line-height: 18px;
+  transition: 0.3s;
 
   color: var(--text-color);
 
@@ -24,7 +25,7 @@
   width: 100%;
 }
 
-.nav .navBlock div {
+.footerBlock {
   display: flex;
   gap: 37px;
 }
@@ -59,17 +60,48 @@
     gap: 10px;
   }
 
-  .nav .navBlock div {
+  .footerBlock {
     gap: 6.8px;
     flex-direction: column;
   }
 
   .nav .navBlock .child {
     display: block;
+  }
+
+  .span {
+    margin-left: 0;
+  }
+
+  .linkPhone {
+    display: flex;
+    flex-direction: row;
+    gap: 25px;
+  }
+}
+
+@media (max-width: 520px) {
+  .nav .navBlock .child {
     font-size: 12px;
+    line-height: 14px;
+    font-weight: 500;
   }
 
   .nav a {
     font-size: 12px;
+    line-height: 14px;
+    font-weight: 500;
+  }
+
+  .span {
+    font-size: 12px;
+    line-height: 14px;
+    font-weight: 500;
+  }
+
+  .linkPhone {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
   }
 }

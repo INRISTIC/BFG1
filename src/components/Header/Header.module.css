@@ -48,9 +48,21 @@ header {
   background-clip: text;
 }
 
-.navOpen {
-  border-radius: 0px 0px 0px 35px;
+
+
+.navDefault {
+  position: fixed;
+  top: 0;
+  left: 0;
   z-index: 2;
+}
+
+.navOpen {
+  z-index: 3;
+}
+
+.navNoOpen {
+  border-radius: 0px 0px 0px 35px;
 }
 
 @media (max-width: 970px) {
@@ -64,6 +76,7 @@ header {
     padding: 28px 25px 37px;
     border-radius: 0px 0px 35px 35px;
     gap: 23px;
+
   }
 
   .logo {
