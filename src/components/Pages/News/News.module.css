@@ -1,9 +1,16 @@
+@-webkit-keyframes float {
+  0%   {opacity: 0;}
+  100% {opacity: 1;}
+}
+
 @keyframes float {
   0%   {opacity: 0;}
   100% {opacity: 1;}
 }
 
 .newsTitle {
+  width: -webkit-max-content;
+  width: -moz-max-content;
   width: max-content;
   background: var(--background-modal);
   margin-top: 59px;
@@ -19,16 +26,20 @@
   color: #0066ff;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.07);
   transition:  0.3s;
-  animation-name: float;
-  animation-duration: 1s;
+  -webkit-animation-name: float;
+          animation-name: float;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
 }
 
 .newsBlock {
   display: flex;
   justify-content: space-between;
   gap: 25px;
-  animation-name: float;
-  animation-duration: 1s;
+  -webkit-animation-name: float;
+          animation-name: float;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
 }
 
 .newsBlockLeft {
@@ -84,6 +95,8 @@
 }
 
 .stats div {
+  width: -webkit-max-content;
+  width: -moz-max-content;
   width: max-content;
   font-weight: 500;
   font-size: 15px;

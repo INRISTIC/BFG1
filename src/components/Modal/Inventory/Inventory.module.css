@@ -1,3 +1,12 @@
+@-webkit-keyframes float {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 @keyframes float {
   0% {
     opacity: 0;
@@ -25,6 +34,8 @@
   background: #0071ff;
   border-radius: 15px;
   padding: 18px 20px;
+  width: -webkit-max-content;
+  width: -moz-max-content;
   width: max-content;
   margin-left: auto;
   margin-right: auto;
@@ -102,8 +113,10 @@
   left: 33%;
 
   transform: translate(-27%, 6px);
-  animation-name: float;
-  animation-duration: 0.3s;
+  -webkit-animation-name: float;
+          animation-name: float;
+  -webkit-animation-duration: 0.3s;
+          animation-duration: 0.3s;
 }
 
 .active:hover .hoverEl::after {
@@ -121,8 +134,10 @@
   left: 33%;
 
   transform: translate(-33%, 6px);
-  animation-name: float;
-  animation-duration: 0.5s;
+  -webkit-animation-name: float;
+          animation-name: float;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
 }
 
 .img {

@@ -94,7 +94,8 @@
 }
 
 .stars li {
-  margin-inline-end: 0px!important;
+  -webkit-margin-end: 0px!important;
+          margin-inline-end: 0px!important;
 }
 
 .postDescription p {

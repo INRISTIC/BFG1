@@ -1,3 +1,8 @@
+@-webkit-keyframes float {
+  0%   {opacity: 0;}
+  100% {opacity: 1;}
+}
+
 @keyframes float {
   0%   {opacity: 0;}
   100% {opacity: 1;}
@@ -13,8 +18,10 @@
   background-image: url('../../../../assets/images/circle-blue.svg');
   background-repeat: no-repeat;
   transition:  0.3s;
-  animation-name: float;
-  animation-duration: 1s;
+  -webkit-animation-name: float;
+          animation-name: float;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
   background-size: auto;
 }
 

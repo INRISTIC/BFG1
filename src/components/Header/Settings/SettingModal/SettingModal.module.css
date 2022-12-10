@@ -8,9 +8,19 @@ button {
   justify-content: center;
 }
 
+@-webkit-keyframes float {
+  0%   {opacity: 0;}
+  100% {opacity: 1;}
+}
+
 @keyframes float {
   0%   {opacity: 0;}
   100% {opacity: 1;}
+}
+
+@-webkit-keyframes damping {
+  0%   {opacity: 1;}
+  100% {opacity: 0;}
 }
 
 @keyframes damping {
@@ -27,14 +37,18 @@ button {
   box-shadow: 0px 5px 50px rgba(0, 0, 0, 0.05);
   border-radius: 20px 0px 20px 20px;
   transition:  0.3s;
-  animation-name: float;
-  animation-duration: 1s;
+  -webkit-animation-name: float;
+          animation-name: float;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
   z-index: 1;
 }
 
 .unvis {
-  animation-name: damping;
-  animation-duration: 1s;
+  -webkit-animation-name: damping;
+          animation-name: damping;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
 }
 
 .translate {

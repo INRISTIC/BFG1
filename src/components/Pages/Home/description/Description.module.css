@@ -1,3 +1,8 @@
+@-webkit-keyframes float {
+  0%   {opacity: 0;}
+  100% {opacity: 1;}
+}
+
 @keyframes float {
   0%   {opacity: 0;}
   100% {opacity: 1;}
@@ -8,8 +13,10 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  animation-name: float;
-  animation-duration: 1s;
+  -webkit-animation-name: float;
+          animation-name: float;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
 }
 
 .block::before {
@@ -27,6 +34,8 @@
 }
 
 .title {
+  width: -webkit-max-content;
+  width: -moz-max-content;
   width: max-content;
   padding: 18px 30px 19px;
   background: var(--background-modal);

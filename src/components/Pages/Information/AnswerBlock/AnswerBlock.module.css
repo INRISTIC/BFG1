@@ -122,7 +122,10 @@ textarea {
 .checkbox + label {
   display: inline-flex;
   align-items: center;
-  user-select: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 .checkbox + label::before {
   content: "";

@@ -17,6 +17,8 @@
   background: #0071FF;
   border-radius: 15px;
   padding: 18px 20px;
+  width: -webkit-max-content;
+  width: -moz-max-content;
   width: max-content;
   margin-left: auto;
   margin-right: auto;

@@ -1,3 +1,8 @@
+@-webkit-keyframes float {
+  0%   {opacity: 0;}
+  100% {opacity: 1;}
+}
+
 @keyframes float {
   0%   {opacity: 0;}
   100% {opacity: 1;}
@@ -8,6 +13,8 @@
 }
 
 .title {
+  width: -webkit-max-content;
+  width: -moz-max-content;
   width: max-content;
   margin: 0 auto;
   margin-bottom: 59px;
@@ -21,8 +28,10 @@
   border-radius: 20px;
   padding: 19px 51px;
   transition:  0.3s;
-  animation-name: float;
-  animation-duration: 1s;
+  -webkit-animation-name: float;
+          animation-name: float;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
 }
 
 .subTitle {

@@ -1,3 +1,12 @@
+@-webkit-keyframes float {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 @keyframes float {
   0% {
     opacity: 0;
@@ -17,8 +26,11 @@
   margin-top: 73px;
   margin-bottom: 200px;
 
-  animation-name: float;
-  animation-duration: 1s;
+  -webkit-animation-name: float;
+
+          animation-name: float;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
 }
 
 .statMainBlock {
@@ -322,6 +334,8 @@
 
   .statInfoElementTextBlockSmall {
     min-width: 190px;
+    max-width: -webkit-max-content;
+    max-width: -moz-max-content;
     max-width: max-content;
 
     margin-left: auto;

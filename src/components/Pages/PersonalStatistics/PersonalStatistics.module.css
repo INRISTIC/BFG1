@@ -1,6 +1,24 @@
+@-webkit-keyframes float {
+  0% {
+    opacity: 0.3;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 @keyframes float {
   0% {
     opacity: 0.3;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes floatArrow {
+  0% {
+    opacity: 0;
   }
   100% {
     opacity: 1;
@@ -13,6 +31,15 @@
   }
   100% {
     opacity: 1;
+  }
+}
+
+@-webkit-keyframes shadow {
+  0% {
+    box-shadow: inset 120px 120px rgb(0 0 0 / 0%);
+  }
+  100% {
+    box-shadow: inset 120px 120px rgb(0 0 0 / 50%);
   }
 }
 
@@ -36,12 +63,16 @@
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.07);
   border-radius: 20px;
   margin-bottom: 85px;
+  width: -webkit-max-content;
+  width: -moz-max-content;
   width: max-content;
   margin: 0 auto;
   margin-bottom: 85px;
   margin-top: 59px;
-  animation-name: float;
-  animation-duration: 1s;
+  -webkit-animation-name: float;
+          animation-name: float;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
 }
 
 .statsBlock {
@@ -53,8 +84,11 @@
   padding-bottom: 115px;
   margin-bottom: 50px;
 
-  animation-name: float;
-  animation-duration: 1s;
+  -webkit-animation-name: float;
+
+          animation-name: float;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
 }
 
 .statsBlockHeader {
@@ -209,8 +243,10 @@
 
 .statsButton:hover {
   box-shadow: inset 120px 120px rgb(0 0 0 / 50%);
-  animation-name: shadow;
-  animation-duration: 0.5s;
+  -webkit-animation-name: shadow;
+          animation-name: shadow;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
 }
 
 .statsButton:hover::after {
@@ -228,8 +264,10 @@
   color: #ffffff;
   top: -75px;
   left: 50%;
-  animation-name: float;
-  animation-duration: 0.4s;
+  -webkit-animation-name: float;
+          animation-name: float;
+  -webkit-animation-duration: 0.4s;
+          animation-duration: 0.4s;
   transform: translate(-50%, 6px);
 }
 
@@ -245,8 +283,10 @@
   position: absolute;
   top: -50px;
   left: 50%;
-  animation-name: float;
-  animation-duration: 0.5s;
+  -webkit-animation-name: float;
+          animation-name: float;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
   transform: translate(-50%, 6px);
 }
 
@@ -405,6 +445,7 @@
 
 .active::-webkit-scrollbar-thumb {
   opacity: 0;
+  -webkit-transition: 1s;
   transition: 1s;
   background: rgba(0, 133, 255, 1);
 }
@@ -637,6 +678,7 @@
 
   .active::-webkit-scrollbar-thumb {
     opacity: 0;
+    -webkit-transition: 1s;
     transition: 1s;
     background: rgba(0, 133, 255, 1);
   }

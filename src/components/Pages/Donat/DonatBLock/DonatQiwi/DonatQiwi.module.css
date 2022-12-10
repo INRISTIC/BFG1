@@ -1,9 +1,27 @@
+@-webkit-keyframes float {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 @keyframes float {
   0% {
     opacity: 0;
   }
   100% {
     opacity: 1;
+  }
+}
+
+@-webkit-keyframes textFLoat {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0.5;
   }
 }
 
@@ -30,8 +48,10 @@
   opacity: 0.5;
   margin-bottom: 23px;
   transition: 0.3s;
-  animation-name: textFLoat;
-  animation-duration: 1s;
+  -webkit-animation-name: textFLoat;
+          animation-name: textFLoat;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
 }
 
 .headerBlock {
@@ -72,8 +92,10 @@
   gap: 17px;
   position: relative;
   transition: 0.3s;
-  animation-name: float;
-  animation-duration: 1s;
+  -webkit-animation-name: float;
+          animation-name: float;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
 }
 
 .inputList {

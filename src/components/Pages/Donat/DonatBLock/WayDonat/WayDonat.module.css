@@ -1,3 +1,12 @@
+@-webkit-keyframes float {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 @keyframes float {
   0% {
     opacity: 0;
@@ -7,12 +16,30 @@
   }
 }
 
+@-webkit-keyframes antiFloat {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
 @keyframes antiFloat {
   0% {
     opacity: 1;
   }
   100% {
     opacity: 0;
+  }
+}
+
+@-webkit-keyframes textFLoat {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0.5;
   }
 }
 
@@ -37,8 +64,10 @@
   border-radius: 20px;
   padding: 19px 51px;
   transition: 0.3s;
-  animation-name: float;
-  animation-duration: 1s;
+  -webkit-animation-name: float;
+          animation-name: float;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
 }
 
 .subTitle {
@@ -50,8 +79,10 @@
   opacity: 0.5;
   margin-bottom: 23px;
   transition: 0.3s;
-  animation-name: textFLoat;
-  animation-duration: 1s;
+  -webkit-animation-name: textFLoat;
+          animation-name: textFLoat;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
 }
 
 .listBtn {
@@ -63,8 +94,10 @@
   flex-direction: column;
   gap: 23px;
   margin-bottom: 23px;
-  animation-name: float;
-  animation-duration: 1s;
+  -webkit-animation-name: float;
+          animation-name: float;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
 }
 
 .bankCard {
@@ -99,8 +132,10 @@
   line-height: 19px;
   text-align: center;
   color: #ffffff;
-  animation-name: float;
-  animation-duration: 1s;
+  -webkit-animation-name: float;
+          animation-name: float;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
 }
 
 .none {
