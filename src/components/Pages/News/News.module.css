@@ -349,7 +349,11 @@
   }
 
   .newsBlock {
-    gap: 32px;
+    gap: 0;
+  }
+
+  .newsBlockRight {
+    margin-bottom: 32px;
   }
 }
 

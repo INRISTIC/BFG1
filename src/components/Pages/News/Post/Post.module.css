@@ -119,6 +119,10 @@
 
 @media (max-width: 850px) {
 
+  .postDescription.postDescription_shadow::after {
+      display: none;
+    }
+
   .postImgContainer {
     width: 241px;
     max-width: 241px;
