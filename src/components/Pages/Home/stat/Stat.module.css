@@ -35,9 +35,9 @@
   height: 631px;
   border-radius: 50%;
 
-  box-shadow: inset 0px 0px 0px 50px #17283C,
-    inset 0px 0px 0px 120px #152E4F,
-    inset 0px 0px 0px 100vh #0071ff;
+  box-shadow: inset 0px 0px 0px 50px var(--circle-three),
+    inset 0px 0px 0px 120px var(--circle-two),
+    inset 0px 0px 0px 100vh var(--circle-one);
 }
 
 .statInfoBlockImgContainer {
@@ -110,8 +110,8 @@
   width: 100%;
   height: 90px;
 
-  background-image: url('../../../../assets/images/statBlockLine.svg');
-  background-repeat:  no-repeat;
+  background-image: var(--home-line);
+  background-repeat: no-repeat;
 }
 
 .stat .statInfoBlock:nth-of-type(2) {
@@ -179,7 +179,7 @@
 }
 
 .statInfoElement:nth-of-type(1) .statInfoElementTextBlock span:first-child {
-  color: #FFFFFF;
+  color: var(--text-color);
 }
 
 .statInfoElement:nth-of-type(1) .statInfoElementTextBlock span:last-child {
@@ -202,7 +202,7 @@
 }
 
 .statInfoElement:nth-of-type(2) .statInfoElementTextBlock span:first-child {
-  color: #FFFFFF;
+  color: var(--text-color);
 }
 
 .statInfoElement:nth-of-type(2) .statInfoElementTextBlock span:last-child {
@@ -234,9 +234,9 @@
     width: 450px;
     height: 450px;
 
-    box-shadow: inset 0px 0px 0px 35.5px #17283C,
-    inset 0px 0px 0px 85px #152E4F,
-    inset 0px 0px 0px 100vh #0071ff;
+    box-shadow: inset 0px 0px 0px 35.5px var(--circle-three),
+    inset 0px 0px 0px 85px var(--circle-two),
+    inset 0px 0px 0px 100vh var(--circle-one);
   }
   
   .statInfoBlockImgContainer {
@@ -326,7 +326,7 @@
 
     margin-left: auto;
 
-    background: #232C37;
+    background: var(--background-modal);
     box-shadow: 0px 7px 13px rgba(0, 0, 0, 0.13);
     border-radius: 12.3707px;
 
@@ -349,7 +349,7 @@
 
     text-align: center;
 
-    color: #FFFFFF;
+    color: var(--text-color);
   }
 
   .statInfoElementTextBlockSmall span:last-child {
@@ -375,7 +375,7 @@
     font-size: 19.1739px;
     line-height: 23px;
 
-    color: #FFFFFF;
+    color: var(--text-color);
 
     text-align: left;
   }
@@ -390,7 +390,7 @@
 
     color: #0071FF;
 
-    background: #1A3250;
+    background: var(--back-counter-home);
     border: 1.37614px solid #0071FF;
     border-radius: 9.92157px;
 
