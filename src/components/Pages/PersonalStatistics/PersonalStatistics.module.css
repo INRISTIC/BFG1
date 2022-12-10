@@ -464,6 +464,13 @@
   }
 }
 
+@media (max-width: 830px) {
+  .statsBlockContainer {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+}
+
 @media (max-width: 735px) {
   .buttons {
     flex-wrap: wrap;

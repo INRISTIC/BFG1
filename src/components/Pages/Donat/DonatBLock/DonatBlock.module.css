@@ -82,7 +82,12 @@
   gap: 4px;
 }
 
-
+@media (max-width: 830px) {
+  .donatBlock {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+}
 
 @media (max-width: 500px) {
   .donatBlock {

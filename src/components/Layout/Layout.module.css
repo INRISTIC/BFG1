@@ -5,6 +5,8 @@
   padding-right: 85px;
   align-self: center;
   width: 100%;
+
+  /* background: url('home-panda-fon.svg') */
 }
 
 .header {
@@ -17,5 +19,12 @@
   .main {
     padding-left: 32px;
     padding-right: 32px;
+  }
+}
+
+@media (max-width: 830px) {
+  .main {
+    padding-left: 0;
+    padding-right: 0;
   }
 }

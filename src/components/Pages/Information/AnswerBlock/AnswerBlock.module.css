@@ -166,6 +166,13 @@ textarea {
   color: #ffffff;
 }
 
+@media (max-width: 830px) {
+  .answerBlockContainer {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+}
+
 @media (max-width: 500px) {
   .answerBlock {
     padding: 36px 34px 51px;

@@ -71,26 +71,17 @@ const Stat = () => {
         </>
       ) : (
         <>
-          <div className={s.statInfoBlockSmall}>
-            <div className={s.statInfoElementSmall}>
-              <span>Количество пользователей</span>
-              <span>35 312</span>
-            </div>
+            <div className={s.statMainBlock}>
+              <div className={s.statMainBlock}>
+                <div className={s.statInfoBlockCircles}></div>
 
-            <div className={s.statInfoElementSmall}>
-              <span>Количество сообщений</span>
-              <span>35 682 195</span>
-            </div>
+                <div className={s.statInfoBlockImgContainer}>
+                  <img src={statInfoBlockImg} alt="" />
+                </div>
 
-            <div className={s.statInfoElementSmall}>
-              <span>Количество дней с основания</span>
-              <span>162</span>
-            </div>
+                <button className={s.statInfoBlockBtn}>Перейти в бота</button>
 
-            <div className={s.statInfoElementSmall}>
-              <span>Онлайн</span>
-              <span>153</span>
-            </div>
+              </div>
           </div>
         </>
       )}

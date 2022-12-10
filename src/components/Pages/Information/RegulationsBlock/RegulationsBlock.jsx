@@ -3,7 +3,7 @@ import RulesItem from "../RulesItem/RulesItem";
 
 const RegulationsBlock = () => {
   return (
-    <div className={s.RegulatBlock}>
+    <div className={s.regulationBlockContainer}>
       <h1 className={s.title}>Правила</h1>
       <div className={s.informationRow}>
         <div className={s.informationCol}>

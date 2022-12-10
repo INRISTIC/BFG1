@@ -58,6 +58,13 @@
   }
 }
 
+@media (max-width: 830px) {
+  .PrivilegeBlock {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+}
+
 @media (max-width: 500px) {
   .title {
     padding: 15px 46px;
