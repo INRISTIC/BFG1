@@ -1,0 +1,68 @@
+@keyframes float {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.stat {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: relative;
+
+  margin-top: 73px;
+  margin-bottom: 184px;
+
+  animation-name: float;
+  animation-duration: 1s;
+}
+
+.statMainBlock {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.statInfoBlockImgContainer {
+  max-width: 631px;
+  width: 100%;
+}
+
+.statInfoBlockImgContainer img {
+  width: 100%;
+}
+
+.statInfoBlockBtn {
+  width: 231px;
+
+  background: #0071FF;
+  box-shadow: 0px 22px 40px rgba(0, 0, 0, 0.3);
+  border-radius: 18px;
+
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 26px;
+  text-align: center;
+  color: #FFFFFF;
+
+  padding: 20px;
+
+  position: absolute;
+  bottom: -16px;
+
+  cursor: pointer;
+}
+
+@media (max-width: 1200px) {
+
+}
+
+@media (max-width: 650px) {
+  .about {
+    margin-bottom: 74px;
+  }
+}
