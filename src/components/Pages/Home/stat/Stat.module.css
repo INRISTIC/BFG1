@@ -292,6 +292,8 @@
 
 @media (max-width: 830px) {
   .stat {
+    margin-top: 58px;
     margin-bottom: 74px;
+    flex-direction: column;
   }
 }
