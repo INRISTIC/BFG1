@@ -32,6 +32,7 @@
   display: block;
   z-index: 1;
   background: #0071ff;
+  color: white;
   border-radius: 15px;
   padding: 18px 20px;
   width: -webkit-max-content;
@@ -53,17 +54,7 @@
   background: var(--title-acsec1);
 }
 
-.title::before {
-  position: absolute;
-  content: "";
-  width: 18%;
-  height: 50px;
-  border-radius: 13.5789px;
-  bottom: 0;
-  left: 50%;
-  transform: translate(-50%, 13px);
-  background: var(--title-acsec2);
-}
+
 
 .list {
   display: grid;
@@ -145,6 +136,14 @@
 }
 
 @media (max-width: 540px) {
+
+  .active:hover .hoverEl::after {
+    display: none;
+  }
+
+  .active:hover .hoverEl {
+    display: none;
+  }
   .modal {
     padding: 38px 47px 66px;
   }

@@ -15,6 +15,7 @@
   display: block;
   z-index: 1;
   background: #0071FF;
+  color: white;
   border-radius: 15px;
   padding: 18px 20px;
   width: -webkit-max-content;
