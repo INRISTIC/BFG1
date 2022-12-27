@@ -1,5 +1,6 @@
 import React, { useRef, useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
+import { useTranslation } from "react-i18next";
 
 import s from "./SettingModal.module.css";
 import { set } from "../../../../store/slices/sliceTheme";
@@ -9,6 +10,11 @@ import { ReactComponent as Sun } from "../../../../assets/images/sun.svg";
 import { ReactComponent as Moon } from "../../../../assets/images/moon.svg";
 
 const SettingModal = ({ className, active, closeSetting, btnRef }) => {
+  const { i18n } = useTranslation();
+
+  const changeLanguage = lng => {
+    i18n.changeLanguage(lng);
+  };
 
   const settingRef = useRef(null);
 
@@ -44,9 +50,9 @@ const SettingModal = ({ className, active, closeSetting, btnRef }) => {
   return (
     <div ref={settingRef} className={s.settingsModal}>
       <div className={s.translate}>
-        <button>RU</button>
-        <button>UA</button>
-        <button>EN</button>
+        <button onClick={() => changeLanguage("ru")} className={i18n.language === "ru" && s.activeBtn}>RU</button>
+        <button onClick={() => changeLanguage("ua")} className={i18n.language === "ua" && s.activeBtn}>UA</button>
+        <button onClick={() => changeLanguage("en")} className={i18n.language === "en" && s.activeBtn}>EN</button>
       </div>
       <div className={s.theme}>
         <button

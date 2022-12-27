@@ -258,6 +258,13 @@
   padding: 15px;
 }
 
+.loader {
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  align-items: center;
+}
+
 @media (max-width: 1400px) {
   .newsBlock {
     flex-direction: column-reverse;

@@ -1,9 +1,11 @@
 import s from "./Post.module.css";
 import React from "react";
+import { useTranslation } from "react-i18next";
 import { useLayoutEffect, useState, useEffect, createRef } from "react";
-import { Rate } from 'antd';
+import { Rate } from "antd";
+import { format, parseISO } from "date-fns";
 
-import { ReactComponent as Star } from "../../../../assets/images/star-gray.svg"
+import { ReactComponent as Star } from "../../../../assets/images/star-gray.svg";
 
 import ava from "../../../../assets/images/panda-post.png";
 import { ReactComponent as Arrow } from "../../../../assets/images/arrow-right.svg";
@@ -58,6 +60,18 @@ function changeHeightPostContant(ref, func) {
 }
 
 const Post = (props) => {
+  const { i18n } = useTranslation();
+  const {
+    content_en,
+    content_ru,
+    content_ua,
+    createdAt,
+    rating,
+    title_en,
+    title_ru,
+    title_ua,
+  } = props.item;
+
   const [width] = useWindowSize();
 
   const [heightPostContant, ChangeHeightPostContantState] = useState(180);
@@ -70,7 +84,10 @@ const Post = (props) => {
 
   const classesPostOpen = `${s.newsPost} ${s.newsPost_open}`;
 
-  useEffect(() => changeHeightPostContant(refComponent, ChangeHeightPostContantState), [refComponent]);
+  useEffect(
+    () => changeHeightPostContant(refComponent, ChangeHeightPostContantState),
+    [refComponent]
+  );
 
   let flag;
 
@@ -91,59 +108,67 @@ const Post = (props) => {
         props.changeFlagClose(false);
       }
     }
-
-
   }, [props]);
 
   return (
-    <div className={flag ? open ? classesPostOpen : s.newsPost : s.newsPost}>
+    <div className={flag ? (open ? classesPostOpen : s.newsPost) : s.newsPost}>
       <div className={s.postImgContainer}>
         <img src={ava} alt="" className={s.postImg} />
       </div>
       <div className={s.postContainer}>
         <div className={s.postHeader}>
-          <div className={s.postTitle}>Название новости</div>
-
-          <div className={s.postTitleDate}>
-            <Rate character={<Star className={s.star} />} style={{ fontSize: 23.4, marginInlineEnd: 0 }} className={s.stars} />
-            <div className={s.postData}>14.11.2022</div>
+          <div className={s.postTitle}>
+            {i18n.language === "ru" && title_ru}
+            {i18n.language === "en" && title_en}
+            {i18n.language === "ua" && title_ua}
           </div>
 
+          <div className={s.postTitleDate}>
+            <Rate
+              defaultValue={rating}
+              character={<Star className={s.star} />}
+              style={{ fontSize: 23.4, marginInlineEnd: 0 }}
+              className={s.stars}
+            />
+            <div className={s.postData}>
+              {format(parseISO(createdAt), "dd.MM.yyyy")}
+            </div>
+          </div>
         </div>
-        <div className={flag ? !open ? classesDescHiddenOpen : classesDescHiddenClose : s.postDescription} ref={refComponent}>
-          <p>Описание новости Описание новости Описание новости Описание новости
-            Описание новости Описание новости Описание новости Описание новости
-            Описание новости Описание новости Описание новости Описание новости
-            Описание новости Описание новости Описание новости Описание новости
-            Описание новости Описание новости Описание новости Описание новости
-            Описание новости Описание новости Описание новости Описание новости
-            Описание новости Описание новости Описание новости Описание новости
-            Описание новости Описание новости Описание новости Описание новости
-            Описание новости Описание новости Описание новости Описание новости
-            Описание новости Описание новости Описание новости Описание новости
-            Описание новости Описание новости Описание новости Описание новости
-            Описание новости Описание новости Описание новости Описание новости
-            Описание новости Описание новости Описание новости Описание новости
-            Описание новости Описание новости Описание новости Описание новости
-            Описание новости Описание новости Описание новости Описание новости</p>
+        <div
+          className={
+            flag
+              ? !open
+                ? classesDescHiddenOpen
+                : classesDescHiddenClose
+              : s.postDescription
+          }
+          ref={refComponent}
+        >
+          <p>
+            {i18n.language === "ru" && content_ru}
+            {i18n.language === "en" && content_en}
+            {i18n.language === "ua" && content_ua}
+          </p>
         </div>
 
-        {flag ?
-          (
-            <button className={s.postFullBtn} onClick={() => {
+        {flag ? (
+          <button
+            className={s.postFullBtn}
+            onClick={() => {
               setOpen(!open);
 
               let arr = props.flagsOpen;
               arr[props.index] = !arr[props.index];
               props.changeFlagOpen(arr);
-
-            }}>
-              {!open ? "Развернуть" : "Скрыть"}
-              <Arrow className={s.arrow} style={{ width: 19, height: 20 }} />
-            </button>
-          ) : false
-        }
-
+            }}
+          >
+            {!open ? "Развернуть" : "Скрыть"}
+            <Arrow className={s.arrow} style={{ width: 19, height: 20 }} />
+          </button>
+        ) : (
+          false
+        )}
       </div>
     </div>
   );

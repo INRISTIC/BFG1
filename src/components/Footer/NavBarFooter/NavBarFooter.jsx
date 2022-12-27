@@ -1,5 +1,6 @@
 import { NavLink } from "react-router-dom";
 import useWindowSize from "../../../hooks/widthHook";
+import { useTranslation } from "react-i18next";
 import s from "./NavBarFooter.module.css";
 import { openModal } from "../../../store/slices/sliceModal";
 import { useDispatch } from "react-redux";
@@ -7,12 +8,12 @@ import { useDispatch } from "react-redux";
 const setActive = ({ isActive }) => (isActive ? s.active : s.notActive);
 
 const NavBarFooter = () => {
+  const { t } = useTranslation();
   const [width] = useWindowSize();
   const dispatch = useDispatch();
   const onModalOpen = () => {
-    dispatch(openModal({ modalPersonInfo: true }))
-  }
-
+    dispatch(openModal({ modalPersonInfo: true }));
+  };
 
   return (
     <nav className={s.nav}>
@@ -22,53 +23,52 @@ const NavBarFooter = () => {
             <>
               <div className={s.linkPhone}>
                 <NavLink to="/" className={setActive}>
-                  Главная
+                  {t("NavBar.home")}
                 </NavLink>
                 <button className={s.button} onClick={onModalOpen}>
-                  Пользовательское соглашение
+                  {t("NavBar.termsOfUse")}
                 </button>
               </div>
 
               <div className={s.linkPhone}>
                 <NavLink to="/news" className={setActive}>
-                  Новости
+                  {t("NavBar.news")}
                 </NavLink>
                 <button className={s.button} onClick={onModalOpen}>
-                  Условия пользования
+                  {t("NavBar.userTerms")}
                 </button>
               </div>
             </>
           ) : (
             <>
               <NavLink to="/" className={setActive}>
-                Главная
+                {t("NavBar.home")}
               </NavLink>
-              <NavLink to="/" className={setActive}>
-                Главная
+              <NavLink to="/news" className={setActive}>
+                {t("NavBar.news")}
               </NavLink>
             </>
           )}
           <NavLink to="/donat" className={setActive}>
-            Донат
+            {t("NavBar.donat")}
           </NavLink>
 
           <NavLink to="/info" className={setActive}>
-            Информация
+            {t("NavBar.info")}
           </NavLink>
 
-          <span className={s.span}>Все права защищены © 2022 </span>
+          <span className={s.span}>{t("NavBar.rules")} © 2022 </span>
         </div>
         {width > 810 && (
           <div className={s.footerBlock}>
             <button className={s.button} onClick={onModalOpen}>
-              Пользовательское соглашение
+              {t("NavBar.termsOfUse")}
             </button>
-            <button className={s.button} onClick={onModalOpen} >
-              Условия пользования
+            <button className={s.button} onClick={onModalOpen}>
+              {t("NavBar.userTerms")}
             </button>
           </div>
         )}
-
       </div>
     </nav>
   );

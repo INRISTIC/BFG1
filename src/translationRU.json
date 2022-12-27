@@ -1,0 +1,87 @@
+{
+  "NavBar": {
+    "home": "Главная",
+    "news": "Новости",
+    "donat": "Донат",
+    "stats": "Статистика",
+    "info": "Информация",
+    "termsOfUse": "Пользовательское соглашение",
+    "userTerms": "Условия пользователя",
+    "rules": "Все права защищены"
+  },
+  "Stat": {
+    "online": "Онлайн",
+    "count_users": "Количество пользователей",
+    "count_sms": "Количество сообщений",
+    "count_days": "Количество дней с основания",
+    "bots": "Перейти в бота",
+    "count": "Количество",
+    "users": "пользователей"
+  },
+  "About": {
+    "title": "О нас",
+    "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ac justo mollis lectus pretium ultricies. Ut placerat mi et ipsum tristique, in luctus odio vestibulum. Aenean ligula elit, pellentesque in sagittis vitae, luctus in enim. Vivamus ut risus lacinia, pulvinar eros nec, feugiat justo. Nunc eget cursus sem. Curabitur at enim vitae elit dictum bibendum ac et neque. Praesent et diam nec est hendrerit convallis eu vitae risus. Mauris viverra erat ut magna suscipit dignissim. Curabitur ultricies, ligula eu iaculis auctor, nisl elit vestibulum elit, ac egestas orci diam nec.",
+    "bots": "Перейти в бота"
+  },
+  "Description": {
+    "title": "Описание",
+    "text": "Mauris molestie blandit urna eget auctor. Fusce sapien velit, varius et accumsan eu, scelerisque at ligula. Morbi efficitur purus arcu, a molestie orci scelerisque quis. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Mauris sed interdum ante, non interdum neque. Sed vulputate, urna ac pellentesque posuere, neque purus aliquam elit, ut hendrerit arcu diam in lacus. Pellentesque dapibus fringilla ante, non efficitur diam feugiat eget. Suspendisse ligula leo, aliquet consequat interdum at, cursus vitae felis. Donec eget libero non massa viverra tincidunt. Nam tristique, eros id fermentum efficitur, nisl augue imperdiet nibh, sed mollis enim neque sit amet lorem."
+  },
+  "News": {
+    "title": "Новости",
+    "noWatchNews": "Не пропускай новости",
+    "subscribeTg": "Подписывайся на наш телеграм канал",
+    "goTg": "Перейти",
+    "sorts": "Сортировка",
+    "rating": "Рейтинг",
+    "date": "Дата"
+  },
+  "Donat": {
+    "pay": "Выберите систему оплаты",
+    "bankCard": "Банковская карта",
+    "electronWallet": "Электронный кошелек",
+    "continue": "Продолжить",
+    "field": "Заполните все поля",
+    "summa": "Введите сумму",
+    "id": "Введите ID",
+    "email": "Введите E-mail",
+    "payBtn": "Оплатить"
+  },
+  "ConnectWithUs": {
+    "connection": "Связаться с нами",
+    "bots": "Перейти в бота"
+  },
+  "Information": {
+    "rules": "Правила",
+    "privillege": "Привелегии",
+    "noAnswer": "Не нашел ответа на свой вопрос ?",
+    "noAnswerSubTitle": "Задай его !",
+    "id": "Введите ваш id",
+    "email": "Введите ваш email",
+    "theme": "Введите тему вопроса",
+    "description": "Введите описание вопроса",
+    "personal": "я соглашаюсь с условиями пользовательского соглашение и политикой конфиденциальности",
+    "answer": "Задать вопрос"
+  },
+  "PersonalInfo": {
+    "0": "Пользовательское соглашение",
+    "1": "1. Пользовательское соглашение",
+    "11": "1.1. Настоящее Пользовательское Соглашение (далее соглашение) регулирует отношения между владельцем игрового «Bot Lesya» (далее бот, сайт) с пользователем.",
+    "12": "1.2. Используя бота, Вы соглашаетесь с условиями данного соглашения.",
+    "2": "2. Права и обязанности сторон",
+    "21": "2.1. Администрация обязуется поддерживать работоспособность сайта и бота за исключением случаев, когда это невозможно по независящим от Администрации причинам.",
+    "22": "2.2. Администрация гарантирует бесплатное использование бота и сайта.",
+    "23": "2.3. Администрация имеет право: удалять и изменять учетные записи; создавать, изменять и удалять правила и информацию; проводить технические работы бота и сайта в любое время.",
+    "24": "2.4. Пользователь обязуется соблюдать данное соглашение",
+    "25": "2.5. Пользователь обязуется не нарушать работоспособность бота и сайта.",
+    "26": "2.6. Пользователь обязуется не использовать скрипты, программы для автоматизированного взаимодействия с сайтом и ботом.",
+    "3": "3. Пожертвования",
+    "31": "3.1. Пользователь на добровольной основе делает пожертвования боту реальными деньгами.",
+    "32": "3.2. Пожертвования не подлежат возврату и/или переносу на другой игровой аккаунт.",
+    "33": "3.3. Вознаграждение выдается в течение суток (обычно моментально) после совершения пожертвования.",
+    "4": "4. Условия действия соглашения",
+    "41": "4.1. Данное соглашение вступает в силу при любом использовании сайта и/или бота.",
+    "42": "4.2. Администрация оставляет за собой право в одностороннем порядке изменять данное соглашение по своему усмотрению.",
+    "43": "4.3. Соглашение действует бессрочно."
+  }
+}

@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
+import { useTranslation } from "react-i18next";
 import { donatWay } from "../../../../../store/slices/sliceDonat";
 
 import { ReactComponent as Card } from "../../../../../assets/images/donat-card.svg";
@@ -9,6 +10,7 @@ import { ReactComponent as Money } from "../../../../../assets/images/donat-mone
 import s from "./WayDonat.module.css";
 
 const WayDonat = () => {
+  const { t } = useTranslation();
   // const initialState = {
   //   card: false,
   //   qiwi: false,
@@ -64,7 +66,7 @@ const WayDonat = () => {
 
   return (
     <div className={s.donatBlock}>
-      <div className={s.subTitle}>Выберите систему оплаты</div>
+      <div className={s.subTitle}>{t("Donat.pay")}</div>
       <div className={s.listBtn}>
         <button
           className={
@@ -79,7 +81,7 @@ const WayDonat = () => {
           </div>
 
           <div className={s.bankCardText}>
-            <div className={s.bankCardTitle}>Банковская карта</div>
+            <div className={s.bankCardTitle}>{t("Donat.bankCard")}</div>
             <div className={s.bankCardSubTitle}>
               VISA/MASTERCARD/МИР/UNIONPAY
             </div>
@@ -99,7 +101,7 @@ const WayDonat = () => {
           </div>
           <div className={s.bankCardText}>
             <div className={s.bankCardTitle}>Qiwi Wallet</div>
-            <div className={s.bankCardSubTitle}>Электронный кошелек</div>
+            <div className={s.bankCardSubTitle}>{t("Donat.electronWallet")}</div>
           </div>
         </button>
 
@@ -117,7 +119,7 @@ const WayDonat = () => {
 
           <div className={s.bankCardText}>
             <div className={s.bankCardTitle}>ЮMoney</div>
-            <div className={s.bankCardSubTitle}>Электронный кошелек</div>
+            <div className={s.bankCardSubTitle}>{t("Donat.electronWallet")}</div>
           </div>
         </button>
       </div>
@@ -130,7 +132,7 @@ const WayDonat = () => {
           onDonatWay(Object.keys(active)[0])
         }
       >
-        Продолжить
+        {t("Donat.continue")}
       </button>
     </div>
   );

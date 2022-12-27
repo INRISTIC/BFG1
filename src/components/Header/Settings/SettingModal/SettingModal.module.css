@@ -70,15 +70,14 @@ button {
   transition:  0.3s;
 }
 
+
+
 .translate button:nth-child(1) {
-  background: #0085FF;
+  
   
   border-radius: 10px 0px 0px 10px;
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 17px;
-  text-align: center;
-  color: #FFFFFF;
+
+  
 }
 
 .translate button:nth-child(2) {
@@ -89,6 +88,15 @@ button {
 .translate button:nth-child(3) {
   
   border-radius: 0px 10px 10px 0px;
+}
+
+.translate .activeBtn {
+  background: #0085FF;
+  color: #FFFFFF;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  text-align: center;
 }
 
 .theme {

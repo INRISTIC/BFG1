@@ -1,5 +1,9 @@
 import React from "react";
-import { useLayoutEffect, useState } from "react";
+import { useLayoutEffect, useState, useEffect } from "react";
+import { useSelector, useDispatch } from "react-redux";
+import { useTranslation } from "react-i18next";
+
+import { fetchSettings } from "../../../../store/slices/sliceSettings";
 
 import s from "./Stat.module.css";
 
@@ -20,7 +24,18 @@ function useWindowSize() {
 }
 
 const Stat = () => {
+
+  const { t } = useTranslation();
+
   const [width] = useWindowSize();
+
+  const dispatch = useDispatch();
+  const { settings } = useSelector(state => state.settings);
+  const isSettingsLoading = settings.status === "loading";
+
+  useEffect(() => {
+    dispatch(fetchSettings())
+  }, [])
 
   return (
     <div className={s.stat}>
@@ -33,22 +48,22 @@ const Stat = () => {
               <img src={statInfoBlockImg} alt="" />
             </div>
 
-            <button className={s.statInfoBlockBtn}>Перейти в бота</button>
+            <button className={s.statInfoBlockBtn}>{t("Stat.bots")}</button>
 
           </div>
 
           <div className={s.statInfoBlock}>
             <div className={s.statInfoElement}>
               <div className={s.statInfoElementTextBlock}>
-                <span>Онлайн</span>
-                <span>153</span>
+                <span>{t("Stat.online")}</span>
+                <span>{settings.info.online}</span>
               </div>
             </div>
 
             <div className={s.statInfoElement}>
               <div className={s.statInfoElementTextBlock}>
-                <span>Количество пользователей</span>
-                <span>253</span>
+                <span>{t("Stat.count_users")}</span>
+                <span>{settings.info.users_count}</span>
               </div>
             </div>
           </div>
@@ -56,15 +71,15 @@ const Stat = () => {
           <div className={s.statInfoBlock}>
             <div className={s.statInfoElement}>
               <div className={s.statInfoElementTextBlock}>
-                <span>Количество сообщений</span>
-                <span>35 682 195</span>
+                <span>{t("Stat.count_sms")}</span>
+                <span>{settings.info.users_sms}</span>
               </div>
             </div>
 
             <div className={s.statInfoElement}>
               <div className={s.statInfoElementTextBlock}>
-                <span>Количество дней с основания</span>
-                <span>162</span>
+                <span>{t("Stat.count_days")}</span>
+                <span>{!isSettingsLoading && Math.floor((Date.parse(new Date) - Date.parse(settings.info.updatedAt)) / (1000 * 3600 * 24))}</span>
               </div>
             </div>
           </div>
@@ -76,26 +91,26 @@ const Stat = () => {
           </div>
           <div className={s.statInfoBlockSmall}>
             <div className={s.statInfoElementTextBlockSmallUsers}>
-              <span>Количество<br />пользователей</span>
-              <span>253</span>
+              <span>{t(Stat.count)}<br />{t(Stat.users)}</span>
+              <span>{settings.info.users_count}</span>
             </div>
 
             <div className={s.statInfoElementTextBlockSmall}>
-              <span>Количество сообщений</span>
-              <span>35 682 195</span>
+              <span>{t("Stat.count_sms")}</span>
+              <span>{settings.info.users_sms}</span>
             </div>
 
             <div className={s.statInfoElementTextBlockSmall}>
-              <span>Количество дней с основания</span>
-              <span>162</span>
+              <span>{t("Stat.count_days")}</span>
+              <span>{!isSettingsLoading && Math.floor((Date.parse(new Date) - Date.parse(settings.info.updatedAt)) / (1000 * 3600 * 24))}</span>
             </div>
 
             <div className={s.statInfoElementTextBlockSmall}>
-              <span>Онлайн</span>
-              <span>153</span>
+              <span>{t("Stat.online")}</span>
+              <span>{settings.info.online}</span>
             </div>
 
-            <button className={s.statInfoBlockBtn}>Перейти в бота</button>
+            <button className={s.statInfoBlockBtn}>{t("Stat.bots")}</button>
           </div>
         </>
       )}

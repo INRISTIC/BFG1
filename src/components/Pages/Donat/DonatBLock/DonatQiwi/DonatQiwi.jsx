@@ -1,5 +1,6 @@
 import { useSelector, useDispatch } from "react-redux";
 import { donatWay } from "../../../../../store/slices/sliceDonat";
+import { useTranslation } from "react-i18next";
 
 import { ReactComponent as Arrow } from "../../../../../assets/images/arrow-left.svg";
 import { ReactComponent as Card } from "../../../../../assets/images/donat-card.svg";
@@ -9,6 +10,7 @@ import { ReactComponent as Money } from "../../../../../assets/images/donat-mone
 import s from "./DonatQiwi.module.css";
 
 const DonatQiwi = () => {
+  const { t } = useTranslation();
   const donat = useSelector((state) => state.donat);
   const dispatch = useDispatch();
 
@@ -27,11 +29,9 @@ const DonatQiwi = () => {
     );
   };
 
-  console.log(donatCard);
-
   return (
     <>
-      <div className={s.subTitle}>Заполните все поля</div>
+      <div className={s.subTitle}>{t("Donat.field")}</div>
       <div className={s.bankCard}>
         <button onClick={onBack} className={s.back}>
           <Arrow className={s.arrowLeft} />
@@ -45,7 +45,7 @@ const DonatQiwi = () => {
 
           <div className={s.bankCardText}>
             <div className={s.bankCardTitle}>
-              {donatCard.status && donatCard.name}
+              {donatCard.status && t("Donat.bankCard")}
               {donatQiwi.status && donatQiwi.name}
               {donatMoney.status && donatMoney.name}
             </div>
@@ -53,16 +53,16 @@ const DonatQiwi = () => {
         </div>
 
         <div className={s.inputList}>
-          <input type="text" placeholder="Введите сумму" className={s.input} />
-          <input type="text" placeholder="Введите ID" className={s.input} />
+          <input type="text" placeholder={t("Donat.summa")} className={s.input} />
+          <input type="text" placeholder={t("Donat.id")} className={s.input} />
           <input
             type="email"
-            placeholder="Введите E-mail"
+            placeholder={t("Donat.email")}
             className={s.input}
           />
         </div>
 
-        <button className={s.pay}>Оплатить</button>
+        <button className={s.pay}>{t("Donat.payBtn")}</button>
       </div>
     </>
   );

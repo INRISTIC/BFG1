@@ -1,6 +1,13 @@
-import { useLayoutEffect, useState, useRef } from "react";
-import { Swiper, SwiperSlide } from 'swiper/react';
+import { useLayoutEffect, useState, useRef, useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { useTranslation } from "react-i18next";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { LoadingOutlined } from "@ant-design/icons";
+import { Spin } from "antd";
+
 import Post from "./Post/Post";
+
+import axios from "../../../axios";
 
 import { ReactComponent as Arrow } from "../../../assets/images/arrow-bottom.svg";
 import { ReactComponent as ArrowRight } from "../../../assets/images/arrow-left.svg";
@@ -8,8 +15,18 @@ import { ReactComponent as ArrowLeft } from "../../../assets/images/arrow-left.s
 import sortIcon from "../../../assets/images/sort-icon.svg";
 
 import s from "./News.module.css";
-import 'swiper/css';
+import "swiper/css";
+import { fetchPosts } from "../../../store/slices/slicePosts";
+import { fetchSettings } from "../../../store/slices/sliceSettings";
 
+const antIcon = (
+  <LoadingOutlined
+    style={{
+      fontSize: 48,
+    }}
+    spin
+  />
+);
 
 function useWindowSize() {
   const [size, setSize] = useState([0]);
@@ -25,13 +42,37 @@ function useWindowSize() {
 }
 
 function changeScroll(e, func) {
-  let scrollBottom = e.target.scrollHeight - e.target.scrollTop - e.target.clientHeight;
+  let scrollBottom =
+    e.target.scrollHeight - e.target.scrollTop - e.target.clientHeight;
   scrollBottom = Math.round(scrollBottom);
 
   func(!scrollBottom);
 }
 
 const News = () => {
+  const { t } = useTranslation();
+
+  const dispatch = useDispatch();
+  const { posts } = useSelector((state) => state.posts);
+  const { settings } = useSelector((state) => state.settings);
+  const isPostsLoading = posts.status === "loading";
+  const isSettingsLoading = settings.status === "loading";
+
+  useEffect(() => {
+    dispatch(fetchPosts());
+    dispatch(fetchSettings());
+  }, []);
+
+  useEffect(() => {
+    if (posts.items.length > 0) {
+      let arr = [];
+      for (let i = 0; i < posts.items.length; i++) {
+        arr.push(false);
+      }
+      setFlags(arr);
+    }
+  }, [posts.items.length]);
+
   const [width] = useWindowSize();
   const [sort, setSort] = useState({ rating: false, time: false });
 
@@ -44,30 +85,37 @@ const News = () => {
   const classesLists = `${s.newsList}`;
   const classesListsShadow = `${classesLists} ${s.newsList_shadow}`;
 
-  const [flagsOpen, setFlags] = useState([false, false, false, false, false, false]);
+  const [flagsOpen, setFlags] = useState([]);
   const [flagClose, setClose] = useState(false);
-
   const swiperRef = useRef();
 
   return (
     <>
-      <h1 className={s.newsTitle}>News</h1>
+      <h1 className={s.newsTitle}>{t("News.title")}</h1>
       <div className={s.newsBlock}>
         <div className={s.newsBlockLeft}>
           <div className={s.newsBlockTg}>
-            <div className={s.tgTitle}>Не пропускай новости !</div>
-            <div className={s.tgText}>Подписывайся на наш телеграм канал</div>
-            <button className={s.tgBtn}>Перейти</button>
+            <div className={s.tgTitle}>{t("News.noWatchNews")}</div>
+            <div className={s.tgText}>{t("News.subscribeTg")}</div>
+            <button className={s.tgBtn}>{t("News.goTg")}</button>
           </div>
           <div className={s.stats}>
             <div>
-              Количество сообщений: <span>35 682 195</span>
+              {t("Stat.count_sms")}: <span>{settings.info.users_sms}</span>
             </div>
             <div>
-              Дней со дня основания: <span>65</span>
+              {t("Stat.count_days")}:{" "}
+              <span>
+                {!isSettingsLoading &&
+                  Math.floor(
+                    (Date.parse(new Date()) -
+                      Date.parse(settings.info.updatedAt)) /
+                      (1000 * 3600 * 24)
+                  )}
+              </span>
             </div>
             <div>
-              Онлайн: <span>154</span>
+              {t("Stat.online")}: <span>{settings.info.online}</span>
             </div>
           </div>
         </div>
@@ -75,7 +123,7 @@ const News = () => {
           <div className={s.filter}>
             <div className={s.filterBtn}>
               <img src={sortIcon} alt="" />
-              Сортировка
+              {t("News.sorts")}
             </div>
             <div className={s.filterOptions}>
               <button
@@ -86,7 +134,7 @@ const News = () => {
                 }
                 onClick={() => btnActive("rating")}
               >
-                Рейтинг
+                {t("News.rating")}
                 <Arrow className={s.arrow} />
               </button>
               <button
@@ -95,68 +143,74 @@ const News = () => {
                 }
                 onClick={() => btnActive("time")}
               >
-                Дата
+                {t("News.date")}
                 <Arrow className={s.arrow} />
               </button>
             </div>
           </div>
           {width > 850 ? (
             <div className={s.newsListContainer}>
-              <div className={!scrollDown ? classesListsShadow : classesLists} onScroll={(e) => changeScroll(e, setScrolling)}>
-                <Post />
-                <Post />
-                <Post />
-                <Post />
-                <Post />
-                <Post />
+              <div
+                className={!scrollDown ? classesListsShadow : classesLists}
+                onScroll={(e) => changeScroll(e, setScrolling)}
+              >
+                {isPostsLoading ? (
+                  <div className={s.loader}>
+                    <Spin indicator={antIcon} />
+                  </div>
+                ) : (
+                  posts.items.map((item) => <Post item={item} key={item._id} />)
+                )}
               </div>
             </div>
           ) : (
             <div className={s.sliderBlock}>
-              <Swiper spaceBetween={300} slidesPerView={1} onBeforeInit={(swiper) => {
-                swiperRef.current = swiper;
-              }}>
-                <SwiperSlide className={s.slidePostContainer}>
-                  <Post flagsOpen={flagsOpen} changeFlagOpen={setFlags} flagClose={flagClose} changeFlagClose={setClose} index='0' />
-                </SwiperSlide>
-
-                <SwiperSlide className={s.slidePostContainer}>
-                  <Post flagsOpen={flagsOpen} changeFlagOpen={setFlags} flagClose={flagClose} changeFlagClose={setClose} index='1' />
-                </SwiperSlide>
-
-                <SwiperSlide className={s.slidePostContainer}>
-                  <Post flagsOpen={flagsOpen} changeFlagOpen={setFlags} flagClose={flagClose} changeFlagClose={setClose} index='2' />
-                </SwiperSlide>
-
-                <SwiperSlide className={s.slidePostContainer}>
-                  <Post flagsOpen={flagsOpen} changeFlagOpen={setFlags} flagClose={flagClose} changeFlagClose={setClose} index='3' />
-                </SwiperSlide>
-
-                <SwiperSlide className={s.slidePostContainer}>
-                  <Post flagsOpen={flagsOpen} changeFlagOpen={setFlags} flagClose={flagClose} changeFlagClose={setClose} index='4' />
-                </SwiperSlide>
-
-                <SwiperSlide className={s.slidePostContainer}>
-                  <Post flagsOpen={flagsOpen} changeFlagOpen={setFlags} flagClose={flagClose} changeFlagClose={setClose} index='5' />
-                </SwiperSlide>
+              <Swiper
+                spaceBetween={300}
+                slidesPerView={1}
+                onBeforeInit={(swiper) => {
+                  swiperRef.current = swiper;
+                }}
+              >
+                {isPostsLoading ? (
+                  <div className={s.loader}>
+                    <Spin indicator={antIcon} />
+                  </div>
+                ) : (
+                  posts.items.map((item, index) => (
+                    <SwiperSlide className={s.slidePostContainer}>
+                      <Post
+                        item={item}
+                        flagsOpen={flagsOpen}
+                        changeFlagOpen={setFlags}
+                        flagClose={flagClose}
+                        changeFlagClose={setClose}
+                        index={String(index)}
+                        key={item._id}
+                      />
+                    </SwiperSlide>
+                  ))
+                )}
               </Swiper>
 
-              <button className={s.leftBtn} onClick={() => {
-                swiperRef.current?.slideNext();
-                flagsOpen.forEach(el => el ? setClose(true) : '');
-              }}>
-
+              <button
+                className={s.leftBtn}
+                onClick={() => {
+                  swiperRef.current?.slideNext();
+                  flagsOpen.forEach((el) => (el ? setClose(true) : ""));
+                }}
+              >
                 <ArrowRight className={s.arrowBtnPrevRight} />
-
               </button>
 
-              <button className={s.rightBtn} onClick={() => {
-                swiperRef.current?.slidePrev();
-                flagsOpen.forEach(el => el ? setClose(true) : '');
-              }}>
-
+              <button
+                className={s.rightBtn}
+                onClick={() => {
+                  swiperRef.current?.slidePrev();
+                  flagsOpen.forEach((el) => (el ? setClose(true) : ""));
+                }}
+              >
                 <ArrowLeft className={s.arrowBtnPrevLeft} />
-
               </button>
             </div>
           )}

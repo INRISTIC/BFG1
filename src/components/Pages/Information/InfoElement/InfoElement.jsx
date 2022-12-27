@@ -1,11 +1,12 @@
 import s from "./InfoElement.module.css";
+import { useTranslation } from "react-i18next";
 import { ReactComponent as Arrow } from "../../../../assets/images/arrow-bottom.svg";
 
 import { useState } from "react";
 
-const InfoElement = () => {
+const InfoElement = ({ item }) => {
+  const { i18n } = useTranslation();
   const [open, setOpen] = useState(false);
-  console.log(open);
   return (
     <div
       className={open ? s.infoElement : s.infoElement + " " + s.hidden}
@@ -30,13 +31,14 @@ const InfoElement = () => {
               : s.infoElement__header_btn
           }
         >
-          <Arrow className={open ? s.arrow + ' ' + s.arrowActive : s.arrow} />
+          <Arrow className={open ? s.arrow + " " + s.arrowActive : s.arrow} />
         </button>
       </div>
-      <div className={open ? s.activeText : s.closed + ' ' + s.defaultBlosk }>
+      <div className={open ? s.activeText : s.closed + " " + s.defaultBlosk}>
         <span className={s.text}>
-          Вы сможете пополнить баланс с помощью Qiwi Wallet, Банковской картой и
-          Юmoney
+          {i18n.language === "ru" && item.content_ru}
+          {i18n.language === "en" && item.content_en}
+          {i18n.language === "ua" && item.content_ua}
         </span>
       </div>
     </div>

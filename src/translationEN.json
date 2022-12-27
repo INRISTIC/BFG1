@@ -1,0 +1,87 @@
+{
+  "NavBar": {
+    "home": "Home",
+    "news": "News",
+    "donat": "Donat",
+    "stats": "Stats",
+    "info": "Info",
+    "termsOfUse": "Terms of use",
+    "userTerms": "User Terms",
+    "rules": "All rights reserved"
+  },
+  "Stat": {
+    "online": "Online",
+    "count_users": "Count users",
+    "count_sms": "Count messages",
+    "count_days": "Count days",
+    "bots": "Go to Bot",
+    "count": "Количество",
+    "users": "Пользователей"
+  },
+  "About": {
+    "title": "About Us",
+    "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ac justo mollis lectus pretium ultricies. Ut placerat mi et ipsum tristique, in luctus odio vestibulum. Aenean ligula elit, pellentesque in sagittis vitae, luctus in enim. Vivamus ut risus lacinia, pulvinar eros nec, feugiat justo. Nunc eget cursus sem. Curabitur at enim vitae elit dictum bibendum ac et neque. Praesent et diam nec est hendrerit convallis eu vitae risus. Mauris viverra erat ut magna suscipit dignissim. Curabitur ultricies, ligula eu iaculis auctor, nisl elit vestibulum elit, ac egestas orci diam nec.",
+    "bots": "Go to Bot"
+  },
+  "Description": {
+    "title": "Description",
+    "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ac justo mollis lectus pretium ultricies. Ut placerat mi et ipsum tristique, in luctus odio vestibulum. Aenean ligula elit, pellentesque in sagittis vitae, luctus in enim. Vivamus ut risus lacinia, pulvinar eros nec, feugiat justo. Nunc eget cursus sem. Curabitur at enim vitae elit dictum bibendum ac et neque. Praesent et diam nec est hendrerit convallis eu vitae risus. Mauris viverra erat ut magna suscipit dignissim. Curabitur ultricies, ligula eu iaculis auctor, nisl elit vestibulum elit, ac egestas orci diam nec."
+  },
+  "News": {
+    "title": "News",
+    "noWatchNews": "Don't miss the news",
+    "subscribeTg": "Subscribe to our telegram channel",
+    "goTg": "Go",
+    "sorts": "Sorting",
+    "rating": "Rating",
+    "date": "Date"
+  },
+  "Donat": {
+    "pay": "Choose a payment system",
+    "bankCard": "Bank card",
+    "electronWallet": "Online wallet",
+    "continue": "Continue",
+    "field": "Fill in all the fields",
+    "summa": "Enter amount",
+    "id": "Enter ID",
+    "email": "Enter Email",
+    "payBtn": "Pay"
+  },
+  "ConnectWithUs": {
+    "connection": "Contact us",
+    "bots": "Go to bot"
+  },
+  "Information": {
+    "rules": "Rules",
+    "privillege": "Privilege",
+    "noAnswer": "Didn't find an answer to your question?",
+    "noAnswerSubTitle": "Ask him!",
+    "id": "Enter your id",
+    "email": "Enter your email",
+    "theme": "Enter question subject",
+    "description": "Enter a question description",
+    "personal": "I agree to the terms of the user agreement and privacy policy",
+    "answer": "Ask a Question"
+  },
+  "PersonalInfo": {
+    "0": "User agreement",
+    "1": "1. User agreement",
+    "11": "1.1. This User Agreement (hereinafter referred to as the agreement) governs the relationship between the owner of the game 'Bot Lesya' (hereinafter referred to as the bot, site) with the user.",
+    "12": "1.2. By using the bot, you agree to the terms of this agreement.",
+    "2": "2. Rights and obligations of the parties",
+    "21": "2.1. Administratsiya obyazuyetsya podderzhivat' rabotosposobnost' sayta i bota za isklyucheniyem sluchayev, kogda eto nevozmozhno po nezavisyashchim ot Administratsii prichinam. The Administration undertakes to maintain the site and the bot in working order, except when it is impossible for reasons beyond the control of the Administration.",
+    "22": "2.2. The administration guarantees the free use of the bot and the site.",
+    "23": "2.3. The administration has the right to: delete and change accounts; create, modify and delete rules and information; carry out technical work on the bot and the site at any time.",
+    "24": "2.4. The user agrees to be bound by this agreement",
+    "25": "2.5. The user undertakes not to disrupt the performance of the bot and the site.",
+    "26": "2.6. The user undertakes not to use scripts, programs for automated interaction with the site and the bot.",
+    "3": "3. Donations",
+    "31": "3.1. The user voluntarily makes donations to the bot with real money.",
+    "32": "3.2. Donations are non-refundable and/or transferable to another game account.",
+    "33": "3.3. The reward is issued within 24 hours (usually immediately) after the donation is made.",
+    "4": "4. Terms of the agreement",
+    "41": "4.1. This agreement comes into force with any use of the site and / or bot.",
+    "42": "4.2. The administration reserves the right to unilaterally change this agreement at its discretion.",
+    "43": "4.3. The agreement is valid indefinitely."
+  }
+}

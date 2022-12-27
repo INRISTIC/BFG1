@@ -1,8 +1,19 @@
+import { useEffect } from "react";
+import { fetchFaqs } from "../../../../store/slices/sliceFaq";
+import { useDispatch, useSelector } from "react-redux";
 import s from "./FAQBlock.module.css";
 
 import InfoElement from "../InfoElement/InfoElement";
 
+
 const FAQBlock = () => {
+  const dispatch = useDispatch();
+  const { faqs } = useSelector(state => state.faqs)
+  useEffect(() => {
+    dispatch(fetchFaqs());
+  }, [])
+
+  const isFaqsStatus = faqs.status === 'loading'
 
   return (
     <div className={s.informationBlockContainer}>
@@ -10,13 +21,9 @@ const FAQBlock = () => {
 
       <div className={s.informationRow}>
         <div className={s.informationCol}>
-          <InfoElement />
-          <InfoElement />
-        </div>
-
-        <div className={s.informationCol}>
-          <InfoElement />
-          <InfoElement />
+        {!isFaqsStatus && faqs.items.map((item) => (
+          <InfoElement item={item} key={item._id}/>
+        )) }
         </div>
       </div>
     </div>

@@ -2,11 +2,13 @@ import { useLocation, NavLink } from "react-router-dom";
 import s from "./NavBarPhone.module.css";
 import { ReactComponent as Burger } from "../../../assets/images/burger.svg";
 import { closeHeader } from "../../../store/slices/sliceHeader";
-import {  useDispatch } from "react-redux";
+import { useDispatch } from "react-redux";
+import { useTranslation } from "react-i18next";
 
 
 
 const NavBarPhone = ({active, openNavList}) => {
+  const { t } = useTranslation();
   const dispatch = useDispatch();
 
   const closeFon = () => {
@@ -37,7 +39,7 @@ const NavBarPhone = ({active, openNavList}) => {
           }
           onClick={closeFon}
         >
-          Главная
+          {t("NavBar.home")}
         </NavLink>
 
         <NavLink
@@ -47,7 +49,7 @@ const NavBarPhone = ({active, openNavList}) => {
           }
           onClick={closeFon}
         >
-          Новости
+          {t("NavBar.news")}
         </NavLink>
 
         <NavLink
@@ -57,7 +59,7 @@ const NavBarPhone = ({active, openNavList}) => {
           }
           onClick={closeFon}
         >
-          Донат
+          {t("NavBar.donat")}
         </NavLink>
 
         {navStat && (
@@ -79,7 +81,7 @@ const NavBarPhone = ({active, openNavList}) => {
           }
           onClick={closeFon}
         >
-          Информация
+          {t("NavBar.info")}
         </NavLink>
       </nav>
       :

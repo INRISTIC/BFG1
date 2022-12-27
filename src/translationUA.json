@@ -1,0 +1,87 @@
+{
+  "NavBar": {
+    "home": "Головна",
+    "news": "Новини",
+    "donat": "Донат",
+    "stats": "Статистика",
+    "info": "Інформація",
+    "termsOfUse": "Користувача угода",
+    "userTerms": "Умови користувача",
+    "rules": "Всі права захищені"
+  },
+  "Stat": {
+    "online": "Онлайн",
+    "count_users": "Кількість користувачів",
+    "count_sms": "Кількість повідомлень",
+    "count_days": "Кількість днів із заснування",
+    "bots": "Перейти в бота",
+    "count": "Кількість",
+    "users": "повідомлень"
+  },
+  "About": {
+    "title": "Про нас",
+    "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ac justo mollis lectus pretium ultricies. Ut placerat mi et ipsum tristique, in luctus odio vestibulum. Aenean ligula elit, pellentesque in sagittis vitae, luctus in enim. Vivamus ut risus lacinia, pulvinar eros nec, feugiat justo. Nunc eget cursus sem. Curabitur at enim vitae elit dictum bibendum ac et neque. Praesent et diam nec est hendrerit convallis eu vitae risus. Mauris viverra erat ut magna suscipit dignissim. Curabitur ultricies, ligula eu iaculis auctor, nisl elit vestibulum elit, ac egestas orci diam nec.",
+    "bots": "Перейти в бота"
+  },
+  "Description": {
+    "title": "Опис",
+    "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ac justo mollis lectus pretium ultricies. Ut placerat mi et ipsum tristique, in luctus odio vestibulum. Aenean ligula elit, pellentesque in sagittis vitae, luctus in enim. Vivamus ut risus lacinia, pulvinar eros nec, feugiat justo. Nunc eget cursus sem. Curabitur at enim vitae elit dictum bibendum ac et neque. Praesent et diam nec est hendrerit convallis eu vitae risus. Mauris viverra erat ut magna suscipit dignissim. Curabitur ultricies, ligula eu iaculis auctor, nisl elit vestibulum elit, ac egestas orci diam nec."
+  },
+  "News": {
+    "title": "Новини",
+    "noWatchNews": "Не пропускай новини",
+    "subscribeTg": "Підписуйся на наш телеграм канал",
+    "goTg": "Перейти",
+    "sorts": "Сортування",
+    "rating": "Рейтинг",
+    "date": "Дата"
+  },
+  "Donat": {
+    "pay": "Виберіть систему оплати",
+    "bankCard": "Банківська картка",
+    "electronWallet": "Електронний гаманець",
+    "continue": "Продовжити",
+    "field": "Заповніть всі поля",
+    "summa": "Введіть суму",
+    "id": "Введіть ID",
+    "email": "Введіть E-mail",
+    "payBtn": "Сплатити"
+  },
+  "ConnectWithUs": {
+    "connection": "Зв'язатися з нами",
+    "bots": "Перейти в бота"
+  },
+  "Information": {
+    "rules": "Правила",
+    "privillege": "Привілеї",
+    "noAnswer": "Чи не знайшов відповіді на своє запитання?",
+    "noAnswerSubTitle": "Задай його!",
+    "id": "Введіть ваш id",
+    "email": "Введіть ваш email",
+    "theme": "Введіть тему запитання",
+    "description": "Введіть опис питання",
+    "personal": "я погоджуюсь з умовами користувальницької угоди та політикою конфіденційності",
+    "answer": "Задати питання"
+  },
+  "PersonalInfo": {
+    "0": "Угода користувача",
+    "1": "1. Угода користувача",
+    "11": "1.1. Дана Угода користувача (далі угода) регулює відносини між власником ігрового «Bot Lesya» (далі бот, сайт) з користувачем.",
+    "12": "1.2. Використовуючи робота, Ви погоджуєтесь з умовами цієї угоди.",
+    "2": "2. Права та обов'язки сторін",
+    "21": "2.1. Адміністрація зобов'язується підтримувати працездатність сайту та робота за винятком випадків, коли це неможливо з незалежних від Адміністрації причин.",
+    "22": "2.2. Адміністрація гарантує безкоштовне використання бота та сайту.",
+    "23": "2.3. Адміністрація має право: видаляти та змінювати облікові записи; створювати, змінювати та видаляти правила та інформацію; проводити технічні роботи бота та сайту у будь-який час.",
+    "24": "2.4. Користувач зобов'язується дотримуватися цієї угоди",
+    "25": "2.5. Користувач зобов'язується не порушувати працездатність бота та сайту.",
+    "26": "2.6. Користувач зобов'язується не використовувати скрипти, програми для автоматизованої взаємодії з сайтом та ботом.",
+    "3": "3. Пожертви",
+    "31": "3.1. Користувач на добровільній основі робить пожертвування роботу реальними грошима.",
+    "32": "3.2. Пожертви не підлягають поверненню та/або перенесенню на інший ігровий обліковий запис",
+    "33": "3.3. Винагорода видається протягом доби (зазвичай моментально) після пожертвування.",
+    "4": "4. Умови дії угоди",
+    "41": "4.1. Ця угода набирає чинності за будь-якого використання сайту та/або бота.",
+    "42": "4.2. Адміністрація залишає за собою право в односторонньому порядку змінювати цю угоду на власний розсуд.",
+    "43": "4.3. Угода діє безстроково."
+  }
+}
