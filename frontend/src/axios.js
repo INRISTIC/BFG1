@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const inctance = axios.create({
-  baseURL: 'http://195.201.7.129:3005'
+  baseURL: `${window.location.hostname}:3005`
 });
 
 export default inctance;
