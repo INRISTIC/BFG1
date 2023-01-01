@@ -49,7 +49,6 @@ const WayDonat = () => {
       };
     }
 
-    console.log(newObj, nameObj)
     setActive({});
     dispatch(donatWay(newObj));
   };
@@ -60,7 +59,6 @@ const WayDonat = () => {
     // } else {
     //   setActive(...obj);
     // }
-    console.log(...obj)
     setActive(...obj);
   };
 

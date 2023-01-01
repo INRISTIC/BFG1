@@ -6,7 +6,6 @@ export const getSettings = async (req, res) => {
 
     res.json(settings[0]);
   } catch (err) {
-    console.log(err);
     res.status(500).json({
       message: "Не удалось получить информацию об изображение",
     });
@@ -31,7 +30,6 @@ export const createSettings = async (req, res) => {
 
     res.json(setting);
   } catch (err) {
-    console.log(err);
     res.status(500).json({
       message: "Не удалось создать изображение",
     });

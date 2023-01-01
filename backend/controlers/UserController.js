@@ -38,7 +38,6 @@ export const register = async (req, res) => {
       token,
     });
   } catch (err) {
-    console.log(err);
     res.status(500).json({
       message: "Не удалось зарегистрироваться",
     });
@@ -82,7 +81,6 @@ export const login =  async (req, res) => {
       token,
     });
   } catch (err) {
-    console.log(err);
     res.status(500).json({
       message: "Не удалось авторизоваться",
     });
@@ -106,7 +104,6 @@ export const getMe = async (req, res) => {
     });
 
   } catch (err) {
-    console.log(err);
     res.status(500).json({
       message: "Нет доступа",
     });

@@ -6,7 +6,6 @@ export const getAllPrivileges = async (req, res) => {
 
     res.json(privileges);
   } catch (err) {
-    console.log(err);
     res.status(500).json({
       message: "Не удалось получить информацию об изображение",
     });
@@ -27,7 +26,6 @@ export const createPrivilege = async (req, res) => {
 
     res.json(privilege);
   } catch (err) {
-    console.log(err);
     res.status(500).json({
       message: "Не удалось создать изображение",
     });

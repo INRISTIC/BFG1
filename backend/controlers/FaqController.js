@@ -6,7 +6,6 @@ export const getAllFaqs = async (req, res) => {
 
     res.json(faqs);
   } catch (err) {
-    console.log(err);
     res.status(500).json({
       message: "Не удалось получить информацию об изображение",
     });
@@ -27,7 +26,6 @@ export const createFaq = async (req, res) => {
 
     res.json(faq);
   } catch (err) {
-    console.log(err);
     res.status(500).json({
       message: "Не удалось создать изображение",
     });

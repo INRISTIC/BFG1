@@ -6,7 +6,6 @@ export const getAll = async (req, res) => {
 
     res.json(posts);
   } catch (err) {
-    console.log(err);
     res.status(500).json({
       message: "Не удалось получить статьи",
     });
@@ -29,7 +28,6 @@ export const getOne = async (req, res) => {
       },
       (err, doc) => {
         if (err) {
-          console.log(err);
           return res.status(500).json({
             message: "Не удалось вернуть статью",
           });
@@ -45,7 +43,6 @@ export const getOne = async (req, res) => {
       }
     );
   } catch (err) {
-    console.log(err);
     res.status(500).json({
       message: "Не удалось получить статьи",
     });
@@ -69,7 +66,6 @@ export const create = async (req, res) => {
 
     res.json(post);
   } catch (err) {
-    console.log(err);
     res.status(500).json({
       message: "Не удалось создать статью",
     });
@@ -86,7 +82,6 @@ export const remove = async (req, res) => {
       },
       (err, doc) => {
         if (err) {
-          console.log(err);
           return res.status(500).json({
             message: "Не удалось удалить статью",
           });
@@ -104,7 +99,6 @@ export const remove = async (req, res) => {
       }
     );
   } catch (err) {
-    console.log(err);
     res.status(500).json({
       message: "Не удалось получить статьи",
     });
@@ -132,7 +126,6 @@ export const update = async (req, res) => {
       success: true,
     });
   } catch(err) {
-    console.log(err);
     res.status(500).json({
       message: "Не удалось обновить статью",
     });

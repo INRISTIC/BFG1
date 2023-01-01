@@ -6,7 +6,6 @@ export const getAllRegulation = async (req, res) => {
 
     res.json(regulations);
   } catch (err) {
-    console.log(err);
     res.status(500).json({
       message: "Не удалось получить информацию об изображение",
     });
@@ -27,7 +26,6 @@ export const createRegulation = async (req, res) => {
 
     res.json(regulation);
   } catch (err) {
-    console.log(err);
     res.status(500).json({
       message: "Не удалось создать изображение",
     });

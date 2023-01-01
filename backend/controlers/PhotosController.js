@@ -6,7 +6,6 @@ export const getAllPhotos = async (req, res) => {
 
     res.json(photos);
   } catch (err) {
-    console.log(err);
     res.status(500).json({
       message: "Не удалось получить информацию об изображение",
     });
@@ -25,7 +24,6 @@ export const createPhoto = async (req, res) => {
 
     res.json(photo);
   } catch (err) {
-    console.log(err);
     res.status(500).json({
       message: "Не удалось создать изображение",
     });
