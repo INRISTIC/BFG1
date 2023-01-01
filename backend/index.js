@@ -81,7 +81,7 @@ app.post("/posts", postCreateValidation, create);
 app.delete("/posts/:id", remove);
 app.patch("/posts/:id", postCreateValidation, checkAuth, update);
 
-app.listen(3005, (err) => {
+app.listen(3005, 'https://forum.bfgproject.com/', (err) => {
   if (err) {
     return console.log(err);
   }
