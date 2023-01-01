@@ -84,14 +84,10 @@ app.post("/posts", postCreateValidation, create);
 app.delete("/posts/:id", remove);
 app.patch("/posts/:id", postCreateValidation, checkAuth, update);
 
-https.createServer({
-  key: fs.readFileSync("key.pem"),
-  cert: fs.readFileSync("cert.pem"),
-}, app).listen(3005, (err) => {
-      
+
+app.listen(3005, (err) => {
   if (err) {
     return console.log(err);
   }
-
   console.log("Server OK");
 });
