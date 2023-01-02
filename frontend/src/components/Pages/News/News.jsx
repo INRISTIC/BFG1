@@ -55,6 +55,8 @@ const News = () => {
   const dispatch = useDispatch();
   const { posts } = useSelector((state) => state.posts);
   const { settings } = useSelector((state) => state.settings);
+  let postsMas = posts.items;
+  const [postsMasHook, setPosts] = useState([]);
   const isPostsLoading = posts.status === "loading";
   const isSettingsLoading = settings.status === "loading";
 
@@ -62,6 +64,11 @@ const News = () => {
     dispatch(fetchPosts());
     dispatch(fetchSettings());
   }, []);
+
+  useEffect(() => {
+    setPosts(postsMas)
+  }, [postsMas]);
+
 
   useEffect(() => {
     if (posts.items.length > 0) {
@@ -77,6 +84,11 @@ const News = () => {
   const [sort, setSort] = useState({ rating: false, time: false });
 
   const btnActive = (arg) => {
+    if (arg === "rating") {
+      setPosts(sortRating(postsMasHook));
+    } else if (arg === "time") {
+      setPosts(sortDate(postsMasHook));
+    }
     setSort({ ...sort, [arg]: !sort[arg] });
   };
 
@@ -88,6 +100,30 @@ const News = () => {
   const [flagsOpen, setFlags] = useState([]);
   const [flagClose, setClose] = useState(false);
   const swiperRef = useRef();
+
+  const sortRating = (posts) => {
+    let funcPosts = [...posts];
+    if (sort.rating) {
+      funcPosts = funcPosts.sort((a, b) => a.rating - b.rating);
+      return funcPosts;
+    } else {
+      funcPosts = funcPosts.sort((a, b) => b.rating - a.rating);
+      return funcPosts
+    }
+  };
+
+  const sortDate = (posts) => {
+    let funcPosts = [...posts];
+    if (sort.time) {
+      return funcPosts.sort(
+        (a, b) => new Date(a.createdAt) - new Date(b.createdAt)
+      );
+    } else {
+      return funcPosts.sort(
+        (a, b) => new Date(b.createdAt) - new Date(a.createdAt)
+      );
+    }
+  };
 
   return (
     <>
@@ -159,7 +195,7 @@ const News = () => {
                     <Spin indicator={antIcon} />
                   </div>
                 ) : (
-                  posts.items.map((item) => <Post item={item} key={item._id} />)
+                  postsMasHook.map((item) => <Post item={item} key={item._id} />)
                 )}
               </div>
             </div>
@@ -177,7 +213,7 @@ const News = () => {
                     <Spin indicator={antIcon} />
                   </div>
                 ) : (
-                  posts.items.map((item, index) => (
+                  postsMasHook.map((item, index) => (
                     <SwiperSlide className={s.slidePostContainer}>
                       <Post
                         item={item}

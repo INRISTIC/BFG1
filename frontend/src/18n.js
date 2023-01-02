@@ -25,7 +25,7 @@ i18n
   .init({
     resources,
     fallbacking: "en",
-    debug: true,
+    debug: false,
     lng: "en",
     detection: {
       order: ["queryString", "cookie"],

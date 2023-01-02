@@ -1,3 +1,5 @@
+
+
 import CloseBtn from "../CloseBtn/CloseBtn";
 import s from "./Inventory.module.css";
 

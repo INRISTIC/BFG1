@@ -45,7 +45,8 @@
     "summa": "Enter amount",
     "id": "Enter ID",
     "email": "Enter Email",
-    "payBtn": "Pay"
+    "payBtn": "Pay",
+    "valute": "Currency purchase rate"
   },
   "ConnectWithUs": {
     "connection": "Contact us",
@@ -83,5 +84,17 @@
     "41": "4.1. This agreement comes into force with any use of the site and / or bot.",
     "42": "4.2. The administration reserves the right to unilaterally change this agreement at its discretion.",
     "43": "4.3. The agreement is valid indefinitely."
+  },
+  "ModalFatalPay": "Payment failed or was declined",
+  "ModalCompletePay": "Payment was successful",
+  "BotProtect": {
+    "higtText": "Check what you wrote to the bot",
+    "lowText": "at least one message"
+  },
+  "BlockModal": {
+    "ban": "You are blocked!",
+    "banMassage": "Bad behavior",
+    "descBan": "Insulting a member of the administration team in a particularly harsh manner",
+    "supports": "Contact support"
   }
 }

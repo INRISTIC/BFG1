@@ -78,6 +78,8 @@ body {
   --circle-three:  rgb(216, 236, 255);
 
   --back-counter-home: #C1DDFF;
+
+  --icon-valute: #68AEFF;
 }
 
 :root[data-theme="dark"] {
@@ -139,6 +141,8 @@ body {
   --circle-three: #17283C;
 
   --back-counter-home: #1A3250;
+
+  --icon-valute: #27374a;
 }
 
 li.ant-rate-star-zero svg {
