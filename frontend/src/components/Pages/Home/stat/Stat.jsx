@@ -56,14 +56,14 @@ const Stat = () => {
             <div className={s.statInfoElement}>
               <div className={s.statInfoElementTextBlock}>
                 <span>{t("Stat.online")}</span>
-                <span>{settings.info.online}</span>
+                <span>{Number(settings.info.online).toLocaleString('ru-RU')}</span>
               </div>
             </div>
 
             <div className={s.statInfoElement}>
               <div className={s.statInfoElementTextBlock}>
                 <span>{t("Stat.count_users")}</span>
-                <span>{settings.info.users_count}</span>
+                <span>{Number(settings.info.users_count).toLocaleString('ru-RU')}</span>
               </div>
             </div>
           </div>
@@ -72,14 +72,14 @@ const Stat = () => {
             <div className={s.statInfoElement}>
               <div className={s.statInfoElementTextBlock}>
                 <span>{t("Stat.count_sms")}</span>
-                <span>{settings.info.users_sms}</span>
+                <span>{Number(settings.info.users_sms).toLocaleString('ru-RU')}</span>
               </div>
             </div>
 
             <div className={s.statInfoElement}>
               <div className={s.statInfoElementTextBlock}>
                 <span>{t("Stat.count_days")}</span>
-                <span>{!isSettingsLoading && Math.floor((Date.parse(new Date) - Date.parse(settings.info.updatedAt)) / (1000 * 3600 * 24))}</span>
+                <span>{!isSettingsLoading && Number(Math.floor((Date.parse(new Date) - Date.parse(settings.info.updatedAt)) / (1000 * 3600 * 24))).toLocaleString('ru-RU')}</span>
               </div>
             </div>
           </div>
@@ -92,22 +92,22 @@ const Stat = () => {
           <div className={s.statInfoBlockSmall}>
             <div className={s.statInfoElementTextBlockSmallUsers}>
               <span>{t(Stat.count)}<br />{t(Stat.users)}</span>
-              <span>{settings.info.users_count}</span>
+              <span>{Number(settings.info.users_count).toLocaleString('ru-RU')}</span>
             </div>
 
             <div className={s.statInfoElementTextBlockSmall}>
               <span>{t("Stat.count_sms")}</span>
-              <span>{settings.info.users_sms}</span>
+              <span>{Number(settings.info.users_sms).toLocaleString('ru-RU')}</span>
             </div>
 
             <div className={s.statInfoElementTextBlockSmall}>
               <span>{t("Stat.count_days")}</span>
-              <span>{!isSettingsLoading && Math.floor((Date.parse(new Date) - Date.parse(settings.info.updatedAt)) / (1000 * 3600 * 24))}</span>
+              <span>{!isSettingsLoading && Number(Math.floor((Date.parse(new Date) - Date.parse(settings.info.updatedAt)) / (1000 * 3600 * 24))).toLocaleString('ru-RU')}</span>
             </div>
 
             <div className={s.statInfoElementTextBlockSmall}>
               <span>{t("Stat.online")}</span>
-              <span>{settings.info.online}</span>
+              <span>{Number(settings.info.online).toLocaleString('ru-RU')}</span>
             </div>
 
             <button className={s.statInfoBlockBtn}>{t("Stat.bots")}</button>

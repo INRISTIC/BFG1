@@ -11,8 +11,13 @@ const NavBarFooter = () => {
   const { t } = useTranslation();
   const [width] = useWindowSize();
   const dispatch = useDispatch();
-  const onModalOpen = () => {
+
+  const onModalOpenPersonalInfo = () => {
     dispatch(openModal({ modalPersonInfo: true }));
+  };
+
+  const onModalOpenTermsOfUse = () => {
+    dispatch(openModal({ modalTermsOfUse: true }));
   };
 
   return (
@@ -25,7 +30,7 @@ const NavBarFooter = () => {
                 <NavLink to="/" className={setActive}>
                   {t("NavBar.home")}
                 </NavLink>
-                <button className={s.button} onClick={onModalOpen}>
+                <button className={s.button} onClick={onModalOpenTermsOfUse}>
                   {t("NavBar.termsOfUse")}
                 </button>
               </div>
@@ -34,7 +39,7 @@ const NavBarFooter = () => {
                 <NavLink to="/news" className={setActive}>
                   {t("NavBar.news")}
                 </NavLink>
-                <button className={s.button} onClick={onModalOpen}>
+                <button className={s.button} onClick={onModalOpenPersonalInfo}>
                   {t("NavBar.userTerms")}
                 </button>
               </div>
@@ -57,14 +62,14 @@ const NavBarFooter = () => {
             {t("NavBar.info")}
           </NavLink>
 
-          <span className={s.span}>{t("NavBar.rules")} © 2022 </span>
+          <span className={s.span}>{t("NavBar.rules")} © 2023 </span>
         </div>
         {width > 810 && (
           <div className={s.footerBlock}>
-            <button className={s.button} onClick={onModalOpen}>
+            <button className={s.button} onClick={onModalOpenTermsOfUse}>
               {t("NavBar.termsOfUse")}
             </button>
-            <button className={s.button} onClick={onModalOpen}>
+            <button className={s.button} onClick={onModalOpenPersonalInfo}>
               {t("NavBar.userTerms")}
             </button>
           </div>

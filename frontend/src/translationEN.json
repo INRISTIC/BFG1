@@ -85,6 +85,27 @@
     "42": "4.2. The administration reserves the right to unilaterally change this agreement at its discretion.",
     "43": "4.3. The agreement is valid indefinitely."
   },
+  "TermsOfUse": {
+    "0": "Terms of use",
+    "1": "1. Terms of use",
+    "11": "1.1. hi.",
+    "12": "1.2. hi.",
+    "2": "2. hi",
+    "21": "2.1. hi",
+    "22": "2.2. The administration guarantees the free use of the bot and the site.",
+    "23": "2.3. hi.",
+    "24": "2.4. The user agrees to be bound by this agreement",
+    "25": "2.5. The user undertakes not to disrupt the performance of the bot and the site.",
+    "26": "2.6. The user undertakes not to use scripts, programs for automated interaction with the site and the bot.",
+    "3": "3. Donations",
+    "31": "3.1. The user voluntarily makes donations to the bot with real money.",
+    "32": "3.2. Donations are non-refundable and/or transferable to another game account.",
+    "33": "3.3. The reward is issued within 24 hours (usually immediately) after the donation is made.",
+    "4": "4. Terms of the agreement",
+    "41": "4.1. This agreement comes into force with any use of the site and / or bot.",
+    "42": "4.2. The administration reserves the right to unilaterally change this agreement at its discretion.",
+    "43": "4.3. The agreement is valid indefinitely."
+  },
   "ModalFatalPay": "Payment failed or was declined",
   "ModalCompletePay": "Payment was successful",
   "BotProtect": {

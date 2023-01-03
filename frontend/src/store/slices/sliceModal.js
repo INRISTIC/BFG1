@@ -7,6 +7,7 @@ const initialState = {
   modalComplete: false,
   modalFatal: false,
   modalPersonInfo: false,
+  modalTermsOfUse: false,
   modalBotProtect: false,
   modalBlock: false,
 };
@@ -27,6 +28,7 @@ export const modalSlice = createSlice({
         modalComplete: false,
         modalFatal: false,
         modalPersonInfo: false,
+        modalTermsOfUse: false,
         modalBotProtect: false,
         modalBlock: false,
       };

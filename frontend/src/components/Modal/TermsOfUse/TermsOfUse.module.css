@@ -1,0 +1,79 @@
+@-webkit-keyframes float {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes float {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.scrollBlock {
+  padding-bottom: 15px;
+  padding-top: 47px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.07);
+  
+}
+
+.modal::-webkit-scrollbar {
+  opacity: 0;
+  width: 1px;
+  background-color: transparent;
+}
+
+.modal {
+  padding: 0 67px 85px;
+  overflow-x: scroll;
+  max-height: 70vh;
+  padding-bottom: 15px;
+  border-radius: 25px;
+}
+
+.title {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 24px;
+  text-align: left;
+  color: var(--text-color);
+}
+
+.block {
+  max-width: 692px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  color: var(--text-color);
+}
+
+li {
+  list-style-type: none; /* Убираем маркеры */
+}
+ul {
+  margin-left: 0;
+  padding-left: 0;
+}
+
+@media (max-width: 600px) {
+  .modal {
+    padding: 0 28px 15px;
+  }
+
+  .title {
+    font-size: 15px;
+    line-height: 18px;
+  }
+
+  .block {
+    font-size: 15px;
+    line-height: 18px;
+  }
+}

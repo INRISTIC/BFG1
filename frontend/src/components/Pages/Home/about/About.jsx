@@ -7,7 +7,7 @@ const About = () => {
   const { t } = useTranslation();
   return (
     <div className={s.about}>
-      <div className={s.title}>{t("PersonalInfo.1")}</div>
+      <div className={s.title}>{t("About.title")}</div>
       <div className={s.block}>
         <div className={s.blockLeft}>
           <p className={s.blockLeftText}>

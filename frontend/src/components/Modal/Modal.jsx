@@ -8,6 +8,7 @@ import { openHeader, closeHeader } from "../../store/slices/sliceHeader";
 import CompletPay from "./CompletPay/CompletPay";
 import FatalPay from "./FatalPay/FatalPay";
 import PersonalInfo from "./PersonalInfo/PersonalInfo";
+import TermsOfUse from "./TermsOfUse/TermsOfUse";
 import BotProtect from "./BotProtect/BotProtect";
 import BlockModal from "./BlockModal/BlockModal";
 
@@ -37,6 +38,7 @@ const Modal = () => {
   const modalComplete = modal.modalComplete;
   const modalFatal = modal.modalFatal;
   const personalInfo = modal.modalPersonInfo;
+  const termsOfUse = modal.modalTermsOfUse;
   const modalBot = modal.modalBotProtect;
   const modalBlock = modal.modalBlock;
 
@@ -65,6 +67,7 @@ const Modal = () => {
           {modalComplete && <CompletPay />}
           {modalFatal && <FatalPay />}
           {personalInfo && <PersonalInfo />}
+          {termsOfUse && <TermsOfUse />}
           {modalBot && <BotProtect />}
           {modalBlock && <BlockModal />}
         </div>
