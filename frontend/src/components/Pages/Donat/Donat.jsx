@@ -1,6 +1,6 @@
 import s from "./Donat.module.css";
 import DonatBlock from "./DonatBLock/DonatBlock";
-import ConnectWithUs from "./ConnectWithUs/ConnectWithUs";
+import DonatFooter from "./DonatFooter/DonatFooter";
 import { useEffect } from "react";
 import { openModal } from "../../../store/slices/sliceModal";
 import { useDispatch } from "react-redux";
@@ -18,7 +18,7 @@ const Donat = () => {
   return (
     <>
       <DonatBlock />
-      <ConnectWithUs />
+      <DonatFooter />
     </>
   );
 };

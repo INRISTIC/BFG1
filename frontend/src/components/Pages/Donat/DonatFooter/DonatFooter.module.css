@@ -1,0 +1,77 @@
+.courseRub {
+  max-width: 420px;
+  padding: 18px 25px;
+  background: var(--background-modal);
+  border: 2px solid #0071ff;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.07);
+  border-radius: 20px;
+  margin: 0 auto;
+  margin-bottom: 45px;
+}
+
+.header {
+  display: flex;
+  gap: 17px;
+  font-family: "Rubik";
+  align-items: center;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 19px;
+  margin-bottom: 15px;
+}
+
+.icon {
+  width: 29px;
+  height: 29px;
+  background: var(--icon-valute);
+  border-radius: 6.44444px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.main {
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+  color: var(--text);
+  width: max-content;
+  margin-left: 45px;
+  border-bottom: solid 2px #0071ff;
+}
+
+@media (max-width: 500px) {
+  .courseRub {
+    max-width: 330px;
+    padding: 14.14px 19.64px;
+  }
+
+  .header {
+    font-size: 12.5714px;
+    line-height: 15px;
+    gap: 13.36px;
+    margin-bottom: 7.07px;
+    
+  }
+
+  .icon {
+    width: 22.79px;
+    height: 22.79px;
+    border-radius: 5.06349px;
+  }
+
+  .main {
+    font-size: 15.7143px;
+    line-height: 19px;
+    border-bottom: solid 1.5px #0071ff;
+    margin-left: 37px;
+  }
+
+  .icon img {
+    width: 14.14px;
+    height: 14.14px;
+  }
+}

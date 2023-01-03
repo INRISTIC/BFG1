@@ -60,6 +60,7 @@ export const create = async (req, res) => {
       content_ua: req.body.content_ua,
       content_en: req.body.content_en,
       content_ru: req.body.content_ru,
+      rating: req.body.rating
     });
 
     const post = await doc.save();

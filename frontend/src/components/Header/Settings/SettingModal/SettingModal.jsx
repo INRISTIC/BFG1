@@ -50,9 +50,9 @@ const SettingModal = ({ className, active, closeSetting, btnRef }) => {
   return (
     <div ref={settingRef} className={s.settingsModal}>
       <div className={s.translate}>
-        <button onClick={() => changeLanguage("ru")} className={i18n.language === "ru" && s.activeBtn}>RU</button>
-        <button onClick={() => changeLanguage("ua")} className={i18n.language === "ua" && s.activeBtn}>UA</button>
-        <button onClick={() => changeLanguage("en")} className={i18n.language === "en" && s.activeBtn}>EN</button>
+        <button onClick={() => changeLanguage("ru")} className={i18n.language === "ru" ? s.activeBtn : undefined}>RU</button>
+        <button onClick={() => changeLanguage("ua")} className={i18n.language === "ua" ? s.activeBtn : undefined}>UA</button>
+        <button onClick={() => changeLanguage("en")} className={i18n.language === "en" ? s.activeBtn : undefined}>EN</button>
       </div>
       <div className={s.theme}>
         <button

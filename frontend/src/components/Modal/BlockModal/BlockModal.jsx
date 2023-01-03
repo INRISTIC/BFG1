@@ -1,17 +1,19 @@
 import CloseBtn from "../CloseBtn/CloseBtn";
 import s from "./BlockModal.module.css";
+import { useTranslation } from "react-i18next";
 
 const BlockModal = () => {
+  const { t } = useTranslation();
   return (
     <div className={s.modal}>
-      <h3 className={s.blockTitle}>Вы заблокированы !</h3>
+      <h3 className={s.blockTitle}>{t("BlockModal.ban")}</h3>
       <div className={s.title}>
-        <span>Оскорбительное поведение</span>
+        <span>{t("BlockModal.banMassage")}</span>
       </div>
       <div className={s.desc}>
-        Оскорбление члена команды администрации в особо жесткой манере
+      {t("BlockModal.descBan")}
       </div>
-      <button className={s.button}>Обратиться в поддержку</button>
+      <button className={s.button}>{t("BlockModal.supports")}</button>
       <CloseBtn />
     </div>
   );
