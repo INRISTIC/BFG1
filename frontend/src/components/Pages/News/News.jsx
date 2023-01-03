@@ -146,7 +146,7 @@ const News = () => {
                   Math.floor(
                     (Date.parse(new Date()) -
                       Date.parse(settings.info.updatedAt)) /
-                      (1000 * 3600 * 24)
+                    (1000 * 3600 * 24)
                   )}
               </span>
             </div>
@@ -162,7 +162,7 @@ const News = () => {
               {t("News.sorts")}
             </div>
             <div className={s.filterOptions}>
-              <button
+              {/* <button
                 className={
                   sort.rating
                     ? s.sortBtns1 + " " + s.sortBtnsActive
@@ -172,7 +172,7 @@ const News = () => {
               >
                 {t("News.rating")}
                 <Arrow className={s.arrow} />
-              </button>
+              </button> */}
               <button
                 className={
                   sort.time ? s.sortBtns2 + " " + s.sortBtnsActive : s.sortBtns2

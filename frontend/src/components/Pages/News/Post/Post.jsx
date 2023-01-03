@@ -124,12 +124,12 @@ const Post = (props) => {
           </div>
 
           <div className={s.postTitleDate}>
-            <Rate
+            {/* <Rate
               defaultValue={rating}
               character={<Star className={s.star} />}
               style={{ fontSize: 23.4, marginInlineEnd: 0 }}
               className={s.stars}
-            />
+            /> */}
             <div className={s.postData}>
               {format(parseISO(createdAt), "dd.MM.yyyy")}
             </div>

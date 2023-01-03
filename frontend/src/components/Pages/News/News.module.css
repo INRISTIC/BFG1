@@ -174,7 +174,8 @@
 
 .filterOptions {
   display: flex;
-  justify-content: space-between;
+  /* justify-content: space-between; */
+  justify-content: flex-end;
 
   max-width: 285px;
   width: 100%;
