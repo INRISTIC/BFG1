@@ -63,26 +63,26 @@ const app = express();
 app.use(express.json());
 app.use(cors())
 
-app.get("/photos", getAllPhotos);
-app.post("/photos", photosCreateValidation, createPhoto);
+app.get("/api/photos", getAllPhotos);
+app.post("/api/photos", photosCreateValidation, createPhoto);
 
-app.get("/faq", getAllFaqs);
-app.post("/faq", faqCreateValidation, createFaq);
+app.get("/api/faq", getAllFaqs);
+app.post("/api/faq", faqCreateValidation, createFaq);
 
-app.get("/privilege", getAllPrivileges);
-app.post("/privilege", privilegeCreateValidation, createPrivilege);
+app.get("/api/privilege", getAllPrivileges);
+app.post("/api/privilege", privilegeCreateValidation, createPrivilege);
 
-app.get("/regulation", getAllRegulation);
-app.post("/regulation", regulationCreateValidation, createRegulation);
+app.get("/api/regulation", getAllRegulation);
+app.post("/api/regulation", regulationCreateValidation, createRegulation);
 
-app.get("/settings", getSettings);
-app.post("/settings", settingsCreateValidation, createSettings);
+app.get("/api/settings", getSettings);
+app.post("/api/settings", settingsCreateValidation, createSettings);
 
-app.get("/posts", getAll);
-app.get("/posts/:id", getOne);
-app.post("/posts", postCreateValidation, create);
-app.delete("/posts/:id", remove);
-app.patch("/posts/:id", postCreateValidation, checkAuth, update);
+app.get("/api/posts", getAll);
+app.get("/api/posts/:id", getOne);
+app.post("/api/posts", postCreateValidation, create);
+app.delete("/api/posts/:id", remove);
+app.patch("/api/posts/:id", postCreateValidation, checkAuth, update);
 
 
 app.listen(3005, (err) => {
